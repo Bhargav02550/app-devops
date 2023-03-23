@@ -1,8 +1,9 @@
+import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+//import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'homepage.dart';
-import 'open.dart';
-import 'open1.dart';
+//import 'open.dart';
+//import 'open1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,14 +15,41 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSwatch()
-            .copyWith(secondary: Color.fromARGB(255, 0, 0, 0)),
-      ),
       debugShowCheckedModeBanner: false,
       title: 'Bhargav',
-      home: Home(),
-      //home: Open1(),
+      home: Myslider(),
+    );
+  }
+}
+
+class Myslider extends StatefulWidget {
+  const Myslider({super.key});
+
+  @override
+  State<Myslider> createState() => _MysliderState();
+}
+
+class _MysliderState extends State<Myslider> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Carousel Slider'),
+      ),
+      body: Container(
+        child: Center(
+            child: ListView(
+          children: [
+            SizedBox(
+              height: 200.0,
+              width: double.infinity,
+              child: Carousel(
+                images: [Image.asset('images/pasd31.jpg', fit: BoxFit.cover)],
+              ),
+            ),
+          ],
+        )),
+      ),
     );
   }
 }
