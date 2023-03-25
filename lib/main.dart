@@ -1,54 +1,137 @@
-import 'package:carousel_pro/carousel_pro.dart';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
-//import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'homepage.dart';
-//import 'open.dart';
-//import 'open1.dart';
+import 'package:thub/slider.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
+      // Remove the debug banner
       debugShowCheckedModeBanner: false,
-      title: 'Bhargav',
-      home: Myslider(),
+      title: 'BASIC',
+      home: HomePage(),
     );
   }
 }
 
-class Myslider extends StatefulWidget {
-  const Myslider({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  State<Myslider> createState() => _MysliderState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _MysliderState extends State<Myslider> {
+class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+  // animation controller
+  late AnimationController _controller;
+  // animation color
+  late Animation<Color?> _color;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      duration: const Duration(seconds: 3),
+      vsync: this,
+    )..repeat(reverse: true);
+
+    _color = ColorTween(begin: Colors.green, end: Colors.yellow)
+        .animate(_controller);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
+    double w = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Carousel Slider'),
+      body: SafeArea(
+        child: AnimatedBuilder(
+          animation: _color,
+          builder: (BuildContext _, Widget? __) {
+            return Container(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height / 1.9,
+              decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 5,
+                    color: Colors.black12,
+                  ),
+                  color: _color.value,
+                  borderRadius: const BorderRadius.only(
+                    bottomRight: Radius.circular(150),
+                    bottomLeft: Radius.circular(150),
+                  )),
+            );
+          },
+        ),
       ),
-      body: Container(
-        child: Center(
-            child: ListView(
+      floatingActionButton: SizedBox(
+        height: MediaQuery.of(context).size.height / 1.7,
+        width: MediaQuery.of(context).size.width / 1.1,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              height: 200.0,
-              width: double.infinity,
-              child: Carousel(
-                images: [Image.asset('images/pasd31.jpg', fit: BoxFit.cover)],
+              width: 140,
+              height: 140,
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10),
+                        topRight: Radius.circular(60),
+                        bottomLeft: Radius.circular(60),
+                      ),
+                    ),
+                  ),
+                  onPressed: () {},
+                  child: Image.asset(
+                    "images/thublogo.png",
+                    fit: BoxFit.cover,
+                  )),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 130),
+              child: SizedBox(
+                height: 45,
+                width: 200,
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green,
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(10),
+                          bottomLeft: Radius.circular(10),
+                          topLeft: Radius.circular(10),
+                          bottomRight: Radius.circular(10),
+                        ),
+                      ),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Myslider()));
+                    },
+                    child: const Text("Get Started")),
               ),
             ),
           ],
-        )),
+        ),
       ),
     );
   }

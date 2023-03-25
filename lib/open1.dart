@@ -11,6 +11,9 @@ class _Open1State extends State<Open1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Bhargav"),
+      ),
       body: Row(
         children: [
           Align(

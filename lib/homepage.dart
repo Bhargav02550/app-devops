@@ -8,6 +8,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  get style => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,58 +24,20 @@ class _HomeState extends State<Home> {
       //     ),
       //   )),
       // ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Center(
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Color.fromARGB(255, 9, 9, 9),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Container(
-                    height: 250,
-                    width: 400,
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 154, 150, 150),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Container(
-                    height: 250,
-                    width: 400,
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 154, 150, 150),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Container(
-                    height: 250,
-                    width: 400,
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 154, 150, 150),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                ),
-              ],
+      body: Center(
+        child: ElevatedButton(
+          style: style,
+          onPressed: () {},
+          child: const Text(
+            'Bhargav',
+            style: TextStyle(
+              fontFamily: 'Vonique',
+              fontStyle: FontStyle.italic,
             ),
           ),
         ),
       ),
     );
+    //);
   }
 }
