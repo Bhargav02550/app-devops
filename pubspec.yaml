@@ -36,6 +36,10 @@ dependencies:
     sdk: flutter
   flutter_launcher_icons: ^0.12.0
   flutter_native_splash: ^2.2.19
+  google_nav_bar: ^5.0.6
+  new_gradient_app_bar: ^0.2.0
+  video_player: null
+
 flutter_native_splash:
   image: images/thublogo.png
 
@@ -63,12 +67,14 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - images/PSD.png
     - images/psd31.jpg
     - images/owl_bg.png
     - images/thublogo.png
     - images/tc2.1.jpg
     - images/owl coder.png
-    - images/image1.jpg
+    - images/image1.png
+    - images/main.png
     - images/driveready.jpeg
     - images/PS.png
     - images/TC.png
@@ -78,6 +84,10 @@ flutter:
     - images/dpp.png
     - images/dp.png
     - images/owlcoder.png
+    - images/owl.png
+    - images/TCON.png
+    - images/DR.png
+    - images/CO.png
 
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

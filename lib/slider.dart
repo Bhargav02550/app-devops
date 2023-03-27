@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:thub/homepage.dart';
 import 'package:thub/open1.dart';
 
@@ -18,7 +19,7 @@ class _MysliderState extends State<Myslider> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        title: Text(
+        title: const Text(
           'TECHNICAL HUB',
           style: TextStyle(fontFamily: 'Vonique'),
           textAlign: TextAlign.center,
@@ -37,8 +38,8 @@ class _MysliderState extends State<Myslider> {
                   height: 200,
                   reverse: false,
                   autoPlay: true,
-                  autoPlayInterval: Duration(seconds: 3),
-                  autoPlayAnimationDuration: Duration(milliseconds: 800),
+                  autoPlayInterval: const Duration(seconds: 3),
+                  autoPlayAnimationDuration: const Duration(milliseconds: 800),
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enlargeCenterPage: true,
                   aspectRatio: 16 / 9,
@@ -48,118 +49,102 @@ class _MysliderState extends State<Myslider> {
                 ),
                 items: [
                   ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
                     child: Image.asset(
                       'images/team.jpg',
                       fit: BoxFit.fill,
                     ),
-                    borderRadius: BorderRadius.circular(10),
                   ),
                   ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
                     child: Image.asset(
                       'images/owl_bg.png',
                       fit: BoxFit.fill,
                     ),
-                    borderRadius: BorderRadius.circular(10),
                   ),
                   ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
                     child: Image.asset(
                       'images/psd31.jpg',
                       fit: BoxFit.fill,
                     ),
-                    borderRadius: BorderRadius.circular(10),
                   ),
                   ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
                     child: Image.asset('images/thublogo.png'),
-                    borderRadius: BorderRadius.circular(20),
                   ),
                   ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
                     child: Image.asset('images/PS2.png'),
-                    borderRadius: BorderRadius.circular(20),
                   ),
                   ClipRRect(
-                    child: Image.asset('images/codemind.png'),
                     borderRadius: BorderRadius.circular(20),
+                    child: Image.asset('images/codemind.png'),
                   ),
                 ],
               ),
             ),
-            Divider(
+            const Divider(
               thickness: 0.5,
               color: Colors.black,
             ),
-            Padding(
-              padding: const EdgeInsets.all(15),
-              child: Container(
-                height: 200,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 20.0,
+            InkWell(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 10, left: 20, right: 20, bottom: 5),
+                child: Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(10),
+                    // ignore: prefer_const_literals_to_create_immutables
+                    boxShadow: [
+                      const BoxShadow(
+                        color: Color.fromARGB(255, 0, 0, 0),
+                        blurRadius: 5.0,
+                        blurStyle: BlurStyle.outer,
+                      ),
+                    ],
+                    //image: DecorationImage(image: AssetImage('images/owl.png')),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'images/main.png',
+                      fit: BoxFit.cover,
+                      //alignment: Alignment(0.0, 1.0),
                     ),
-                  ],
-                  image:
-                      DecorationImage(image: AssetImage('images/owlcoder.png')),
+                  ),
                 ),
-                // child: ClipRRect(
-                //   child: Image.asset(
-                //     'images/image1.jpg',
-                //     fit: BoxFit.fill,
-                //   ),
-                //   borderRadius: BorderRadius.circular(10),
-                // ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(15),
-              child: Container(
-                height: 200,
-                child: ClipRRect(
-                  child: Image.asset('images/TC.png', fit: BoxFit.none),
-                ),
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 20.0,
-                    ),
-                  ],
-                ),
-                // child: ClipRRect(
-                //   child: Image.asset(
-                //     'images/image1.jpg',
-                //     fit: BoxFit.fill,
-                //   ),
-                //   borderRadius: BorderRadius.circular(10),
-                // ),
               ),
             ),
             InkWell(
               child: Padding(
-                padding: const EdgeInsets.all(15),
+                padding: const EdgeInsets.only(
+                    top: 10, left: 20, right: 20, bottom: 5),
                 child: Container(
-                  height: 200,
+                  height: 150,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 255, 255, 255),
+                    color: const Color.fromARGB(255, 255, 255, 255),
                     borderRadius: BorderRadius.circular(10),
+                    // ignore: prefer_const_literals_to_create_immutables
                     boxShadow: [
-                      BoxShadow(
-                        blurRadius: 20.0,
+                      const BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 5.0,
+                        blurStyle: BlurStyle.outer,
                       ),
                     ],
-                    image: DecorationImage(
-                        image: AssetImage('images/dp.png'),
-                        alignment: Alignment.center),
+                    //image: DecorationImage(image: AssetImage('images/owl.png')),
                   ),
-                  // child: ClipRRect(
-                  //   child: Image.asset(
-                  //     'images/image1.jpg',
-                  //     fit: BoxFit.fill,
-                  //   ),
-                  //   borderRadius: BorderRadius.circular(10),
-                  // ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'images/TCON.png',
+                      fit: BoxFit.fitHeight,
+                      //alignment: Alignment(0.0, 1.0),
+                    ),
+                  ),
                 ),
               ),
               onTap: () {
@@ -170,33 +155,114 @@ class _MysliderState extends State<Myslider> {
               },
             ),
             Padding(
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.only(
+                  top: 10, left: 20, right: 20, bottom: 5),
               child: Container(
-                height: 200,
+                height: 150,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: const Color.fromARGB(255, 255, 255, 255),
                   borderRadius: BorderRadius.circular(10),
+                  // ignore: prefer_const_literals_to_create_immutables
                   boxShadow: [
-                    BoxShadow(
-                      blurRadius: 20.0,
+                    const BoxShadow(
+                      color: Colors.black38,
+                      blurRadius: 5.0,
+                      blurStyle: BlurStyle.outer,
                     ),
                   ],
-                  image: DecorationImage(
-                      image: AssetImage('images/codemind.png'),
-                      alignment: Alignment.center),
+                  //image: DecorationImage(image: AssetImage('images/owl.png')),
                 ),
-                // child: ClipRRect(
-                //   child: Image.asset(
-                //     'images/image1.jpg',
-                //     fit: BoxFit.fill,
-                //   ),
-                //   borderRadius: BorderRadius.circular(10),
-                // ),
+                child: ClipRRect(
+                  // ignore: sort_child_properties_last
+                  child: Image.asset(
+                    'images/DR.png',
+                    fit: BoxFit.cover,
+                    //alignment: Alignment(0.0, 1.0),
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: 10, left: 20, right: 20, bottom: 5),
+              child: Container(
+                height: 150,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                  borderRadius: BorderRadius.circular(10),
+                  // ignore: prefer_const_literals_to_create_immutables
+                  boxShadow: [
+                    const BoxShadow(
+                      color: Colors.black38,
+                      blurRadius: 5.0,
+                      blurStyle: BlurStyle.outer,
+                    ),
+                  ],
+                  //image: DecorationImage(image: AssetImage('images/owl.png')),
+                ),
+                child: ClipRRect(
+                  // ignore: sort_child_properties_last
+                  child: Image.asset(
+                    'images/PSD.png',
+                    fit: BoxFit.cover,
+                    //alignment: Alignment(0.0, 1.0),
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  top: 10, left: 20, right: 20, bottom: 5),
+              child: Container(
+                height: 150,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 255, 255, 255),
+                  borderRadius: BorderRadius.circular(10),
+                  // ignore: prefer_const_literals_to_create_immutables
+                  boxShadow: [
+                    const BoxShadow(
+                      color: Colors.black38,
+                      blurRadius: 5.0,
+                      blurStyle: BlurStyle.outer,
+                    ),
+                  ],
+                  //image: DecorationImage(image: AssetImage('images/owl.png')),
+                ),
+                child: ClipRRect(
+                  // ignore: sort_child_properties_last
+                  child: Image.asset(
+                    'images/CO.png',
+                    fit: BoxFit.fitHeight,
+                    //alignment: Alignment(0.0, 1.0),
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
             ),
           ],
         )),
       ),
+      // ignore: prefer_const_constructors
+      bottomNavigationBar: GNav(tabs: const [
+        GButton(
+          icon: Icons.event_available_rounded,
+          text: 'Home',
+        ),
+        GButton(
+          icon: Icons.event_available_rounded,
+          text: 'Home',
+        ),
+        GButton(
+          icon: Icons.event_available_rounded,
+          text: 'Home',
+        ),
+        GButton(
+          icon: Icons.event_available_rounded,
+          text: 'Home',
+        ),
+      ]),
     );
   }
 }
