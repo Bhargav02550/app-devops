@@ -16,6 +16,7 @@ class Myslider extends StatefulWidget {
 class _MysliderState extends State<Myslider> {
   @override
   Widget build(BuildContext context) {
+    double wid = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
@@ -94,6 +95,7 @@ class _MysliderState extends State<Myslider> {
                     top: 10, left: 20, right: 20, bottom: 5),
                 child: Container(
                   height: 150,
+                  width: wid * (0.06),
                   decoration: BoxDecoration(
                     color: const Color.fromARGB(255, 255, 255, 255),
                     borderRadius: BorderRadius.circular(10),

@@ -88,6 +88,9 @@ flutter:
     - images/TCON.png
     - images/DR.png
     - images/CO.png
+    - images/RHN1.jpeg
+    - images/RHN2.jpg
+    - images/RPA.png
 
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

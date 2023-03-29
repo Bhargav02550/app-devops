@@ -14,10 +14,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       // Remove the debug banner
       debugShowCheckedModeBanner: false,
-      title: 'BASIC',
+      builder: (context, child) {
+        return MediaQuery(
+          child: child!,
+          data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+        );
+      },
+      title: 'T - HUB',
       home: HomePage(),
     );
   }
