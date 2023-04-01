@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:thub/driveready.dart';
 import 'package:thub/homepage.dart';
 import 'package:thub/open1.dart';
+import 'package:thub/owlcoder.dart';
 
 class Myslider extends StatefulWidget {
   const Myslider({super.key});
@@ -119,6 +122,10 @@ class _MysliderState extends State<Myslider> {
                   ),
                 ),
               ),
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Home2()));
+              },
             ),
             InkWell(
               child: Padding(
@@ -143,7 +150,7 @@ class _MysliderState extends State<Myslider> {
                     borderRadius: BorderRadius.circular(10),
                     child: Image.asset(
                       'images/TCON.png',
-                      fit: BoxFit.fitHeight,
+                      fit: BoxFit.cover,
                       //alignment: Alignment(0.0, 1.0),
                     ),
                   ),
@@ -152,38 +159,47 @@ class _MysliderState extends State<Myslider> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Home()),
+                  PageTransition(
+                    child: const Home(),
+                    type: PageTransitionType.fade,
+                  ),
                 );
               },
             ),
-            Padding(
-              padding: const EdgeInsets.only(
-                  top: 10, left: 20, right: 20, bottom: 5),
-              child: Container(
-                height: 150,
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 255, 255, 255),
-                  borderRadius: BorderRadius.circular(10),
-                  // ignore: prefer_const_literals_to_create_immutables
-                  boxShadow: [
-                    const BoxShadow(
-                      color: Colors.black38,
-                      blurRadius: 5.0,
-                      blurStyle: BlurStyle.outer,
-                    ),
-                  ],
-                  //image: DecorationImage(image: AssetImage('images/owl.png')),
-                ),
-                child: ClipRRect(
-                  // ignore: sort_child_properties_last
-                  child: Image.asset(
-                    'images/DR.png',
-                    fit: BoxFit.cover,
-                    //alignment: Alignment(0.0, 1.0),
+            InkWell(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 10, left: 20, right: 20, bottom: 5),
+                child: Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(10),
+                    // ignore: prefer_const_literals_to_create_immutables
+                    boxShadow: [
+                      const BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 5.0,
+                        blurStyle: BlurStyle.outer,
+                      ),
+                    ],
+                    //image: DecorationImage(image: AssetImage('images/owl.png')),
                   ),
-                  borderRadius: BorderRadius.circular(10),
+                  child: ClipRRect(
+                    // ignore: sort_child_properties_last
+                    child: Image.asset(
+                      'images/DR.png',
+                      fit: BoxFit.cover,
+                      //alignment: Alignment(0.0, 1.0),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                 ),
               ),
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Drive()));
+              },
             ),
             Padding(
               padding: const EdgeInsets.only(
@@ -214,57 +230,65 @@ class _MysliderState extends State<Myslider> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(
-                  top: 10, left: 20, right: 20, bottom: 5),
-              child: Container(
-                height: 150,
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 255, 255, 255),
-                  borderRadius: BorderRadius.circular(10),
-                  // ignore: prefer_const_literals_to_create_immutables
-                  boxShadow: [
-                    const BoxShadow(
-                      color: Colors.black38,
-                      blurRadius: 5.0,
-                      blurStyle: BlurStyle.outer,
-                    ),
-                  ],
-                  //image: DecorationImage(image: AssetImage('images/owl.png')),
-                ),
-                child: ClipRRect(
-                  // ignore: sort_child_properties_last
-                  child: Image.asset(
-                    'images/CO.png',
-                    fit: BoxFit.fitHeight,
-                    //alignment: Alignment(0.0, 1.0),
+            InkWell(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 10, left: 20, right: 20, bottom: 5),
+                child: Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(10),
+                    // ignore: prefer_const_literals_to_create_immutables
+                    boxShadow: [
+                      const BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 5.0,
+                        blurStyle: BlurStyle.outer,
+                      ),
+                    ],
+                    //image: DecorationImage(image: AssetImage('images/owl.png')),
                   ),
-                  borderRadius: BorderRadius.circular(10),
+                  child: ClipRRect(
+                    // ignore: sort_child_properties_last
+                    child: Image.asset(
+                      'images/CO.png',
+                      fit: BoxFit.cover,
+                      //alignment: Alignment(0.0, 1.0),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                 ),
               ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CMpage()),
+                );
+              },
             ),
           ],
         )),
       ),
       // ignore: prefer_const_constructors
-      bottomNavigationBar: GNav(tabs: const [
-        GButton(
-          icon: Icons.event_available_rounded,
-          text: 'Home',
-        ),
-        GButton(
-          icon: Icons.event_available_rounded,
-          text: 'Home',
-        ),
-        GButton(
-          icon: Icons.event_available_rounded,
-          text: 'Home',
-        ),
-        GButton(
-          icon: Icons.event_available_rounded,
-          text: 'Home',
-        ),
-      ]),
+      bottomNavigationBar: GNav(
+          backgroundColor: Colors.green,
+          activeColor: Colors.white,
+          tabBackgroundColor: Color.fromARGB(255, 0, 0, 0),
+          tabs: const [
+            GButton(
+              icon: Icons.home_rounded,
+              text: 'Home',
+            ),
+            GButton(
+              icon: Icons.home_work_outlined,
+              text: 'Home',
+            ),
+            GButton(
+              icon: Icons.info_outline_rounded,
+              text: 'Info',
+            ),
+          ]),
     );
   }
 }

@@ -2,10 +2,12 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:thub/slider.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
   runApp(const MyApp());
 }
 
@@ -131,9 +133,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                     ),
                     onPressed: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Myslider()));
+                        context,
+                        PageTransition(
+                          child: const Myslider(),
+                          type: PageTransitionType.fade,
+                        ),
+                      );
                     },
                     child: const Text("Get Started")),
               ),
