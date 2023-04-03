@@ -164,7 +164,7 @@ class _Home2State extends State<Home2> {
                                     ],
                                   ),
                                   child: ClipRRect(
-                                    child: Image.asset("assets/ashoksir.png",
+                                    child: Image.asset("assets/Coding.png",
                                         fit: BoxFit.cover),
                                   ),
                                 ),
@@ -220,7 +220,7 @@ class _Home2State extends State<Home2> {
                           ],
                         ),
                         child: ClipRRect(
-                          child: Image.asset("assets/kiransir.png",
+                          child: Image.asset("images/Coding.png",
                               fit: BoxFit.cover),
                         ),
                       ),
@@ -286,7 +286,7 @@ class _Home2State extends State<Home2> {
                                     ],
                                   ),
                                   child: ClipRRect(
-                                    child: Image.asset("assets/rajachowsir.png",
+                                    child: Image.asset("images/Coding.png",
                                         fit: BoxFit.cover),
                                   ),
                                 ),
@@ -342,7 +342,7 @@ class _Home2State extends State<Home2> {
                           ],
                         ),
                         child: ClipRRect(
-                          child: Image.asset("assets/siddqsir.jpg",
+                          child: Image.asset("images/Coding.png",
                               fit: BoxFit.cover),
                         ),
                       ),
@@ -374,67 +374,64 @@ class _Home2State extends State<Home2> {
             ],
           ),
         ),
-        Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Column(
-                children: [
-                  Container(
-                    width: 120,
-                    height: 120,
-                    margin: const EdgeInsets.only(top: 20),
-                    child: FlipCard(
-                      direction: FlipDirection.HORIZONTAL,
-                      front: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 255, 255, 255),
-                              borderRadius: BorderRadius.circular(10),
-                              boxShadow: const [
-                                BoxShadow(
-                                  blurRadius: 20.0,
-                                ),
-                              ],
-                            ),
-                            child: ClipRRect(
-                              child: Image.asset("assets/bharathsir.png",
-                                  fit: BoxFit.cover),
-                            ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Column(
+              children: [
+                Container(
+                  width: 120,
+                  height: 120,
+                  margin: const EdgeInsets.only(top: 20),
+                  child: FlipCard(
+                    direction: FlipDirection.HORIZONTAL,
+                    front: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            borderRadius: BorderRadius.circular(10),
+                            boxShadow: const [
+                              BoxShadow(
+                                blurRadius: 20.0,
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
-                      back: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Container(
-                            decoration: const BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
-                              color: Colors.grey,
-                            ),
+                          child: ClipRRect(
+                            child: Image.asset("images/Coding.png",
+                                fit: BoxFit.cover),
                           ),
-                          const Padding(
-                            padding: EdgeInsets.all(8.0),
-                            child: Text(
-                              'Mr Bharath \nAptitude Trainer',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600),
-                            ),
+                        ),
+                      ],
+                    ),
+                    back: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Container(
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            color: Colors.grey,
                           ),
-                        ],
-                      ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            'Mr Bharath \nAptitude Trainer',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                ],
-              ),
-            ],
-          ),
+                ),
+              ],
+            ),
+          ],
         ),
         const SizedBox(
           height: 20,

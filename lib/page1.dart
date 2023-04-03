@@ -1,230 +1,220 @@
-import 'dart:ui';
-import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:flutter/material.dart';
+import 'package:carousel_pro/carousel_pro.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:thub/bottom.dart';
 import 'package:thub/slider.dart';
 
-class Main extends StatefulWidget {
-  const Main({super.key});
+class Events extends StatefulWidget {
+  const Events({Key? key}) : super(key: key);
 
   @override
-  State<Main> createState() => _MainState();
+  State<Events> createState() => _EventsState();
 }
 
-class _MainState extends State<Main> {
+class _EventsState extends State<Events> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.black12,
-        title: Padding(
-          padding: const EdgeInsets.only(top: 10, left: 25),
-          child: Text(
-            'TECHNICAL HUB',
-            style: TextStyle(fontFamily: 'Vonique', fontSize: 30),
-          ),
+        title: Text("Events"),
+        backgroundColor: Colors.blue[900],
+        leading: InkWell(
+          child: Icon(Icons.arrow_back_rounded),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Gone()),
+            );
+          },
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(15),
-              child: InkWell(
-                child: Container(
-                  height: 250,
+      body: Container(
+        child: Center(
+          child: ListView(
+            children: [
+              Container(
+                child: SizedBox(
+                  height: 250.0,
                   width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
-                        image: AssetImage('images/owl_bg.png'),
-                        fit: BoxFit.fill),
-                  ),
-                  alignment: Alignment.center,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 135),
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 50),
-                      child: BlurryContainer(
-                        blur: 3,
-                        color: Color.fromARGB(92, 17, 17, 18),
-                        borderRadius: BorderRadius.circular(20),
-                        child: Container(
-                          height: 25,
-                          width: 150,
-                          child: Center(
-                            child: Text(
-                              'OWL CODER',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Vonique',
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
+                  child: CarouselSlider(
+                    options: CarouselOptions(
+                      height: 200,
+                      reverse: false,
+                      autoPlay: true,
+                      autoPlayInterval: Duration(seconds: 3),
+                      autoPlayAnimationDuration: Duration(milliseconds: 800),
+                      autoPlayCurve: Curves.fastOutSlowIn,
+                      enlargeCenterPage: true,
+                      aspectRatio: 16 / 9,
+                      viewportFraction: 0.8,
+                      onPageChanged: null,
+                      scrollDirection: Axis.horizontal,
                     ),
+                    items: [
+                      ClipRRect(
+                        child: Image.asset(
+                          'assets/skdayselfie.png',
+                          fit: BoxFit.fill,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      ClipRRect(
+                        child: Image.asset(
+                          'assets/skday1.png',
+                          fit: BoxFit.fill,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      ClipRRect(
+                        child: Image.asset(
+                          'assets/progday1.png',
+                          fit: BoxFit.fill,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      ClipRRect(
+                        child: Image.asset('assets/botchal.png'),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Divider(
+                thickness: 0.5,
+                color: Colors.black,
+              ),
+              InkWell(
+                child: Padding(
+                  padding: const EdgeInsets.all(15),
+                  child: Container(
+                    height: 150,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 20.0,
+                        ),
+                      ],
+                      image: DecorationImage(
+                          image: AssetImage('images/Coding.png'),
+                          fit: BoxFit.cover),
+                    ),
+                    // child: ClipRRect(
+                    //   child: Image.asset(
+                    //     'images/image1.jpg',
+                    //     fit: BoxFit.fill,
+                    //   ),
+                    //   borderRadius: BorderRadius.circular(10),
+                    // ),
                   ),
                 ),
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Myslider()));
+                  //Navigator.push(context, MaterialPageRoute(builder: (context)=>()));
                 },
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(15),
-              child: InkWell(
-                child: Container(
-                  height: 250,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
-                        image: AssetImage('images/psd31.jpg'),
-                        fit: BoxFit.fill),
-                  ),
-                  alignment: Alignment.center,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 135),
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 50),
-                      child: BlurryContainer(
-                        blur: 3,
-                        color: Color.fromARGB(92, 17, 17, 18),
-                        borderRadius: BorderRadius.circular(20),
-                        child: Container(
-                          height: 25,
-                          width: 150,
-                          child: Center(
-                            child: Text(
-                              'PROJECT SPACE',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Vonique',
-                              ),
-                            ),
-                          ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Padding(
+                  padding: const EdgeInsets.all(15),
+                  child: Container(
+                    height: 150,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 20.0,
                         ),
-                      ),
+                      ],
+                      image: DecorationImage(
+                          image: AssetImage('images/Coding.png'),
+                          fit: BoxFit.fill),
                     ),
+                    // child: ClipRRect(
+                    //   child: Image.asset(
+                    //     'images/image1.jpg',
+                    //     fit: BoxFit.fill,
+                    //   ),
+                    //   borderRadius: BorderRadius.circular(10),
+                    // ),
                   ),
                 ),
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Myslider()));
+                  //Navigator.push(context, MaterialPageRoute(builder: (context)=>()));
                 },
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(15),
-              child: InkWell(
-                child: Container(
-                  height: 250,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
-                        image: AssetImage('images/tc2.1.jpg'),
-                        fit: BoxFit.fill),
-                  ),
-                  alignment: Alignment.center,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 135),
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 50),
-                      child: BlurryContainer(
-                        blur: 3,
-                        color: Color.fromARGB(92, 17, 17, 18),
-                        borderRadius: BorderRadius.circular(20),
-                        child: Container(
-                          height: 25,
-                          width: 150,
-                          child: Center(
-                            child: Text(
-                              'T - CONNECT',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Vonique',
-                              ),
-                            ),
-                          ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Padding(
+                  padding: const EdgeInsets.all(15),
+                  child: Container(
+                    height: 150,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 20.0,
                         ),
-                      ),
+                      ],
+                      image: DecorationImage(
+                          image: AssetImage('images/Coding.png'),
+                          fit: BoxFit.cover),
                     ),
+                    // child: ClipRRect(
+                    //   child: Image.asset(
+                    //     'images/image1.jpg',
+                    //     fit: BoxFit.fill,
+                    //   ),
+                    //   borderRadius: BorderRadius.circular(10),
+                    // ),
                   ),
                 ),
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Myslider()));
+                  //Navigator.push(context, MaterialPageRoute(builder: (context)=>()));
                 },
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(15),
-              child: InkWell(
-                child: Container(
-                  height: 250,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
-                        image: AssetImage('images/tc2.1.jpg'),
-                        fit: BoxFit.fill),
-                  ),
-                  alignment: Alignment.center,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 135),
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 50),
-                      child: BlurryContainer(
-                        blur: 3,
-                        color: Color.fromARGB(92, 17, 17, 18),
-                        borderRadius: BorderRadius.circular(20),
-                        child: Container(
-                          height: 25,
-                          width: 150,
-                          child: Center(
-                            child: Text(
-                              'DRIVE READY',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Vonique',
-                              ),
-                            ),
-                          ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                child: Padding(
+                  padding: const EdgeInsets.all(15),
+                  child: Container(
+                    height: 150,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 20.0,
                         ),
-                      ),
+                      ],
+                      image: DecorationImage(
+                          image: AssetImage('images/Coding.png'),
+                          fit: BoxFit.fill),
                     ),
+                    // child: ClipRRect(
+                    //   child: Image.asset(
+                    //     'images/image1.jpg',
+                    //     fit: BoxFit.fill,
+                    //   ),
+                    //   borderRadius: BorderRadius.circular(10),
+                    // ),
                   ),
                 ),
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Myslider()));
+                  //Navigator.push(context, MaterialPageRoute(builder: (context)=>()));
                 },
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

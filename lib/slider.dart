@@ -1,11 +1,15 @@
+import 'package:dot_navigation_bar/dot_navigation_bar.dart';
+import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:thub/driveready.dart';
 import 'package:thub/homepage.dart';
+import 'package:thub/main.dart';
 import 'package:thub/open1.dart';
 import 'package:thub/owlcoder.dart';
 
@@ -18,6 +22,19 @@ class Myslider extends StatefulWidget {
 
 class _MysliderState extends State<Myslider> {
   @override
+  List<Widget> pageList = [
+    Drive(),
+  ];
+
+  var _currentIndex = 0;
+  var _selectedTab = _SelectedTab.home;
+
+  void _handleIndexChanged(int i) {
+    setState(() {
+      _selectedTab = _SelectedTab.values[i];
+    });
+  }
+
   Widget build(BuildContext context) {
     double wid = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -29,6 +46,15 @@ class _MysliderState extends State<Myslider> {
           textAlign: TextAlign.center,
         ),
         centerTitle: true,
+        leading: InkWell(
+          child: Icon(Icons.arrow_back_rounded),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MyApp()),
+            );
+          },
+        ),
       ),
       body: Container(
         child: Center(
@@ -270,25 +296,8 @@ class _MysliderState extends State<Myslider> {
           ],
         )),
       ),
-      // ignore: prefer_const_constructors
-      bottomNavigationBar: GNav(
-          backgroundColor: Colors.green,
-          activeColor: Colors.white,
-          tabBackgroundColor: Color.fromARGB(255, 0, 0, 0),
-          tabs: const [
-            GButton(
-              icon: Icons.home_rounded,
-              text: 'Home',
-            ),
-            GButton(
-              icon: Icons.home_work_outlined,
-              text: 'Home',
-            ),
-            GButton(
-              icon: Icons.info_outline_rounded,
-              text: 'Info',
-            ),
-          ]),
     );
   }
 }
+
+enum _SelectedTab { home, favorite, search, person }

@@ -60,7 +60,14 @@ class _HomeState extends State<Home> {
                     left: pd, right: pd, top: pd - 10, bottom: pd - 10),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 89, 169, 212),
+                    color: Color.fromARGB(222, 84, 182, 151),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 10.0,
+                        spreadRadius: 0.1,
+                      ),
+                    ],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   height: 130,
@@ -126,7 +133,7 @@ class _HomeState extends State<Home> {
                               ),
                             ],
                             image: const DecorationImage(
-                                image: AssetImage('images/RHN2.jpg'),
+                                image: AssetImage('images/Redhat.png'),
                                 alignment: Alignment(0.3, 0),
                                 fit: BoxFit.fitHeight),
                             borderRadius: BorderRadius.circular(10),
@@ -295,545 +302,13 @@ class _HomeState extends State<Home> {
                               boxShadow: const [
                                 BoxShadow(
                                   color: Color.fromARGB(31, 0, 0, 0),
-                                  spreadRadius: 5.0,
-                                  blurRadius: 15,
-                                ),
-                              ],
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(
-                                  image: AssetImage('images/cisco1.png'),
-                                  fit: BoxFit.fill)),
-                        ),
-                      ),
-                      onTap: () {
-                        showDialog(
-                          context: (context),
-                          builder: (context) {
-                            return Center(
-                              child: Material(
-                                type: MaterialType.transparency,
-                                child: Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.5,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.8,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(20),
-                                        child: Image.asset(
-                                          'images/cisco2.jpg',
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      // SizedBox(
-                                      //   height: 10,
-                                      // ),
-                                      const Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 10, bottom: 0),
-                                        child: Text(
-                                          'Cisco',
-                                          style: TextStyle(
-                                              decoration:
-                                                  TextDecoration.underline,
-                                              color: Color.fromARGB(
-                                                  255, 17, 197, 229),
-                                              fontSize: 50,
-                                              fontWeight: FontWeight.w900,
-                                              fontFamily: 'Alkatra'),
-                                        ),
-                                      ),
-                                      const Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 10, right: 10),
-                                        child: Text(
-                                          'Cisco Systems, Inc., commonly known as Cisco, is an American-based multinational digital communications technology conglomerate corporation headquartered in San Jose, California. Cisco develops, manufactures, and sells networking hardware, software, telecommunications equipment and other high-technology services and products.',
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                            fontStyle: FontStyle.italic,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            );
-                          },
-                        );
-                      },
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    InkWell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
-                        child: Container(
-                          //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
-                          decoration: BoxDecoration(
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Color.fromARGB(31, 0, 0, 0),
-                                  spreadRadius: 5.0,
-                                  blurRadius: 15,
-                                ),
-                              ],
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(
-                                  image: AssetImage('images/RPA.png'))),
-                        ),
-                      ),
-                      onTap: () {
-                        showDialog(
-                          context: (context),
-                          builder: (context) {
-                            return Center(
-                              child: Material(
-                                type: MaterialType.transparency,
-                                child: Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.5,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.8,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(20),
-                                        child: Image.asset(
-                                          'images/AUTO.jpg',
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 50,
-                                      ),
-                                      const Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 10, bottom: 0),
-                                        child: Text(
-                                          'Automation',
-                                          style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 243, 108, 12),
-                                              fontSize: 30,
-                                              fontWeight: FontWeight.w900,
-                                              fontFamily: 'Alkatra'),
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      const Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 10, right: 10),
-                                        child: Text(
-                                          'Automation Anywhere was originally founded as Tethys Solutions, LLC[2] in San Jose, by Mihir Shukla, Neeti Mehta Shukla, Ankur Kothari and Rushabh Parmani. The company rebranded itself as Automation Anywhere, Inc. in 2010',
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                            fontStyle: FontStyle.italic,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            );
-                          },
-                        );
-                      },
-                    ),
-                    InkWell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
-                        child: Container(
-                          //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
-                          decoration: BoxDecoration(
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Color.fromARGB(31, 0, 0, 0),
-                                  spreadRadius: 5.0,
-                                  blurRadius: 15,
-                                ),
-                              ],
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(
-                                image: AssetImage('images/DevOps.jpg'),
-                                fit: BoxFit.fill,
-                              )),
-                        ),
-                      ),
-                      onTap: () {
-                        showDialog(
-                          context: (context),
-                          builder: (context) {
-                            return Center(
-                              child: Material(
-                                type: MaterialType.transparency,
-                                child: Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.5,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.8,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(20),
-                                        child: Image.asset(
-                                          'images/devop.jpeg',
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      const Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 10, bottom: 0),
-                                        child: Text(
-                                          'DevOps',
-                                          style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 200, 222, 101),
-                                              fontSize: 30,
-                                              fontWeight: FontWeight.w900,
-                                              fontFamily: 'Alkatra'),
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      const Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 10, right: 10),
-                                        child: Text(
-                                          'DevOps is a methodology in the software development and IT industry. Used as a set of practices and tools, DevOps integrates and automates the work of software development (Dev) and IT operations (Ops) as a means for improving and shortening the systems development life cycle.',
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                            fontStyle: FontStyle.italic,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            );
-                          },
-                        );
-                      },
-                    ),
-                    InkWell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
-                        child: Container(
-                          //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
-                          decoration: BoxDecoration(
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Color.fromARGB(31, 0, 0, 0),
                                   spreadRadius: 10.0,
                                   blurRadius: 10,
                                 ),
                               ],
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
-                                  image: AssetImage('images/fullstack.png'),
-                                  fit: BoxFit.cover)),
-                        ),
-                      ),
-                      onTap: () {
-                        showDialog(
-                          context: (context),
-                          builder: (context) {
-                            return Center(
-                              child: Material(
-                                type: MaterialType.transparency,
-                                child: Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.5,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.8,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(20),
-                                        child: Image.asset(
-                                          'images/full.png',
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      const Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 10, bottom: 0),
-                                        child: Text(
-                                          'Full Stack',
-                                          style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 24, 18, 95),
-                                              fontSize: 30,
-                                              fontWeight: FontWeight.w900,
-                                              fontFamily: 'Alkatra'),
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      const Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 10, right: 10),
-                                        child: Text(
-                                          'Full stack web Developers: Full stack web developers have the ability to design complete web applications and websites. They work on the frontend, backend, database and debugging of web applications or websites.',
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                            fontStyle: FontStyle.italic,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            );
-                          },
-                        );
-                      },
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    InkWell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
-                        child: Container(
-                          //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
-                          decoration: BoxDecoration(
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Color.fromARGB(31, 0, 0, 0),
-                                  spreadRadius: 10.0,
-                                  blurRadius: 10,
-                                ),
-                              ],
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(
-                                  image: AssetImage('images/CS.jpg'),
-                                  fit: BoxFit.cover)),
-                        ),
-                      ),
-                      onTap: () {
-                        showDialog(
-                          context: (context),
-                          builder: (context) {
-                            return Center(
-                              child: Material(
-                                type: MaterialType.transparency,
-                                child: Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.5,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.8,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(20),
-                                        child: Image.asset(
-                                          'images/CS2.jpg',
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      const Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 10, bottom: 0),
-                                        child: Text(
-                                          'Cyber Security',
-                                          style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 4, 29, 96),
-                                              fontSize: 30,
-                                              fontWeight: FontWeight.w900,
-                                              fontFamily: 'Alkatra'),
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      const Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 10, right: 10),
-                                        child: Text(
-                                          'Cyber security refers to every aspect of protecting an organization and its employees and assets against cyber threats. As cyberattacks become more common and sophisticated and corporate networks grow more complex, a variety of cyber security solutions are required to mitigate corporate cyber risk.',
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                            fontStyle: FontStyle.italic,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            );
-                          },
-                        );
-                      },
-                    ),
-                    InkWell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
-                        child: Container(
-                          //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
-                          decoration: BoxDecoration(
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Color.fromARGB(31, 0, 0, 0),
-                                  spreadRadius: 10.0,
-                                  blurRadius: 10,
-                                ),
-                              ],
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(
-                                  image: AssetImage('images/PG.jpg'),
-                                  fit: BoxFit.cover)),
-                        ),
-                      ),
-                      onTap: () {
-                        showDialog(
-                          context: (context),
-                          builder: (context) {
-                            return Center(
-                              child: Material(
-                                type: MaterialType.transparency,
-                                child: Container(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.5,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.8,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: <Widget>[
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(20),
-                                        child: Image.asset(
-                                          'images/PG2.png',
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 10, bottom: 0),
-                                        child: Text(
-                                          'PEGA',
-                                          style: TextStyle(
-                                              color: Colors.teal[500],
-                                              fontSize: 30,
-                                              fontWeight: FontWeight.w900,
-                                              fontFamily: 'Alkatra'),
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 10,
-                                      ),
-                                      const Padding(
-                                        padding: EdgeInsets.only(
-                                            left: 10, right: 10),
-                                        child: Text(
-                                          'Pegasystems Inc. is an American software company based in Cambridge, Massachusetts.[4] Founded in 1983, Pegasystems develops software for customer relationship management (CRM) and business process management (BPM).[5][6] The company has been publicly traded since 1996 as PEGA (NASDAQ).',
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w500,
-                                            fontStyle: FontStyle.italic,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            );
-                          },
-                        );
-                      },
-                    ),
-                    InkWell(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
-                        child: Container(
-                          //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
-                          decoration: BoxDecoration(
-                              boxShadow: const [
-                                BoxShadow(
-                                  color: Color.fromARGB(31, 0, 0, 0),
-                                  spreadRadius: 10.0,
-                                  blurRadius: 10,
-                                ),
-                              ],
-                              borderRadius: BorderRadius.circular(10),
-                              image: const DecorationImage(
-                                  image: AssetImage('images/OA.png'),
+                                  image: AssetImage('images/oracle.png'),
                                   fit: BoxFit.cover)),
                         ),
                       ),
@@ -1006,13 +481,545 @@ class _HomeState extends State<Home> {
                               boxShadow: const [
                                 BoxShadow(
                                   color: Color.fromARGB(31, 0, 0, 0),
+                                  spreadRadius: 5.0,
+                                  blurRadius: 15,
+                                ),
+                              ],
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(
+                                image: AssetImage('images/devo.png'),
+                                fit: BoxFit.fill,
+                              )),
+                        ),
+                      ),
+                      onTap: () {
+                        showDialog(
+                          context: (context),
+                          builder: (context) {
+                            return Center(
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Container(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.5,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.8,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.asset(
+                                          'images/devop.jpeg',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, bottom: 0),
+                                        child: Text(
+                                          'DevOps',
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 200, 222, 101),
+                                              fontSize: 30,
+                                              fontWeight: FontWeight.w900,
+                                              fontFamily: 'Alkatra'),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, right: 10),
+                                        child: Text(
+                                          'DevOps is a methodology in the software development and IT industry. Used as a set of practices and tools, DevOps integrates and automates the work of software development (Dev) and IT operations (Ops) as a means for improving and shortening the systems development life cycle.',
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            fontStyle: FontStyle.italic,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                    InkWell(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        child: Container(
+                          //child: Text('$wi'),
+                          height: 100,
+                          width: MediaQuery.of(context).size.width * 0.2431,
+                          decoration: BoxDecoration(
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color.fromARGB(31, 0, 0, 0),
+                                  spreadRadius: 5.0,
+                                  blurRadius: 15,
+                                ),
+                              ],
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(
+                                  image: AssetImage('images/CISCO.png'),
+                                  fit: BoxFit.fill)),
+                        ),
+                      ),
+                      onTap: () {
+                        showDialog(
+                          context: (context),
+                          builder: (context) {
+                            return Center(
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Container(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.5,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.8,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.asset(
+                                          'images/cisco2.jpg',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                      // SizedBox(
+                                      //   height: 10,
+                                      // ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, bottom: 0),
+                                        child: Text(
+                                          'Cisco',
+                                          style: TextStyle(
+                                              decoration:
+                                                  TextDecoration.underline,
+                                              color: Color.fromARGB(
+                                                  255, 17, 197, 229),
+                                              fontSize: 50,
+                                              fontWeight: FontWeight.w900,
+                                              fontFamily: 'Alkatra'),
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, right: 10),
+                                        child: Text(
+                                          'Cisco Systems, Inc., commonly known as Cisco, is an American-based multinational digital communications technology conglomerate corporation headquartered in San Jose, California. Cisco develops, manufactures, and sells networking hardware, software, telecommunications equipment and other high-technology services and products.',
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            fontStyle: FontStyle.italic,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    InkWell(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        child: Container(
+                          //child: Text('$wi'),
+                          height: 100,
+                          width: MediaQuery.of(context).size.width * 0.2431,
+                          decoration: BoxDecoration(
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color.fromARGB(31, 0, 0, 0),
                                   spreadRadius: 10.0,
                                   blurRadius: 10,
                                 ),
                               ],
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
-                                  image: AssetImage('images/IOT.jpg'),
+                                  image: AssetImage('images/cyber.png'),
+                                  fit: BoxFit.cover)),
+                        ),
+                      ),
+                      onTap: () {
+                        showDialog(
+                          context: (context),
+                          builder: (context) {
+                            return Center(
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Container(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.5,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.8,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.asset(
+                                          'images/CS2.jpg',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, bottom: 0),
+                                        child: Text(
+                                          'Cyber Security',
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 4, 29, 96),
+                                              fontSize: 30,
+                                              fontWeight: FontWeight.w900,
+                                              fontFamily: 'Alkatra'),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, right: 10),
+                                        child: Text(
+                                          'Cyber security refers to every aspect of protecting an organization and its employees and assets against cyber threats. As cyberattacks become more common and sophisticated and corporate networks grow more complex, a variety of cyber security solutions are required to mitigate corporate cyber risk.',
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            fontStyle: FontStyle.italic,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                    InkWell(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        child: Container(
+                          //child: Text('$wi'),
+                          height: 100,
+                          width: MediaQuery.of(context).size.width * 0.2431,
+                          decoration: BoxDecoration(
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color.fromARGB(31, 0, 0, 0),
+                                  spreadRadius: 10.0,
+                                  blurRadius: 10,
+                                ),
+                              ],
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(
+                                  image: AssetImage('images/PG.jpg'),
+                                  fit: BoxFit.cover)),
+                        ),
+                      ),
+                      onTap: () {
+                        showDialog(
+                          context: (context),
+                          builder: (context) {
+                            return Center(
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Container(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.5,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.8,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.asset(
+                                          'images/PG2.png',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 10, bottom: 0),
+                                        child: Text(
+                                          'PEGA',
+                                          style: TextStyle(
+                                              color: Colors.teal[500],
+                                              fontSize: 30,
+                                              fontWeight: FontWeight.w900,
+                                              fontFamily: 'Alkatra'),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, right: 10),
+                                        child: Text(
+                                          'Pegasystems Inc. is an American software company based in Cambridge, Massachusetts.[4] Founded in 1983, Pegasystems develops software for customer relationship management (CRM) and business process management (BPM).[5][6] The company has been publicly traded since 1996 as PEGA (NASDAQ).',
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            fontStyle: FontStyle.italic,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                    InkWell(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        child: Container(
+                          //child: Text('$wi'),
+                          height: 100,
+                          width: MediaQuery.of(context).size.width * 0.2431,
+                          decoration: BoxDecoration(
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color.fromARGB(31, 0, 0, 0),
+                                  spreadRadius: 10.0,
+                                  blurRadius: 10,
+                                ),
+                              ],
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(
+                                  image: AssetImage('images/Full stack.png'),
+                                  fit: BoxFit.cover)),
+                        ),
+                      ),
+                      onTap: () {
+                        showDialog(
+                          context: (context),
+                          builder: (context) {
+                            return Center(
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Container(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.5,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.8,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.asset(
+                                          'images/full.png',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, bottom: 0),
+                                        child: Text(
+                                          'Full Stack',
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 24, 18, 95),
+                                              fontSize: 30,
+                                              fontWeight: FontWeight.w900,
+                                              fontFamily: 'Alkatra'),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, right: 10),
+                                        child: Text(
+                                          'Full stack web Developers: Full stack web developers have the ability to design complete web applications and websites. They work on the frontend, backend, database and debugging of web applications or websites.',
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            fontStyle: FontStyle.italic,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    InkWell(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        child: Container(
+                          //child: Text('$wi'),
+                          height: 100,
+                          width: MediaQuery.of(context).size.width * 0.2431,
+                          decoration: BoxDecoration(
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color.fromARGB(31, 0, 0, 0),
+                                  spreadRadius: 5.0,
+                                  blurRadius: 15,
+                                ),
+                              ],
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(
+                                  image: AssetImage('images/RPA.jpg'))),
+                        ),
+                      ),
+                      onTap: () {
+                        showDialog(
+                          context: (context),
+                          builder: (context) {
+                            return Center(
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Container(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.5,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.8,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.asset(
+                                          'images/AUTO.jpg',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 50,
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, bottom: 0),
+                                        child: Text(
+                                          'Automation',
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 243, 108, 12),
+                                              fontSize: 30,
+                                              fontWeight: FontWeight.w900,
+                                              fontFamily: 'Alkatra'),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, right: 10),
+                                        child: Text(
+                                          'Automation Anywhere was originally founded as Tethys Solutions, LLC[2] in San Jose, by Mihir Shukla, Neeti Mehta Shukla, Ankur Kothari and Rushabh Parmani. The company rebranded itself as Automation Anywhere, Inc. in 2010',
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            fontStyle: FontStyle.italic,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                    InkWell(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        child: Container(
+                          //child: Text('$wi'),
+                          height: 100,
+                          width: MediaQuery.of(context).size.width * 0.2431,
+                          decoration: BoxDecoration(
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color.fromARGB(31, 0, 0, 0),
+                                  spreadRadius: 10.0,
+                                  blurRadius: 10,
+                                ),
+                              ],
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(
+                                  image: AssetImage('images/IOT.png'),
                                   fit: BoxFit.cover)),
                         ),
                       ),
@@ -1097,7 +1104,7 @@ class _HomeState extends State<Home> {
                               ],
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
-                                  image: AssetImage('images/ML.jpg'),
+                                  image: AssetImage('images/AI ML.png'),
                                   fit: BoxFit.cover)),
                         ),
                       ),
@@ -1191,7 +1198,7 @@ class _HomeState extends State<Home> {
                               ],
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
-                                  image: AssetImage('images/ARVR.jpg'),
+                                  image: AssetImage('images/AR VR.png'),
                                   fit: BoxFit.cover)),
                         ),
                       ),
@@ -1276,7 +1283,7 @@ class _HomeState extends State<Home> {
                               ],
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
-                                  image: AssetImage('images/3D.jpg'),
+                                  image: AssetImage('images/3D Modeling.png'),
                                   fit: BoxFit.cover)),
                         ),
                       ),
@@ -1361,7 +1368,272 @@ class _HomeState extends State<Home> {
                               ],
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
-                                  image: AssetImage('images/COD2.png'),
+                                  image: AssetImage('images/Coding.png'),
+                                  fit: BoxFit.cover)),
+                        ),
+                      ),
+                      onTap: () {
+                        showDialog(
+                          context: (context),
+                          builder: (context) {
+                            return Center(
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Container(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.5,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.8,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.asset(
+                                          'images/COD2.png',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, bottom: 0),
+                                        child: Text(
+                                          'Coding',
+                                          style: TextStyle(
+                                              color:
+                                                  Color.fromARGB(255, 2, 7, 74),
+                                              fontSize: 30,
+                                              fontWeight: FontWeight.w900,
+                                              fontFamily: 'Alkatra'),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, right: 10),
+                                        child: Text(
+                                          'The Internet of Things (IoT) describes the network of physical objects—“things”—that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the internet.',
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            fontStyle: FontStyle.italic,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 15, bottom: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    InkWell(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        child: Container(
+                          //child: Text('$wi'),
+                          height: 100,
+                          width: MediaQuery.of(context).size.width * 0.2431,
+                          decoration: BoxDecoration(
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color.fromARGB(31, 0, 0, 0),
+                                  spreadRadius: 10.0,
+                                  blurRadius: 10,
+                                ),
+                              ],
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(
+                                  image: AssetImage('images/Placements.png'),
+                                  fit: BoxFit.cover)),
+                        ),
+                      ),
+                      onTap: () {
+                        showDialog(
+                          context: (context),
+                          builder: (context) {
+                            return Center(
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Container(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.5,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.8,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.asset(
+                                          'images/IOT2.jpg',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, bottom: 0),
+                                        child: Text(
+                                          'AR & VR',
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 180, 35, 165),
+                                              fontSize: 30,
+                                              fontWeight: FontWeight.w900,
+                                              fontFamily: 'Alkatra'),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, right: 10),
+                                        child: Text(
+                                          'The Internet of Things (IoT) describes the network of physical objects—“things”—that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the internet.',
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            fontStyle: FontStyle.italic,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                    InkWell(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        child: Container(
+                          //child: Text('$wi'),
+                          height: 100,
+                          width: MediaQuery.of(context).size.width * 0.2431,
+                          decoration: BoxDecoration(
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color.fromARGB(31, 0, 0, 0),
+                                  spreadRadius: 10.0,
+                                  blurRadius: 10,
+                                ),
+                              ],
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(
+                                  image: AssetImage(
+                                      'images/Digital marketing.png'),
+                                  fit: BoxFit.cover)),
+                        ),
+                      ),
+                      onTap: () {
+                        showDialog(
+                          context: (context),
+                          builder: (context) {
+                            return Center(
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Container(
+                                  height:
+                                      MediaQuery.of(context).size.height * 0.5,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.8,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Image.asset(
+                                          'images/3D.jpg',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, bottom: 0),
+                                        child: Text(
+                                          '3D Printing',
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 228, 152, 0),
+                                              fontSize: 30,
+                                              fontWeight: FontWeight.w900,
+                                              fontFamily: 'Alkatra'),
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            left: 10, right: 10),
+                                        child: Text(
+                                          'The Internet of Things (IoT) describes the network of physical objects—“things”—that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the internet.',
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            fontStyle: FontStyle.italic,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
+                    ),
+                    InkWell(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        child: Container(
+                          //child: Text('$wi'),
+                          height: 100,
+                          width: MediaQuery.of(context).size.width * 0.2431,
+                          decoration: BoxDecoration(
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color.fromARGB(31, 0, 0, 0),
+                                  spreadRadius: 10.0,
+                                  blurRadius: 10,
+                                ),
+                              ],
+                              borderRadius: BorderRadius.circular(10),
+                              image: const DecorationImage(
+                                  image: AssetImage('images/Drone.png'),
                                   fit: BoxFit.cover)),
                         ),
                       ),
