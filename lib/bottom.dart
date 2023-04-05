@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:thub/Info.dart';
+import 'package:thub/Tinfo.dart';
 import 'package:thub/coding.dart';
 import 'package:thub/slider.dart';
 import 'package:thub/page1.dart';
@@ -16,7 +18,7 @@ class _GoneState extends State<Gone> {
   List pages = [
     const Myslider(),
     const Events(),
-    const code(),
+    const Tinfo(),
   ];
 
   void onTap(int index) {

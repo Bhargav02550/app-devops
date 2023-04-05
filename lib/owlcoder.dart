@@ -42,8 +42,7 @@ class _Home2State extends State<Home2> {
       ),
       body: ListView(children: [
         Padding(
-          padding: EdgeInsets.only(
-              left: pd, right: pd, top: pd - 5, bottom: pd - 10),
+          padding: EdgeInsets.only(right: pd, top: pd - 5, bottom: pd - 10),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: FlickVideoPlayer(flickManager: flickManager),
@@ -697,6 +696,18 @@ class _Home2State extends State<Home2> {
             height: 100,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(70),
+              gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                stops: [
+                  0.5,
+                  0.9,
+                ],
+                colors: [
+                  Colors.pinkAccent,
+                  Colors.black,
+                ],
+              ),
               boxShadow: [
                 BoxShadow(
                   color: Colors.purpleAccent,
@@ -714,11 +725,11 @@ class _Home2State extends State<Home2> {
                     )),
                 SizedBox(width: MediaQuery.of(context).size.width / 8),
                 Text(
-                  "   Owl Coder Badge1 \n Completed By 270 Owls",
+                  "   Owl Coder Badge 1 \n Completed By 270 Owls",
                   style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
-                      color: Colors.black),
+                      color: Color.fromARGB(255, 255, 255, 255)),
                 ),
               ],
             ),
@@ -729,6 +740,18 @@ class _Home2State extends State<Home2> {
           child: Container(
             height: 100,
             decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                stops: [
+                  0.5,
+                  0.9,
+                ],
+                colors: [
+                  Colors.purple,
+                  Colors.black,
+                ],
+              ),
               borderRadius: BorderRadius.circular(70),
               boxShadow: [
                 BoxShadow(
@@ -747,11 +770,11 @@ class _Home2State extends State<Home2> {
                     )),
                 SizedBox(width: MediaQuery.of(context).size.width / 8),
                 Text(
-                  "   Owl Coder Badge1 \n Completed By 270 Owls",
+                  "   Owl Coder Badge 2 \n Completed By 170 Owls",
                   style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
-                      color: Colors.black),
+                      color: Color.fromARGB(255, 255, 255, 255)),
                 ),
               ],
             ),
@@ -762,6 +785,18 @@ class _Home2State extends State<Home2> {
           child: Container(
             height: 100,
             decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                stops: [
+                  0.5,
+                  0.9,
+                ],
+                colors: [
+                  Colors.teal,
+                  Colors.black,
+                ],
+              ),
               borderRadius: BorderRadius.circular(70),
               boxShadow: [
                 BoxShadow(
@@ -780,11 +815,11 @@ class _Home2State extends State<Home2> {
                     )),
                 SizedBox(width: MediaQuery.of(context).size.width / 8),
                 Text(
-                  "   Owl Coder Badge1 \n Completed By 270 Owls",
+                  "   Owl Coder Badge 3 \n Completed By 80 Owls",
                   style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
-                      color: Colors.black),
+                      color: Color.fromARGB(255, 255, 255, 255)),
                 ),
               ],
             ),
@@ -795,6 +830,18 @@ class _Home2State extends State<Home2> {
           child: Container(
             height: 100,
             decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                stops: [
+                  0.5,
+                  0.9,
+                ],
+                colors: [
+                  Colors.blueGrey,
+                  Colors.black,
+                ],
+              ),
               borderRadius: BorderRadius.circular(70),
               boxShadow: [
                 BoxShadow(
@@ -814,11 +861,11 @@ class _Home2State extends State<Home2> {
                 ),
                 SizedBox(width: MediaQuery.of(context).size.width / 8),
                 Text(
-                  "   Owl Coder Badge1 \n Completed By 270 Owls",
+                  "   Owl Coder Badge 4 \n Completed By 36 Owls",
                   style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
-                      color: Colors.black),
+                      color: Color.fromARGB(255, 255, 255, 255)),
                 ),
               ],
             ),

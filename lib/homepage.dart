@@ -34,9 +34,10 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.teal,
         elevation: 0,
         centerTitle: true,
-        title: Text('T - CONNECT'),
+        title: const Text('T - CONNECT'),
       ),
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: ListView(
@@ -60,8 +61,8 @@ class _HomeState extends State<Home> {
                     left: pd, right: pd, top: pd - 10, bottom: pd - 10),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(222, 84, 182, 151),
-                    boxShadow: [
+                    color: Colors.teal,
+                    boxShadow: const [
                       BoxShadow(
                         color: Colors.grey,
                         blurRadius: 10.0,
@@ -113,7 +114,7 @@ class _HomeState extends State<Home> {
                   children: [
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 15, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
                           // child: Image.asset(
@@ -121,8 +122,8 @@ class _HomeState extends State<Home> {
                           //   fit: BoxFit.contain,
                           //   colorBlendMode: BlendMode.xor,
                           // ),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                             //shape: BoxShape.circle,
                             boxShadow: const [
@@ -133,8 +134,7 @@ class _HomeState extends State<Home> {
                               ),
                             ],
                             image: const DecorationImage(
-                                image: AssetImage('images/Redhat.png'),
-                                alignment: Alignment(0.3, 0),
+                                image: AssetImage('images/red2.png'),
                                 fit: BoxFit.fitHeight),
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -149,7 +149,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -163,7 +163,7 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/RHN1.jpeg',
+                                          'images/REDHAT.png',
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -205,22 +205,23 @@ class _HomeState extends State<Home> {
                     ),
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
                                   color: Color.fromARGB(31, 0, 0, 0),
-                                  spreadRadius: 5.0,
-                                  blurRadius: 15,
+                                  spreadRadius: 10.0,
+                                  blurRadius: 10,
                                 ),
                               ],
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
-                                  image: AssetImage('images/codemind.png'))),
+                                  image: AssetImage('images/codemind.png'),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -232,7 +233,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -246,12 +247,9 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/CO.png',
+                                          'images/Codem.png',
                                           fit: BoxFit.fill,
                                         ),
-                                      ),
-                                      const SizedBox(
-                                        height: 50,
                                       ),
                                       const Padding(
                                         padding: EdgeInsets.only(
@@ -259,9 +257,7 @@ class _HomeState extends State<Home> {
                                         child: Text(
                                           'Codemind',
                                           style: TextStyle(
-                                              decoration:
-                                                  TextDecoration.underline,
-                                              color: Colors.pinkAccent,
+                                              color: Colors.teal,
                                               fontSize: 30,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
@@ -293,11 +289,11 @@ class _HomeState extends State<Home> {
                     ),
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -309,7 +305,7 @@ class _HomeState extends State<Home> {
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
                                   image: AssetImage('images/oracle.png'),
-                                  fit: BoxFit.cover)),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -321,7 +317,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -335,7 +331,7 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/OA2.jpg',
+                                          'images/OracleAca.png',
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -345,8 +341,7 @@ class _HomeState extends State<Home> {
                                         child: Text(
                                           'Oracle',
                                           style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 204, 62, 6),
+                                              color: Colors.teal,
                                               fontSize: 30,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
@@ -387,11 +382,11 @@ class _HomeState extends State<Home> {
                   children: [
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -403,7 +398,7 @@ class _HomeState extends State<Home> {
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
                                   image: AssetImage('images/SF2.jpg'),
-                                  fit: BoxFit.cover)),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -415,7 +410,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -429,7 +424,7 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/SF3.jpg',
+                                          'images/Sales.png',
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -439,8 +434,7 @@ class _HomeState extends State<Home> {
                                         child: Text(
                                           'Salseforce',
                                           style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 14, 185, 232),
+                                              color: Colors.teal,
                                               fontSize: 30,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
@@ -472,11 +466,11 @@ class _HomeState extends State<Home> {
                     ),
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -488,7 +482,7 @@ class _HomeState extends State<Home> {
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
                                 image: AssetImage('images/devo.png'),
-                                fit: BoxFit.fill,
+                                fit: BoxFit.fitHeight,
                               )),
                         ),
                       ),
@@ -501,7 +495,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -515,7 +509,7 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/devop.jpeg',
+                                          'images/DEVOP.png',
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -525,8 +519,7 @@ class _HomeState extends State<Home> {
                                         child: Text(
                                           'DevOps',
                                           style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 200, 222, 101),
+                                              color: Colors.teal,
                                               fontSize: 30,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
@@ -558,11 +551,11 @@ class _HomeState extends State<Home> {
                     ),
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -573,8 +566,8 @@ class _HomeState extends State<Home> {
                               ],
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
-                                  image: AssetImage('images/CISCO.png'),
-                                  fit: BoxFit.fill)),
+                                  image: AssetImage('images/cis.png'),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -586,7 +579,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -600,7 +593,7 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/cisco2.jpg',
+                                          'images/CISCO.png',
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -613,10 +606,7 @@ class _HomeState extends State<Home> {
                                         child: Text(
                                           'Cisco',
                                           style: TextStyle(
-                                              decoration:
-                                                  TextDecoration.underline,
-                                              color: Color.fromARGB(
-                                                  255, 17, 197, 229),
+                                              color: Colors.teal,
                                               fontSize: 50,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
@@ -654,11 +644,11 @@ class _HomeState extends State<Home> {
                   children: [
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -670,7 +660,7 @@ class _HomeState extends State<Home> {
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
                                   image: AssetImage('images/cyber.png'),
-                                  fit: BoxFit.cover)),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -682,7 +672,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -696,7 +686,7 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/CS2.jpg',
+                                          'images/Cybersec.png',
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -706,8 +696,7 @@ class _HomeState extends State<Home> {
                                         child: Text(
                                           'Cyber Security',
                                           style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 4, 29, 96),
+                                              color: Colors.teal,
                                               fontSize: 30,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
@@ -739,11 +728,11 @@ class _HomeState extends State<Home> {
                     ),
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -755,7 +744,7 @@ class _HomeState extends State<Home> {
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
                                   image: AssetImage('images/PG.jpg'),
-                                  fit: BoxFit.cover)),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -767,7 +756,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -781,7 +770,7 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/PG2.png',
+                                          'images/pega.png',
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -823,11 +812,11 @@ class _HomeState extends State<Home> {
                     ),
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -839,7 +828,7 @@ class _HomeState extends State<Home> {
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
                                   image: AssetImage('images/Full stack.png'),
-                                  fit: BoxFit.cover)),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -851,7 +840,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -865,7 +854,7 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/full.png',
+                                          'images/FILL.png',
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -875,8 +864,7 @@ class _HomeState extends State<Home> {
                                         child: Text(
                                           'Full Stack',
                                           style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 24, 18, 95),
+                                              color: Colors.teal,
                                               fontSize: 30,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
@@ -917,11 +905,11 @@ class _HomeState extends State<Home> {
                   children: [
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -932,7 +920,8 @@ class _HomeState extends State<Home> {
                               ],
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
-                                  image: AssetImage('images/RPA.jpg'))),
+                                  image: AssetImage('images/RPA.jpg'),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -944,7 +933,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -958,12 +947,9 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/AUTO.jpg',
+                                          'images/auto.png',
                                           fit: BoxFit.fill,
                                         ),
-                                      ),
-                                      const SizedBox(
-                                        height: 50,
                                       ),
                                       const Padding(
                                         padding: EdgeInsets.only(
@@ -971,8 +957,7 @@ class _HomeState extends State<Home> {
                                         child: Text(
                                           'Automation',
                                           style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 243, 108, 12),
+                                              color: Colors.teal,
                                               fontSize: 30,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
@@ -1004,11 +989,11 @@ class _HomeState extends State<Home> {
                     ),
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -1020,7 +1005,7 @@ class _HomeState extends State<Home> {
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
                                   image: AssetImage('images/IOT.png'),
-                                  fit: BoxFit.cover)),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -1032,7 +1017,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -1046,7 +1031,7 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/IOT2.jpg',
+                                          'images/Internet.png',
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -1056,8 +1041,7 @@ class _HomeState extends State<Home> {
                                         child: Text(
                                           'IOT - Internet Of Things',
                                           style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 24, 119, 11),
+                                              color: Colors.teal,
                                               fontSize: 30,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
@@ -1089,11 +1073,11 @@ class _HomeState extends State<Home> {
                     ),
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -1105,7 +1089,7 @@ class _HomeState extends State<Home> {
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
                                   image: AssetImage('images/AI ML.png'),
-                                  fit: BoxFit.cover)),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -1117,7 +1101,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -1131,7 +1115,7 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/ML2.jpg',
+                                          'images/AI-ML.png',
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -1141,8 +1125,7 @@ class _HomeState extends State<Home> {
                                         child: Text(
                                           'Machine Learning',
                                           style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 110, 147, 163),
+                                              color: Colors.teal,
                                               fontSize: 30,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
@@ -1183,11 +1166,11 @@ class _HomeState extends State<Home> {
                   children: [
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -1199,7 +1182,7 @@ class _HomeState extends State<Home> {
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
                                   image: AssetImage('images/AR VR.png'),
-                                  fit: BoxFit.cover)),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -1211,7 +1194,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -1225,7 +1208,7 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/IOT2.jpg',
+                                          'images/gaming.png',
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -1235,8 +1218,7 @@ class _HomeState extends State<Home> {
                                         child: Text(
                                           'AR & VR',
                                           style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 180, 35, 165),
+                                              color: Colors.teal,
                                               fontSize: 30,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
@@ -1268,11 +1250,11 @@ class _HomeState extends State<Home> {
                     ),
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -1284,7 +1266,7 @@ class _HomeState extends State<Home> {
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
                                   image: AssetImage('images/3D Modeling.png'),
-                                  fit: BoxFit.cover)),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -1296,7 +1278,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -1353,11 +1335,11 @@ class _HomeState extends State<Home> {
                     ),
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -1369,7 +1351,7 @@ class _HomeState extends State<Home> {
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
                                   image: AssetImage('images/Coding.png'),
-                                  fit: BoxFit.cover)),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -1381,7 +1363,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -1395,7 +1377,7 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/COD2.png',
+                                          'images/Codei.png',
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -1405,8 +1387,7 @@ class _HomeState extends State<Home> {
                                         child: Text(
                                           'Coding',
                                           style: TextStyle(
-                                              color:
-                                                  Color.fromARGB(255, 2, 7, 74),
+                                              color: Colors.teal,
                                               fontSize: 30,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
@@ -1447,11 +1428,11 @@ class _HomeState extends State<Home> {
                   children: [
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -1463,7 +1444,7 @@ class _HomeState extends State<Home> {
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
                                   image: AssetImage('images/Placements.png'),
-                                  fit: BoxFit.cover)),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -1475,7 +1456,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -1489,7 +1470,7 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/IOT2.jpg',
+                                          'images/Placement.png',
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -1497,10 +1478,9 @@ class _HomeState extends State<Home> {
                                         padding: EdgeInsets.only(
                                             left: 10, bottom: 0),
                                         child: Text(
-                                          'AR & VR',
+                                          'Placements',
                                           style: TextStyle(
-                                              color: Color.fromARGB(
-                                                  255, 180, 35, 165),
+                                              color: Colors.teal,
                                               fontSize: 30,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
@@ -1532,11 +1512,11 @@ class _HomeState extends State<Home> {
                     ),
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -1549,7 +1529,7 @@ class _HomeState extends State<Home> {
                               image: const DecorationImage(
                                   image: AssetImage(
                                       'images/Digital marketing.png'),
-                                  fit: BoxFit.cover)),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -1561,7 +1541,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -1618,11 +1598,11 @@ class _HomeState extends State<Home> {
                     ),
                     InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 11, right: 15),
+                        padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Container(
                           //child: Text('$wi'),
-                          height: 100,
-                          width: MediaQuery.of(context).size.width * 0.2431,
+                          height: hi * 0.13,
+                          width: wi * 0.27,
                           decoration: BoxDecoration(
                               boxShadow: const [
                                 BoxShadow(
@@ -1634,7 +1614,7 @@ class _HomeState extends State<Home> {
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
                                   image: AssetImage('images/Drone.png'),
-                                  fit: BoxFit.cover)),
+                                  fit: BoxFit.fitHeight)),
                         ),
                       ),
                       onTap: () {
@@ -1646,7 +1626,7 @@ class _HomeState extends State<Home> {
                                 type: MaterialType.transparency,
                                 child: Container(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.5,
+                                      MediaQuery.of(context).size.height * 0.7,
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   decoration: BoxDecoration(
@@ -1660,7 +1640,7 @@ class _HomeState extends State<Home> {
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(20),
                                         child: Image.asset(
-                                          'images/COD2.png',
+                                          'images/Drones.png',
                                           fit: BoxFit.fill,
                                         ),
                                       ),
@@ -1668,10 +1648,9 @@ class _HomeState extends State<Home> {
                                         padding: EdgeInsets.only(
                                             left: 10, bottom: 0),
                                         child: Text(
-                                          'Coding',
+                                          'Drones',
                                           style: TextStyle(
-                                              color:
-                                                  Color.fromARGB(255, 2, 7, 74),
+                                              color: Colors.teal,
                                               fontSize: 30,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
