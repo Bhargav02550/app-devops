@@ -55,6 +55,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
     _color = ColorTween(begin: Colors.green, end: Colors.yellow)
         .animate(_controller);
+
   }
 
   @override
