@@ -17,7 +17,7 @@ class _MpageState extends State<Mpage> {
   void initState() {
     super.initState();
     flickManager = FlickManager(
-        videoPlayerController: VideoPlayerController.asset('assets/cm.mp4'));
+        videoPlayerController: VideoPlayerController.asset('images/COV.mp4'));
   }
 
   @override
@@ -40,30 +40,35 @@ class _MpageState extends State<Mpage> {
     double lobaru = lowid / 2 - /*(lowid/25.46296296296249)*/ 10;
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-            child: Text(
-          "Codemind",
-          style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
-        )),
-        backgroundColor: Colors.pink[400],
-      ),
+          backgroundColor: Colors.pink[300],
+          centerTitle: true,
+          title: Text(
+            "Codemind",
+            style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
+          )),
       body: Center(
           child: ListView(
         children: [
-          Container(
-            padding: EdgeInsets.all(20),
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
-            height: hig,
-            width: wid,
-            child: FlickVideoPlayer(
-              flickManager: flickManager,
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
+              child: FlickVideoPlayer(
+                flickManager: flickManager,
+              ),
             ),
           ),
           Container(
             child: Text(
-                "Code Mind is a platform that focuses on crafting a skilled individual. Our unique and interactive secenario based learning modules are designed to help a student look at a problem in a life like perspective. We stongly believe that every mind isn't alike, and therefore we give the student a chace to express their opinion rather than trying to abide by a generalized one. The platform also guides students on how they should proceed with their goals and helps them prepare for their dream job in a personalized way.",
-                style: TextStyle(color: Colors.black, fontSize: 16)),
+                "Code Mind is a platform that focuses on crafting a skilled individual. Our unique and interactive secenario based learning modules are designed to help a student look at a problem in a life like perspective. We stongly believe that every mind isn't alike, and therefore we give the student a chace to express their opinion rather than trying to abide by a generalized one.",
+                style: TextStyle(
+                  color: Colors.white,
+                )),
             padding: EdgeInsets.all(20),
+            margin: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                color: Colors.pink[300],
+                borderRadius: BorderRadius.circular(20)),
           ),
           Column(children: [
             Padding(
@@ -661,9 +666,9 @@ class _MpageState extends State<Mpage> {
                                                         blurRadius: 20,
                                                       ),
                                                     ],
-                                                    image: const DecorationImage(
+                                                    image: DecorationImage(
                                                         image: AssetImage(
-                                                            'images/IoT.png'),
+                                                            'images/IoTc.png'),
                                                         alignment:
                                                             Alignment(0.1, 0),
                                                         fit: BoxFit.fitHeight),
@@ -801,9 +806,9 @@ class _MpageState extends State<Mpage> {
                                                         blurRadius: 20,
                                                       ),
                                                     ],
-                                                    image: const DecorationImage(
+                                                    image: DecorationImage(
                                                         image: AssetImage(
-                                                            'images/devops.png'),
+                                                            'images/devopsc.png'),
                                                         alignment:
                                                             Alignment(0.1, 0),
                                                         fit: BoxFit.fitHeight),
@@ -1766,7 +1771,7 @@ class _MpageState extends State<Mpage> {
                                                       ],
                                                       image: const DecorationImage(
                                                           image: AssetImage(
-                                                              "images/IoT.png"),
+                                                              "images/IoTc.png"),
                                                           alignment:
                                                               Alignment(0.1, 0),
                                                           fit:
@@ -2751,7 +2756,7 @@ class _MpageState extends State<Mpage> {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(10),
                         child: Image.asset(
-                          'images/TC.png',
+                          'images/1000.png',
                           fit: BoxFit.fill,
                         ),
                       ),

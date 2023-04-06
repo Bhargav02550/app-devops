@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:thub/bottom.dart';
+import 'package:thub/bottomnav.dart';
 import 'package:thub/slider.dart';
 
 void main() {
@@ -55,7 +55,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
     _color = ColorTween(begin: Colors.green, end: Colors.yellow)
         .animate(_controller);
-
   }
 
   @override

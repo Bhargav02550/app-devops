@@ -1,6 +1,5 @@
 import 'package:appbar_animated/appbar_animated.dart';
 import 'package:flutter/material.dart';
-import 'package:thub/bottom.dart';
 import 'package:thub/slider.dart';
 
 class Info extends StatefulWidget {
