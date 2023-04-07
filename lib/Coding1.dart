@@ -1,8 +1,7 @@
-import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/material.dart';
+import 'package:flick_video_player/flick_video_player.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:video_player/video_player.dart';
-import 'package:carousel_pro/carousel_pro.dart';
 
 class Mpage extends StatefulWidget {
   const Mpage({Key? key}) : super(key: key);
@@ -42,7 +41,7 @@ class _MpageState extends State<Mpage> {
       appBar: AppBar(
           backgroundColor: Colors.pink[300],
           centerTitle: true,
-          title: Text(
+          title: const Text(
             "Codemind",
             style: TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
           )),
@@ -59,16 +58,16 @@ class _MpageState extends State<Mpage> {
             ),
           ),
           Container(
-            child: Text(
+            padding: const EdgeInsets.all(20),
+            margin: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                color: Colors.pink[300],
+                borderRadius: BorderRadius.circular(20)),
+            child: const Text(
                 "Code Mind is a platform that focuses on crafting a skilled individual. Our unique and interactive secenario based learning modules are designed to help a student look at a problem in a life like perspective. We stongly believe that every mind isn't alike, and therefore we give the student a chace to express their opinion rather than trying to abide by a generalized one.",
                 style: TextStyle(
                   color: Colors.white,
                 )),
-            padding: EdgeInsets.all(20),
-            margin: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-                color: Colors.pink[300],
-                borderRadius: BorderRadius.circular(20)),
           ),
           Column(children: [
             Padding(
@@ -115,39 +114,45 @@ class _MpageState extends State<Mpage> {
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(20),
                                 ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(20),
-                                      child: Image.asset(
-                                        'images/hand-coding-concept-illustration_114360-8113.jpg',
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 10, bottom: 0),
-                                      child: Text(
-                                        'Coding',
-                                        style: TextStyle(
-                                            color: Colors.deepPurple,
-                                            fontSize: 40,
-                                            fontWeight: FontWeight.w900,
-                                            fontFamily: 'Alkatra'),
-                                      ),
-                                    ),
-                                    const Padding(
-                                      padding:
-                                          EdgeInsets.only(left: 10, right: 10),
-                                      child: Text(
-                                        "Coding is the process of creating instructions in a programming language that a computer can understand and execute.\nOur distinctive approach to teaching is guaranteed to keep you entertained.",
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          fontStyle: FontStyle.italic,
+                                child: ListView(
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          child: Image.asset(
+                                            'images/hand-coding-concept-illustration_114360-8113.jpg',
+                                            fit: BoxFit.fill,
+                                          ),
                                         ),
-                                      ),
+                                        const Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 10, bottom: 0),
+                                          child: Text(
+                                            'Coding',
+                                            style: TextStyle(
+                                                color: Colors.deepPurple,
+                                                fontSize: 40,
+                                                fontWeight: FontWeight.w900,
+                                                fontFamily: 'Alkatra'),
+                                          ),
+                                        ),
+                                        const Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 10, right: 10),
+                                          child: Text(
+                                            "Coding is the process of creating instructions in a programming language that a computer can understand and execute.\nOur distinctive approach to teaching is guaranteed to keep you entertained.",
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w500,
+                                              fontStyle: FontStyle.italic,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 ),
@@ -197,39 +202,45 @@ class _MpageState extends State<Mpage> {
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(20),
                                 ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(20),
-                                      child: Image.asset(
-                                        'images/Apt.png',
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 10, bottom: 0),
-                                      child: Text(
-                                        'Aptitude',
-                                        style: TextStyle(
-                                            color: Colors.deepPurple,
-                                            fontSize: 40,
-                                            fontWeight: FontWeight.w900,
-                                            fontFamily: 'Alkatra'),
-                                      ),
-                                    ),
-                                    const Padding(
-                                      padding:
-                                          EdgeInsets.only(left: 10, right: 10),
-                                      child: Text(
-                                        "We have various topics to learn like Number Series, Coding & Decoding, Letter Series, and so goes the list.\nIn our platform you can take a competitor test or an experimenter test.",
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          fontStyle: FontStyle.italic,
+                                child: ListView(
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          child: Image.asset(
+                                            'images/Apt.png',
+                                            fit: BoxFit.fill,
+                                          ),
                                         ),
-                                      ),
+                                        const Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 10, bottom: 0),
+                                          child: Text(
+                                            'Aptitude',
+                                            style: TextStyle(
+                                                color: Colors.deepPurple,
+                                                fontSize: 40,
+                                                fontWeight: FontWeight.w900,
+                                                fontFamily: 'Alkatra'),
+                                          ),
+                                        ),
+                                        const Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 10, right: 10),
+                                          child: Text(
+                                            "We have various topics to learn like Number Series, Coding & Decoding, Letter Series, and so goes the list.\nIn our platform you can take a competitor test or an experimenter test.",
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w500,
+                                              fontStyle: FontStyle.italic,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 ),
@@ -243,7 +254,7 @@ class _MpageState extends State<Mpage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Padding(
@@ -291,39 +302,45 @@ class _MpageState extends State<Mpage> {
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(20),
                                 ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(20),
-                                      child: Image.asset(
-                                        'images/Untitled1.png',
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 10, bottom: 0),
-                                      child: Text(
-                                        'Reasoning',
-                                        style: TextStyle(
-                                            color: Colors.deepPurple,
-                                            fontSize: 40,
-                                            fontWeight: FontWeight.w900,
-                                            fontFamily: 'Alkatra'),
-                                      ),
-                                    ),
-                                    const Padding(
-                                      padding:
-                                          EdgeInsets.only(left: 10, right: 10),
-                                      child: Text(
-                                        "We have various topics to learn like Analogy, Blood Relations, and so goes the list.\nIn our platform you can take a competitor test or an experimenter test.",
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          fontStyle: FontStyle.italic,
+                                child: ListView(
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          child: Image.asset(
+                                            'images/Untitled1.png',
+                                            fit: BoxFit.fill,
+                                          ),
                                         ),
-                                      ),
+                                        const Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 10, bottom: 0),
+                                          child: Text(
+                                            'Reasoning',
+                                            style: TextStyle(
+                                                color: Colors.deepPurple,
+                                                fontSize: 40,
+                                                fontWeight: FontWeight.w900,
+                                                fontFamily: 'Alkatra'),
+                                          ),
+                                        ),
+                                        const Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 10, right: 10),
+                                          child: Text(
+                                            "We have various topics to learn like Analogy, Blood Relations, and so goes the list.\nIn our platform you can take a competitor test or an experimenter test.",
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w500,
+                                              fontStyle: FontStyle.italic,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 ),
@@ -373,39 +390,45 @@ class _MpageState extends State<Mpage> {
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(20),
                                 ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(20),
-                                      child: Image.asset(
-                                        'images/soso.png',
-                                        fit: BoxFit.fill,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 10, bottom: 0),
-                                      child: Text(
-                                        'Soft Skills',
-                                        style: TextStyle(
-                                            color: Colors.deepPurple,
-                                            fontSize: 40,
-                                            fontWeight: FontWeight.w900,
-                                            fontFamily: 'Alkatra'),
-                                      ),
-                                    ),
-                                    const Padding(
-                                      padding:
-                                          EdgeInsets.only(left: 10, right: 10),
-                                      child: Text(
-                                        "Put your learning skills to the test with out course aligned quizzes.\nYou can take test on various courses based on soft skills like Verbal Ability.",
-                                        style: TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          fontStyle: FontStyle.italic,
+                                child: ListView(
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          child: Image.asset(
+                                            'images/soso.png',
+                                            fit: BoxFit.fill,
+                                          ),
                                         ),
-                                      ),
+                                        const Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 10, bottom: 0),
+                                          child: Text(
+                                            'Soft Skills',
+                                            style: TextStyle(
+                                                color: Colors.deepPurple,
+                                                fontSize: 40,
+                                                fontWeight: FontWeight.w900,
+                                                fontFamily: 'Alkatra'),
+                                          ),
+                                        ),
+                                        const Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 10, right: 10),
+                                          child: Text(
+                                            "Put your learning skills to the test with out course aligned quizzes.\nYou can take test on various courses based on soft skills like Verbal Ability.",
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.w500,
+                                              fontStyle: FontStyle.italic,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 ),
@@ -419,7 +442,7 @@ class _MpageState extends State<Mpage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Padding(
@@ -477,8 +500,8 @@ class _MpageState extends State<Mpage> {
                                           fit: BoxFit.fill,
                                         ),
                                       ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
+                                      const Padding(
+                                        padding: EdgeInsets.only(
                                             left: 10, bottom: 0),
                                         child: Text(
                                           'Technologies',
@@ -489,7 +512,7 @@ class _MpageState extends State<Mpage> {
                                               fontFamily: 'Alkatra'),
                                         ),
                                       ),
-                                      Padding(
+                                      const Padding(
                                         padding: EdgeInsets.only(
                                             left: 10, right: 10),
                                         child: Text(
@@ -666,7 +689,7 @@ class _MpageState extends State<Mpage> {
                                                         blurRadius: 20,
                                                       ),
                                                     ],
-                                                    image: DecorationImage(
+                                                    image: const DecorationImage(
                                                         image: AssetImage(
                                                             'images/IoTc.png'),
                                                         alignment:
@@ -806,7 +829,7 @@ class _MpageState extends State<Mpage> {
                                                         blurRadius: 20,
                                                       ),
                                                     ],
-                                                    image: DecorationImage(
+                                                    image: const DecorationImage(
                                                         image: AssetImage(
                                                             'images/devopsc.png'),
                                                         alignment:
@@ -1053,8 +1076,8 @@ class _MpageState extends State<Mpage> {
                                             fit: BoxFit.fill,
                                           ),
                                         ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
+                                        const Padding(
+                                          padding: EdgeInsets.only(
                                               left: 10, bottom: 0),
                                           child: Text(
                                             'Courses',
@@ -2645,13 +2668,13 @@ class _MpageState extends State<Mpage> {
                 ],
               ),
             ),
-            Divider(
+            const Divider(
               thickness: 2,
             ),
             Container(
               width: wid,
-              padding: EdgeInsets.all(20),
-              margin: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(20),
+              margin: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
@@ -2660,108 +2683,105 @@ class _MpageState extends State<Mpage> {
                   )
                   //color: Colors.pinkAccent,
                   ),
-              child: Center(
+              child: const Center(
                   child: Text("Belts",
                       style:
                           TextStyle(color: Colors.pinkAccent, fontSize: 20))),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Container(
-              //padding: const EdgeInsets.all(12.0),
-              child: Center(
-                child: SizedBox(
-                  height: 250.0,
-                  width: 300,
-                  child: CarouselSlider(
-                    options: CarouselOptions(
-                      height: 200,
-                      reverse: false,
-                      autoPlay: true,
-                      autoPlayInterval: const Duration(seconds: 3),
-                      autoPlayAnimationDuration:
-                          const Duration(milliseconds: 800),
-                      autoPlayCurve: Curves.fastOutSlowIn,
-                      enlargeCenterPage: true,
-                      aspectRatio: 16 / 9,
-                      viewportFraction: 0.8,
-                      onPageChanged: null,
-                      scrollDirection: Axis.horizontal,
-                    ),
-                    items: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          'images/100.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          'images/200.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          'images/300.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          'images/400.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          'images/500.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          'images/600.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          'images/700.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          'images/800.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          'images/900.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          'images/1000.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ],
+            Center(
+              child: SizedBox(
+                height: 250.0,
+                width: 300,
+                child: CarouselSlider(
+                  options: CarouselOptions(
+                    height: 200,
+                    reverse: false,
+                    autoPlay: true,
+                    autoPlayInterval: const Duration(seconds: 3),
+                    autoPlayAnimationDuration:
+                        const Duration(milliseconds: 800),
+                    autoPlayCurve: Curves.fastOutSlowIn,
+                    enlargeCenterPage: true,
+                    aspectRatio: 16 / 9,
+                    viewportFraction: 0.8,
+                    onPageChanged: null,
+                    scrollDirection: Axis.horizontal,
                   ),
+                  items: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        'images/100.png',
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        'images/200.png',
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        'images/300.png',
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        'images/400.png',
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        'images/500.png',
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        'images/600.png',
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        'images/700.png',
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        'images/800.png',
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        'images/900.png',
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        'images/1000.png',
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

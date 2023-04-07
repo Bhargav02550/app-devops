@@ -90,14 +90,14 @@ class _HomeState extends State<Home> {
                           ),
                           Padding(
                             padding:
-                                EdgeInsets.only(left: 5, top: 5, bottom: 5),
+                                EdgeInsets.only(left: 5, top: 5, bottom: 10),
                             child: Text(
                               'T-Connect is a technical hub dedicated to providing students with up-to-date knowledge and skills in the field of new technologies. Its main goal is to bridge the gap between the rapidly evolving technological landscape and the knowledge base of students.Showing a brief note about those technologies by stalls. Some of the growing technologies are presnted below',
                               style: TextStyle(
                                 fontStyle: FontStyle.italic,
                                 //fontFamily: 'IP',
                                 //fontWeight: FontWeight,
-                                fontSize: 13,
+                                fontSize: 15,
                                 color: Colors.white,
                               ),
                             ),
@@ -607,7 +607,7 @@ class _HomeState extends State<Home> {
                                           'Cisco',
                                           style: TextStyle(
                                               color: Colors.teal,
-                                              fontSize: 50,
+                                              fontSize: 30,
                                               fontWeight: FontWeight.w900,
                                               fontFamily: 'Alkatra'),
                                         ),

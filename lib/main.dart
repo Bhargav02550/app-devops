@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:thub/bottomnav.dart';
-import 'package:thub/slider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,12 +21,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       builder: (context, child) {
         return MediaQuery(
-          child: child!,
           data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+          child: child!,
         );
       },
       title: 'T - HUB',
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
@@ -100,7 +99,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
-                    shape: const RoundedRectangleBorder(
+                    shape: const RoundedRectangleBorder( 
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(10),
                         bottomRight: Radius.circular(10),

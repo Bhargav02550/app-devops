@@ -44,7 +44,7 @@ class _KnowState extends State<Know> {
         backgroundColor: Colors.yellowAccent.shade700,
         elevation: 5,
         shadowColor: Colors.yellow,
-        title: Text(
+        title: const Text(
           "PROJECT SPACE",
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
@@ -62,64 +62,73 @@ class _KnowState extends State<Know> {
             ),
           ),
           const Divider(
-            thickness: 1,
+            thickness: 0.5,
             color: Colors.black,
           ),
-          Padding(
-            padding: EdgeInsets.all(10),
+          Container(
+            padding: const EdgeInsets.all(10),
             child: Container(
               decoration: BoxDecoration(
-                  color: Colors.white,
-                  boxShadow: [BoxShadow(color: Colors.grey, blurRadius: 15)],
+                  color: Colors.yellowAccent.shade700,
+                  boxShadow: const [
+                    BoxShadow(color: Colors.grey, blurRadius: 15)
+                  ],
                   borderRadius: BorderRadius.circular(30)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.all(wid / 20),
-                    child: Text(
+                  Container(
+                    padding:
+                        const EdgeInsets.only(top: 10, left: 10, right: 10),
+                    margin: const EdgeInsets.all(5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.yellowAccent.shade700,
+                    ),
+                    child: const Text(
                       "PROJECT SPACE",
-                      style: TextStyle(fontSize: 30, color: Colors.orange),
+                      style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(
-                        left: wid / 15, right: wid / 15, bottom: 10),
-                    child: Text(
-                      "Project space is a feature rich environment designed to encourage individuals to develop"
-                      " and showcase real-time problems and further find effective solutions that can help overcome them."
-                      " Every individual who chooses to utilize this space pockets themselves a chance that could possibly get them "
-                      "one step closer to their dream job.",
-                      style: TextStyle(color: Colors.green, fontSize: 16),
-                      textAlign: TextAlign.justify,
+                  Container(
+                    padding:
+                        const EdgeInsets.only(bottom: 10, left: 10, right: 10),
+                    margin: const EdgeInsets.all(05),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.yellowAccent.shade700,
                     ),
-                  ),
-                  SizedBox(
-                    height: hig / 25,
+                    child: const Text(
+                      "Project Space is a feature-rich environment designed to encourage individuals to develop and showcase real-time problems and further find effective solutions that can help overcome them. Every individual who chooses to utilize this space pockets themselves a chance that could possibly get them one step closer to their dream job.",
+                      style: TextStyle(color: Colors.white, fontSize: 16),
+                    ),
                   ),
                 ],
               ),
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: hig / 38,
-              left: 50,
-              right: 50,
-              bottom: hig / 12,
-            ),
-            child: Container(
-              height: 55,
-              width: 30,
-              decoration: BoxDecoration(
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            width: wid,
+            padding: const EdgeInsets.all(20),
+            margin: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
                   color: Colors.yellowAccent.shade700,
-                  borderRadius: BorderRadius.circular(35)),
-              child: Center(
-                  child: Text(
-                "TECHNOLOGIES",
-                style: TextStyle(color: Colors.white, fontSize: 25),
-              )),
-            ),
+                  width: 3,
+                )
+                //color: Colors.pinkAccent,
+                ),
+            child: Center(
+                child: Text("Technologies",
+                    style: TextStyle(
+                        color: Colors.yellowAccent.shade700, fontSize: 20))),
+          ),
+          const SizedBox(
+            height: 10,
           ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -183,24 +192,19 @@ class _KnowState extends State<Know> {
                                     child: Text(
                                       'AI & ML',
                                       style: TextStyle(
-                                          color: Colors.deepPurple.shade300,
-                                          fontSize: 40,
-                                          fontWeight: FontWeight.w900,
-                                          fontFamily: 'Alkatra'),
+                                        color: Colors.yellow.shade700,
+                                        fontSize: 40,
+                                      ),
                                     ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.only(
                                         left: wid / 23, right: wid / 23),
-                                    child: Text(
-                                      "Artificial intelligence (AI) is the ability of a computer program or a machine to think and learn.It is also a field of study which tries to make computers . They work on their own without being encoded with commands.\n"
-                                      "Machine learning (ML) is a field of artificial intelligence that allows systems to learn and improve from experience without being explicitly programmed. It has become an increasingly popular topic in recent years due to the many practical applications it has in a variety of industries. ",
+                                    child: const Text(
+                                      "Artificial intelligence (AI) is the ability of a computer program or a machine to think and learn. It is also a field of study which tries to make computers. They work on their own without being encoded with commands.\nMachine learning (ML) is a field of artificial intelligence that allows systems to learn and improve from experience without being explicitly programmed. It has become an increasingly popular topic in recent years due to the many practical applications it has in a variety of industries.",
                                       style: TextStyle(
                                         fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        fontStyle: FontStyle.italic,
                                       ),
-                                      textAlign: TextAlign.justify,
                                     ),
                                   ),
                                   Padding(
@@ -216,7 +220,7 @@ class _KnowState extends State<Know> {
                                           color: Colors.yellowAccent.shade700,
                                           borderRadius:
                                               BorderRadius.circular(30)),
-                                      child: Center(
+                                      child: const Center(
                                         child: Text(
                                           'PROJECTS',
                                           style: TextStyle(fontSize: 30),
@@ -245,19 +249,15 @@ class _KnowState extends State<Know> {
                                         style: TextStyle(
                                           fontSize: 15,
                                           fontWeight: FontWeight.w500,
-                                          fontStyle: FontStyle.italic,
                                         ),
                                         textAlign: TextAlign.start,
                                       ),
                                       children: <Widget>[
                                         ListTile(
                                           title: Text(
-                                            'Investors and traders use stock prediction as a tool to help inform their investment decisions and maximize their returns. However, it is important to conduct thorough research and analysis before making any investment decisions, and to always be aware of the potential risks involved in stock trading.\n\n'
-                                            'Tools used are Spyder,Jupyter,Vs code,Python Flask,Sublime\n\n',
+                                            "Investors and traders use stock prediction as a tool to help inform their investment decisions and maximize their returns. However, it is important to conduct thorough research and analysis before making any investment decisions and to always be aware of the potential risks involved in stock trading.\n\nTools used are Spyder, Jupyter,Vs code, Python Flask, Sublime\n\n",
                                             style: TextStyle(
                                               fontSize: 15,
-                                              fontWeight: FontWeight.w500,
-                                              fontStyle: FontStyle.italic,
                                             ),
                                           ),
                                           textColor: Colors.white,
@@ -265,7 +265,7 @@ class _KnowState extends State<Know> {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 15,
                                   ),
                                   Padding(
@@ -298,19 +298,15 @@ class _KnowState extends State<Know> {
                                             style: TextStyle(
                                               fontSize: 15,
                                               fontWeight: FontWeight.w500,
-                                              fontStyle: FontStyle.italic,
                                             ),
                                             textAlign: TextAlign.start,
                                           ),
                                           children: <Widget>[
                                             ListTile(
                                               title: Text(
-                                                "To Detect and Prevent Fraud Transition a Solution came up with MachineLearning models where the Transaction Data is Trained with ML Models and Fraud Transaction isPredicted.\n\n"
-                                                "Tools Used are Spyder,VSCode,Python,HTML,CSS\n\n",
+                                                "To Detect and Prevent Fraud Transition a Solution came up with MachineLearning models where the Transaction Data is Trained with ML Models and Fraud Transaction isPredicted.\n\nTools Used are Spyder, VSCode, Python, HTML, CSS\n\n",
                                                 style: TextStyle(
                                                   fontSize: 15,
-                                                  fontWeight: FontWeight.w500,
-                                                  fontStyle: FontStyle.italic,
                                                 ),
                                               ),
                                               textColor: Colors.white,
@@ -385,23 +381,19 @@ class _KnowState extends State<Know> {
                                     child: Text(
                                       'DEVOPS',
                                       style: TextStyle(
-                                          color: Colors.deepPurple.shade300,
-                                          fontSize: 40,
-                                          fontWeight: FontWeight.w900,
-                                          fontFamily: 'Alkatra'),
+                                        color: Colors.yellow.shade700,
+                                        fontSize: 40,
+                                      ),
                                     ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.only(
                                         left: wid / 23, right: wid / 23),
-                                    child: Text(
+                                    child: const Text(
                                       " DevOps is a methodology in the software development and IT industry. Used as a set of practices and tools, DevOps integrates and automates the work of software development (Dev) and IT operations (Ops) as a means for improving and shortening the systems development life cycle.[1] DevOps is complementary to agile software development; several DevOps aspects came from the agile way of working",
                                       style: TextStyle(
                                         fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        fontStyle: FontStyle.italic,
                                       ),
-                                      textAlign: TextAlign.justify,
                                     ),
                                   ),
                                   Padding(
@@ -418,7 +410,7 @@ class _KnowState extends State<Know> {
                                           color: Colors.yellowAccent.shade700,
                                           borderRadius:
                                               BorderRadius.circular(30)),
-                                      child: Center(
+                                      child: const Center(
                                         child: Text(
                                           'PROJECTS',
                                           style: TextStyle(fontSize: 30),
@@ -447,19 +439,15 @@ class _KnowState extends State<Know> {
                                         style: TextStyle(
                                           fontSize: 15,
                                           fontWeight: FontWeight.w500,
-                                          fontStyle: FontStyle.italic,
                                         ),
                                         textAlign: TextAlign.start,
                                       ),
                                       children: <Widget>[
                                         ListTile(
                                           title: Text(
-                                            "To automate applications using Ansible, you can create playbooks, which are YAML files that define a set of tasks that should be executed on a group of hosts.By automating your applications with Ansible, you can save time and reduce the risk of errors that can occur with manual deployment and management.\n\n"
-                                            "Tools Used are Ansible,Inventory files,playbooks,Yamlfiles,Docker.\n",
+                                            "To automate applications using Ansible, you can create playbooks, which are YAML files that define a set of tasks that should be executed on a group of hosts.By automating your applications with Ansible, you can save time and reduce the risk of errors that can occur with manual deployment and management.\n\nTools Used are Ansible,Inventory files,playbooks,Yamlfiles,Docker.\n",
                                             style: TextStyle(
                                               fontSize: 15,
-                                              fontWeight: FontWeight.w500,
-                                              fontStyle: FontStyle.italic,
                                             ),
                                           ),
                                           textColor: Colors.white,
@@ -467,7 +455,7 @@ class _KnowState extends State<Know> {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 15,
                                   ),
                                   Padding(
@@ -500,7 +488,6 @@ class _KnowState extends State<Know> {
                                             style: TextStyle(
                                               fontSize: 15,
                                               fontWeight: FontWeight.w500,
-                                              fontStyle: FontStyle.italic,
                                             ),
                                             textAlign: TextAlign.start,
                                           ),
@@ -510,8 +497,6 @@ class _KnowState extends State<Know> {
                                                 "Deploying the given application in Kubernetes and monitor the cluster  and use the service mesh.Kubernetes is an open-source container orchestration platform that provides a way to deploy, manage,and scale containerized applications in a highly available and efficient manner.",
                                                 style: TextStyle(
                                                   fontSize: 15,
-                                                  fontWeight: FontWeight.w500,
-                                                  fontStyle: FontStyle.italic,
                                                 ),
                                               ),
                                               textColor: Colors.white,
@@ -533,7 +518,7 @@ class _KnowState extends State<Know> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -598,23 +583,19 @@ class _KnowState extends State<Know> {
                                     child: Text(
                                       'FULLSTACK DEVELOPMENT',
                                       style: TextStyle(
-                                          color: Colors.deepPurple.shade300,
-                                          fontSize: 35,
-                                          fontWeight: FontWeight.w900,
-                                          fontFamily: 'Alkatra'),
+                                        color: Colors.yellow.shade700,
+                                        fontSize: 35,
+                                      ),
                                     ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.only(
                                         left: wid / 23, right: wid / 23),
-                                    child: Text(
+                                    child: const Text(
                                       "Full stack development refers to the end-to-end application software development, including the front end and back end. The front end consists of the user interface, and the back end takes care of the business logic and application workflows.",
                                       style: TextStyle(
                                         fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        fontStyle: FontStyle.italic,
                                       ),
-                                      textAlign: TextAlign.justify,
                                     ),
                                   ),
                                   Padding(
@@ -630,7 +611,7 @@ class _KnowState extends State<Know> {
                                           color: Colors.yellowAccent.shade700,
                                           borderRadius:
                                               BorderRadius.circular(30)),
-                                      child: Center(
+                                      child: const Center(
                                         child: Text(
                                           'PROJECTS',
                                           style: TextStyle(fontSize: 30),
@@ -659,19 +640,15 @@ class _KnowState extends State<Know> {
                                         style: TextStyle(
                                           fontSize: 15,
                                           fontWeight: FontWeight.w500,
-                                          fontStyle: FontStyle.italic,
                                         ),
                                         textAlign: TextAlign.start,
                                       ),
                                       children: <Widget>[
                                         ListTile(
                                           title: Text(
-                                            'A hostel Outpass system is a protocol used by hostels or dormitories to regulate the movement of their residents. It typically requires residents to obtain permission from hostel authorities before leaving the premises for a specific duration of time.\n'
-                                            ' Tools used are React Js included with HTML, CSS, Bootstrap for front-end purpose and Mongo DB for back-end purpose.',
+                                            'A hostel Outpass system is a protocol used by hostels or dormitories to regulate the movement of their residents. It typically requires residents to obtain permission from hostel authorities before leaving the premises for a specific duration of time.\nTools used are React Js included with HTML, CSS, Bootstrap for front-end purpose and Mongo DB for back-end purpose.',
                                             style: TextStyle(
                                               fontSize: 15,
-                                              fontWeight: FontWeight.w500,
-                                              fontStyle: FontStyle.italic,
                                             ),
                                           ),
                                           textColor: Colors.white,
@@ -679,7 +656,7 @@ class _KnowState extends State<Know> {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 15,
                                   ),
                                   Padding(
@@ -712,7 +689,6 @@ class _KnowState extends State<Know> {
                                             style: TextStyle(
                                               fontSize: 15,
                                               fontWeight: FontWeight.w500,
-                                              fontStyle: FontStyle.italic,
                                             ),
                                             textAlign: TextAlign.start,
                                           ),
@@ -782,7 +758,7 @@ class _KnowState extends State<Know> {
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(20),
                                     child: Image.asset(
-                                      'images/iot.jpg',
+                                      'images/iot (2).jpg',
                                       fit: BoxFit.fill,
                                     ),
                                   ),
@@ -792,21 +768,18 @@ class _KnowState extends State<Know> {
                                     child: Text(
                                       'INTERNET OF THINGS',
                                       style: TextStyle(
-                                          color: Colors.deepPurple.shade300,
-                                          fontSize: 35,
-                                          fontWeight: FontWeight.w900,
-                                          fontFamily: 'Alkatra'),
+                                        color: Colors.deepPurple.shade300,
+                                        fontSize: 35,
+                                      ),
                                     ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.only(
                                         left: wid / 23, right: wid / 23),
-                                    child: Text(
+                                    child: const Text(
                                       "The Internet of things (IoT) describes physical objects (or groups of such objects) with sensors, processing ability, software and other technologies that connect and exchange data with other devices and systems over the Internet or other communications networks.",
                                       style: TextStyle(
                                         fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        fontStyle: FontStyle.italic,
                                       ),
                                     ),
                                   ),
@@ -823,7 +796,7 @@ class _KnowState extends State<Know> {
                                           color: Colors.yellowAccent.shade700,
                                           borderRadius:
                                               BorderRadius.circular(30)),
-                                      child: Center(
+                                      child: const Center(
                                         child: Text(
                                           'PROJECTS',
                                           style: TextStyle(fontSize: 30),
@@ -852,7 +825,6 @@ class _KnowState extends State<Know> {
                                         style: TextStyle(
                                           fontSize: 15,
                                           fontWeight: FontWeight.w500,
-                                          fontStyle: FontStyle.italic,
                                         ),
                                         textAlign: TextAlign.start,
                                       ),
@@ -862,8 +834,6 @@ class _KnowState extends State<Know> {
                                             " It is basically used for knowing the problems, suggestion, remarks and complements. This helps the companies or manufacturers to improve, upgrade and implement the suggestions given by the customers to reach and satisfy their requirements.\n\n",
                                             style: TextStyle(
                                               fontSize: 15,
-                                              fontWeight: FontWeight.w500,
-                                              fontStyle: FontStyle.italic,
                                             ),
                                           ),
                                           textColor: Colors.white,
@@ -871,7 +841,7 @@ class _KnowState extends State<Know> {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 15,
                                   ),
                                   Padding(
@@ -904,19 +874,15 @@ class _KnowState extends State<Know> {
                                             style: TextStyle(
                                               fontSize: 15,
                                               fontWeight: FontWeight.w500,
-                                              fontStyle: FontStyle.italic,
                                             ),
                                             textAlign: TextAlign.start,
                                           ),
                                           children: <Widget>[
                                             ListTile(
                                               title: Text(
-                                                "Matrix Display Board is simply termed ae web controlled smart notice board the project Matrix Display BOARD aims at Eliminating the data from the Desired DATABASE or the file and Display it on the LED DOT MATRIX DISPLAY.\n"
-                                                "Components Used are NodeMCUESP266 Board(Micro Controller) and 8*8 dot Matrix LED Display",
+                                                "Matrix Display Board is simply termed ae web controlled smart notice board the project Matrix Display BOARD aims at Eliminating the data from the Desired DATABASE or the file and Display it on the LED DOT MATRIX DISPLAY.\nComponents Used are NodeMCUESP266 Board(Micro Controller) and 8*8 dot Matrix LED Display",
                                                 style: TextStyle(
                                                   fontSize: 15,
-                                                  fontWeight: FontWeight.w500,
-                                                  fontStyle: FontStyle.italic,
                                                 ),
                                               ),
                                               textColor: Colors.white,
@@ -938,7 +904,7 @@ class _KnowState extends State<Know> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -999,21 +965,18 @@ class _KnowState extends State<Know> {
                                     child: Text(
                                       'CLOUD COMPUTING',
                                       style: TextStyle(
-                                          color: Colors.deepPurple.shade300,
-                                          fontSize: 35,
-                                          fontWeight: FontWeight.w900,
-                                          fontFamily: 'Alkatra'),
+                                        color: Colors.deepPurple.shade300,
+                                        fontSize: 35,
+                                      ),
                                     ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.only(
                                         left: wid / 23, right: wid / 23),
-                                    child: Text(
+                                    child: const Text(
                                       "Cloud computing is the on-demand availability of computer system resources, especially data storage (cloud storage) and computing power, without direct active management by the user. Large clouds often have functions distributed over multiple locations, each of which is a data center. Cloud computing relies on sharing of resources to achieve coherence and typically uses a pay-as-you-go model, which can help in reducing capital expenses but may also lead to unexpected operating expenses for users.",
                                       style: TextStyle(
                                         fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                        fontStyle: FontStyle.italic,
                                       ),
                                     ),
                                   ),
@@ -1030,7 +993,7 @@ class _KnowState extends State<Know> {
                                           color: Colors.yellowAccent.shade700,
                                           borderRadius:
                                               BorderRadius.circular(30)),
-                                      child: Center(
+                                      child: const Center(
                                         child: Text(
                                           'PROJECTS',
                                           style: TextStyle(fontSize: 30),
@@ -1059,19 +1022,15 @@ class _KnowState extends State<Know> {
                                         style: TextStyle(
                                           fontSize: 15,
                                           fontWeight: FontWeight.w500,
-                                          fontStyle: FontStyle.italic,
                                         ),
                                         textAlign: TextAlign.start,
                                       ),
                                       children: <Widget>[
                                         ListTile(
                                           title: Text(
-                                            "To automate the process of placements\n\n"
-                                            "Components Used are Salesforce platform (data loader, workflow rules, Email alerts, reports and dashboards)",
+                                            "To automate the process of placements\n\nComponents Used are Salesforce platform (data loader, workflow rules, Email alerts, reports and dashboards)",
                                             style: TextStyle(
                                               fontSize: 15,
-                                              fontWeight: FontWeight.w500,
-                                              fontStyle: FontStyle.italic,
                                             ),
                                           ),
                                           textColor: Colors.white,
@@ -1079,7 +1038,7 @@ class _KnowState extends State<Know> {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 15,
                                   ),
                                   Padding(
@@ -1112,7 +1071,6 @@ class _KnowState extends State<Know> {
                                             style: TextStyle(
                                               fontSize: 15,
                                               fontWeight: FontWeight.w500,
-                                              fontStyle: FontStyle.italic,
                                             ),
                                             textAlign: TextAlign.start,
                                           ),
@@ -1195,25 +1153,19 @@ class _KnowState extends State<Know> {
                                       child: Text(
                                         'GAMING',
                                         style: TextStyle(
-                                            color: Colors.deepPurple.shade300,
-                                            fontSize: 35,
-                                            fontWeight: FontWeight.w900,
-                                            fontFamily: 'Alkatra'),
+                                          color: Colors.yellow.shade700,
+                                          fontSize: 35,
+                                        ),
                                       ),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.only(
                                           left: wid / 23, right: wid / 23),
-                                      child: Text(
-                                        'A game is a structured form of play, usually undertaken for entertainment or fun, and sometimes used as an educational tool.'
-                                        ' Many games are also considered to be work (such as professional players of spectator sports or games) or'
-                                        ' art (such as jigsaw puzzles or games involving an artistic layout such as Mahjong, solitaire, or some video games.',
+                                      child: const Text(
+                                        'A game is a structured form of play, usually undertaken for entertainment or fun, and sometimes used as an educational tool.Many games are also considered to be work (such as professional players of spectator sports or games) or art (such as jigsaw puzzles or games involving an artistic layout such as Mahjong, solitaire, or some video games.',
                                         style: TextStyle(
                                           fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          fontStyle: FontStyle.italic,
                                         ),
-                                        textAlign: TextAlign.justify,
                                       ),
                                     ),
                                     Padding(
@@ -1229,7 +1181,7 @@ class _KnowState extends State<Know> {
                                             color: Colors.yellowAccent.shade700,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
-                                        child: Center(
+                                        child: const Center(
                                           child: Text(
                                             'PROJECTS',
                                             style: TextStyle(fontSize: 30),
@@ -1258,20 +1210,15 @@ class _KnowState extends State<Know> {
                                           style: TextStyle(
                                             fontSize: 15,
                                             fontWeight: FontWeight.w500,
-                                            fontStyle: FontStyle.italic,
                                           ),
                                           textAlign: TextAlign.start,
                                         ),
                                         children: <Widget>[
                                           ListTile(
                                             title: Text(
-                                              "GAME PLAY GANGSTER’S BADLANDS  is a player versus player shooter game in which up to twenty players fight in a battle royale, a type of large-scale last man standing deathmatch where players fight to remain the last alive. Players can choose to enter the match. The last person or team alive wins the match.\n"
-                                              "Game developed in  UNITY\n"
-                                              "Designed Using PHOTOSHOP AND BLENDER",
+                                              "GAME PLAY GANGSTER’S BADLANDS  is a player versus player shooter game in which up to twenty players fight in a battle royale, a type of large-scale last man standing deathmatch where players fight to remain the last alive. Players can choose to enter the match. The last person or team alive wins the match.\nGame developed in  UNITY\nDesigned Using PHOTOSHOP AND BLENDER",
                                               style: TextStyle(
                                                 fontSize: 15,
-                                                fontWeight: FontWeight.w500,
-                                                fontStyle: FontStyle.italic,
                                               ),
                                             ),
                                             textColor: Colors.white,
@@ -1279,7 +1226,7 @@ class _KnowState extends State<Know> {
                                         ],
                                       ),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 15,
                                     ),
                                     Padding(
@@ -1313,19 +1260,15 @@ class _KnowState extends State<Know> {
                                               style: TextStyle(
                                                 fontSize: 15,
                                                 fontWeight: FontWeight.w500,
-                                                fontStyle: FontStyle.italic,
                                               ),
                                               textAlign: TextAlign.start,
                                             ),
                                             children: <Widget>[
                                               ListTile(
                                                 title: Text(
-                                                  "AR Resume that incorporates interactive 3D models and digital content to showcase a candidate's skills and qualifications. By using this application, job seekers can create engaging and interactive AR resumes that allow employers to view their work in a more immersive and interactive way.\n\n"
-                                                  "technologies used are Unity ,Vuforia,Photoshop,figma",
+                                                  "AR Resume that incorporates interactive 3D models and digital content to showcase a candidate's skills and qualifications. By using this application, job seekers can create engaging and interactive AR resumes that allow employers to view their work in a more immersive and interactive way.\n\ntechnologies used are Unity ,Vuforia,Photoshop,figma",
                                                   style: TextStyle(
                                                     fontSize: 15,
-                                                    fontWeight: FontWeight.w500,
-                                                    fontStyle: FontStyle.italic,
                                                   ),
                                                 ),
                                                 textColor: Colors.white,
@@ -1348,25 +1291,26 @@ class _KnowState extends State<Know> {
               ),
             ],
           ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: 25,
-              left: hi / 15,
-              right: hi / 15,
-              bottom: 30,
-            ),
-            child: Container(
-              height: 45,
-              width: 55,
-              decoration: BoxDecoration(
+          const SizedBox(height: 40),
+          Container(
+            width: wid,
+            padding: const EdgeInsets.all(20),
+            margin: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
                   color: Colors.yellowAccent.shade700,
-                  borderRadius: BorderRadius.circular(30)),
-              child: Center(
-                  child: Text(
-                "IMAGES",
-                style: TextStyle(color: Colors.white, fontSize: 25),
-              )),
-            ),
+                  width: 3,
+                )
+                //color: Colors.pinkAccent,
+                ),
+            child: Center(
+                child: Text("Images",
+                    style: TextStyle(
+                        color: Colors.yellowAccent.shade700, fontSize: 20))),
+          ),
+          const SizedBox(
+            height: 10,
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: 25),

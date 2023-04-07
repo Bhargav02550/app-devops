@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
-import 'package:thub/7thanv.dart';
 import 'package:thub/Events.dart';
 import 'package:thub/Info.dart';
-import 'package:thub/Tinfo.dart';
+import 'package:thub/owlcoder.dart';
 import 'package:thub/slider.dart';
 
 class Gone extends StatefulWidget {
@@ -18,7 +17,7 @@ class _GoneState extends State<Gone> {
   List pages = [
     const Myslider(),
     const Events(),
-    const Tinfo(),
+    const Info(),
   ];
 
   void onTap(int index) {
@@ -37,22 +36,22 @@ class _GoneState extends State<Gone> {
         items: [
           /// Home
           SalomonBottomBarItem(
-            icon: Icon(Icons.home),
-            title: Text("Home"),
-            selectedColor: Color.fromARGB(255, 20, 153, 20),
+            icon: const Icon(Icons.home),
+            title: const Text("Home"),
+            selectedColor: const Color.fromARGB(255, 20, 153, 20),
           ),
 
           /// Likes
           SalomonBottomBarItem(
-            icon: Icon(Icons.event),
-            title: Text("Events"),
+            icon: const Icon(Icons.event),
+            title: const Text("Events"),
             selectedColor: Colors.pink,
           ),
 
           /// Profile
           SalomonBottomBarItem(
-            icon: Icon(Icons.info_outline_rounded),
-            title: Text("Info"),
+            icon: const Icon(Icons.info_outline_rounded),
+            title: const Text("Info"),
             selectedColor: Colors.teal,
           ),
         ],

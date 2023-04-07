@@ -66,11 +66,11 @@ class _OwlState extends State<Owl> {
                 borderRadius: BorderRadius.circular(20),
                 color: const Color.fromARGB(255, 198, 107, 214),
               ),
-              child: Padding(
+              child: const Padding(
                 // padding: EdgeInsets.only(
                 //     left: w / 12, right: w / 12, top: w / 20, bottom: w / 20),
                 padding: EdgeInsets.all(20),
-                child: const Text(
+                child: Text(
                   "Owl coder is an Innovative Training Program of 60 days which enhances trainees on Coding skills like Data Structures and Algorithms, Problem solving skills, Aptitude, Reasoning and Soft skills. ",
                   style: TextStyle(
                     fontSize: 15,
@@ -83,15 +83,15 @@ class _OwlState extends State<Owl> {
               ),
             ),
           ),
-          Divider(height: 10, thickness: 3),
+          const Divider(height: 10, thickness: 3),
           const SizedBox(
             height: 20,
           ),
           Container(
             alignment: Alignment.center,
-            margin: EdgeInsets.all(5),
+            margin: const EdgeInsets.all(5),
             width: MediaQuery.of(context).size.width,
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 border: Border.all(color: Colors.purple, width: 3)),
@@ -235,14 +235,14 @@ class _OwlState extends State<Owl> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Container(
             alignment: Alignment.center,
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
             width: MediaQuery.of(context).size.width,
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 border: Border.all(color: Colors.purple, width: 3)),
@@ -420,7 +420,7 @@ class _OwlState extends State<Owl> {
                             'Mr.Raja Chowdary',
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 25,
+                                fontSize: 20,
                                 fontWeight: FontWeight.w600),
                           ),
                           Text(
@@ -597,9 +597,9 @@ class _OwlState extends State<Owl> {
           ),
           Container(
             alignment: Alignment.center,
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
             width: MediaQuery.of(context).size.width,
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 border: Border.all(color: Colors.purple, width: 3)),
@@ -611,7 +611,7 @@ class _OwlState extends State<Owl> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(

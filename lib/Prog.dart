@@ -25,83 +25,81 @@ class _ProgState extends State<Prog> {
       ),
       body: ListView(
         children: [
-          Container(
-            child: SizedBox(
-              height: 250.0,
-              width: double.infinity,
-              child: CarouselSlider(
-                options: CarouselOptions(
-                  height: 200,
-                  reverse: false,
-                  autoPlay: true,
-                  autoPlayInterval: Duration(seconds: 3),
-                  autoPlayAnimationDuration: Duration(milliseconds: 800),
-                  autoPlayCurve: Curves.fastOutSlowIn,
-                  enlargeCenterPage: true,
-                  aspectRatio: 16 / 9,
-                  viewportFraction: 0.8,
-                  onPageChanged: null,
-                  scrollDirection: Axis.horizontal,
-                ),
-                items: [
-                  ClipRRect(
-                    child: Image.asset(
-                      'images/Cloud Challenge.png',
-                      fit: BoxFit.fill,
-                    ),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  ClipRRect(
-                    child: Image.asset(
-                      'images/Coding Contest.png',
-                      fit: BoxFit.fill,
-                    ),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  ClipRRect(
-                    child: Image.asset(
-                      'images/COGNIMIND.png',
-                      fit: BoxFit.fill,
-                    ),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  ClipRRect(
-                    child: Image.asset('images/Cyber Securityp.png'),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  ClipRRect(
-                    child: Image.asset('images/Fastest Finger First.png'),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  ClipRRect(
-                    child: Image.asset('images/Dynamic Programmer.png'),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  ClipRRect(
-                    child: Image.asset('images/Linux Challenge.png'),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  ClipRRect(
-                    child: Image.asset('images/Networking Challenge.png'),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  ClipRRect(
-                    child: Image.asset('images/Web Dev Challange.png'),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  ClipRRect(
-                    child: Image.asset('images/WET TYPO.png'),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ],
+          SizedBox(
+            height: 250.0,
+            width: double.infinity,
+            child: CarouselSlider(
+              options: CarouselOptions(
+                height: 200,
+                reverse: false,
+                autoPlay: true,
+                autoPlayInterval: const Duration(seconds: 3),
+                autoPlayAnimationDuration: const Duration(milliseconds: 800),
+                autoPlayCurve: Curves.fastOutSlowIn,
+                enlargeCenterPage: true,
+                aspectRatio: 16 / 9,
+                viewportFraction: 0.8,
+                onPageChanged: null,
+                scrollDirection: Axis.horizontal,
               ),
+              items: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image.asset(
+                    'images/Cloud Challenge.png',
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image.asset(
+                    'images/Coding Contest.png',
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image.asset(
+                    'images/COGNIMIND.png',
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset('images/Cyber Securityp.png'),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset('images/Fastest Finger First.png'),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset('images/Dynamic Programmer.png'),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset('images/Linux Challenge.png'),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset('images/Networking Challenge.png'),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset('images/Web Dev Challange.png'),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset('images/WET TYPO.png'),
+                ),
+              ],
             ),
           ),
-          Divider(
+          const Divider(
             thickness: 1,
             color: Colors.black,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Padding(
@@ -117,10 +115,10 @@ class _ProgState extends State<Prog> {
                   border: Border.all(
                     color: Colors.orange,
                   )),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
-                  "Seven Years, Technical-Hub has been a innovation, progress, and excellence in the field of Computer Technology Technical Hub, a institution is known for it's cutting-edge research om fields like Technologies such as ,coding weeb development, cloud computing , AI's etc ..., Our commitment to pushing the boundaries of techology for Students. ",
+                  "Proramming day is Conducted 13 th September.On that day Technical hub was conducted many activities like cloud, cybersecurity , coding, and typing challanges etc...Awards was distributed to the winners on the Programmers day",
                   style: TextStyle(color: Colors.black, fontSize: 15),
                   textAlign: TextAlign.left,
                 ),
@@ -137,7 +135,7 @@ class _ProgState extends State<Prog> {
                   border: Border.all(
                     color: Colors.deepOrange,
                   )),
-              child: Text(
+              child: const Text(
                 " Winners in Programmers Day :",
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
@@ -147,44 +145,36 @@ class _ProgState extends State<Prog> {
               ),
             ),
           ),
-          Container(
-            child: Padding(
-              padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset(
-                    "images/Winners Poster @ Programmers Day_4.2.jpg"),
-              ),
+          Padding(
+            padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.asset(
+                  "images/Winners Poster @ Programmers Day_4.2.jpg"),
             ),
           ),
-          Container(
-            child: Padding(
-              padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset(
-                    "images/Winners Poster @ Programmers Day_4.2.png"),
-              ),
+          Padding(
+            padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.asset(
+                  "images/Winners Poster @ Programmers Day_4.2.png"),
             ),
           ),
-          Container(
-            child: Padding(
-              padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset(
-                    "images/Winners Poster @ Programmers Day_4.2 (1).jpg"),
-              ),
+          Padding(
+            padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.asset(
+                  "images/Winners Poster @ Programmers Day_4.2 (1).jpg"),
             ),
           ),
-          Container(
-            child: Padding(
-              padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset(
-                    "images/Winners Poster @ Programmers Day_4.3.jpg"),
-              ),
+          Padding(
+            padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.asset(
+                  "images/Winners Poster @ Programmers Day_4.3.jpg"),
             ),
           ),
         ],

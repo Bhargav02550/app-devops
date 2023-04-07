@@ -47,6 +47,8 @@ dependencies:
   js: ^0.6.2
   new_gradient_app_bar: ^0.2.0
   page_transition: ^2.0.9
+  panara_dialogs: ^0.1.4
+  quickalert: ^1.0.1
   salomon_bottom_bar: ^3.3.2
   video_player: ^2.6.0
 

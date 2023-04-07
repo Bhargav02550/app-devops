@@ -40,7 +40,7 @@ class _AnvState extends State<Anv> {
         backgroundColor: Colors.teal,
         actions: [
           Image.asset("images/Techo.png"),
-          SizedBox(
+          const SizedBox(
             width: 100,
           )
         ],
@@ -55,7 +55,7 @@ class _AnvState extends State<Anv> {
                 child: FlickVideoPlayer(flickManager: flickManager),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Padding(
               padding: EdgeInsets.only(
                 left: w / 15,
@@ -69,8 +69,8 @@ class _AnvState extends State<Anv> {
                     border: Border.all(
                       color: Colors.greenAccent,
                     )),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Text(
                     "Seven Years, Technical-Hub has been a innovation, progress, and excellence in the field of Computer Technology Technical Hub, a institution is known for it's cutting-edge research om fields like Technologies such as ,coding weeb development, cloud computing , AI's etc ..., Our commitment to pushing the boundaries of techology for Students. ",
                     style: TextStyle(color: Colors.black, fontSize: 15),
@@ -88,7 +88,7 @@ class _AnvState extends State<Anv> {
                     border: Border.all(
                       color: Colors.teal,
                     )),
-                child: Text(
+                child: const Text(
                   " On The Day Of  7th Aniversery :",
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
@@ -98,7 +98,7 @@ class _AnvState extends State<Anv> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
@@ -113,151 +113,334 @@ class _AnvState extends State<Anv> {
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 20, left: w / 12),
-              child: Container(
-                  child: Text(
-                "Best TechCoach :",
-                style: TextStyle(
-                    color: Colors.green[600], fontWeight: FontWeight.w500),
-              )),
+            const SizedBox(
+              height: 20,
             ),
-            Container(
-              child: Padding(
-                padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
-                child: ClipRRect(
+            Padding(
+              padding: EdgeInsets.only(left: w / 15, right: w / 15),
+              child: Container(
+                height: h / 4.7,
+                width: double.infinity,
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.asset("images/IMG-20230406-WA0022.jpg"),
+                  image: const DecorationImage(
+                      image: AssetImage('images/IMG-20230406-WA0022.jpg'),
+                      fit: BoxFit.fill),
+                ),
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: EdgeInsets.only(top: h / 6.5),
+                  child: BlurryContainer(
+                    width: double.infinity,
+                    blur: 3,
+                    color: const Color.fromARGB(92, 17, 17, 18),
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      height: 40,
+                      //width: 120,
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 10, top: 5),
+                        child: Text(
+                          'Best Tech Coach',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w200,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 20, left: w / 12),
-              child: Container(
-                  child: Text(
-                "Best Developer :",
-                style: TextStyle(
-                    color: Colors.green[600], fontWeight: FontWeight.w500),
-              )),
+            const SizedBox(
+              height: 20,
             ),
-            Container(
-              child: Padding(
-                padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
-                child: ClipRRect(
+            Padding(
+              padding: EdgeInsets.only(left: w / 15, right: w / 15),
+              child: Container(
+                height: h / 4.7,
+                width: double.infinity,
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.asset("images/bestdeveloper.JPG"),
+                  image: const DecorationImage(
+                      image: AssetImage('images/bestdeveloper.png'),
+                      fit: BoxFit.fill),
+                ),
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: EdgeInsets.only(top: h / 6.5),
+                  child: BlurryContainer(
+                    width: double.infinity,
+                    blur: 3,
+                    color: const Color.fromARGB(92, 17, 17, 18),
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      height: 40,
+                      //width: 120,
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 10, top: 5),
+                        child: Text(
+                          'Best Developer',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w200,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 20, left: w / 12),
-              child: Container(
-                  child: Text(
-                "Star Of The Year :",
-                style: TextStyle(
-                    color: Colors.green[600], fontWeight: FontWeight.w500),
-              )),
+            const SizedBox(
+              height: 20,
             ),
-            Container(
-              child: Padding(
-                padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
-                child: ClipRRect(
+            Padding(
+              padding: EdgeInsets.only(left: w / 15, right: w / 15),
+              child: Container(
+                height: h / 4.7,
+                width: double.infinity,
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.asset("images/IMG-20230406-WA0034.jpg"),
+                  image: const DecorationImage(
+                      image: AssetImage('images/IMG-20230406-WA0034.jpg'),
+                      fit: BoxFit.fill),
+                ),
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: EdgeInsets.only(top: h / 6.5),
+                  child: BlurryContainer(
+                    width: double.infinity,
+                    blur: 3,
+                    color: const Color.fromARGB(92, 17, 17, 18),
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      height: 40,
+                      //width: 120,
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 10, top: 5),
+                        child: Text(
+                          'Star of the Year',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w200,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 20, left: w / 12),
-              child: Container(
-                  child: Text(
-                "Beyond The Call Of Duty :",
-                style: TextStyle(
-                    color: Colors.green[600], fontWeight: FontWeight.w500),
-              )),
+            const SizedBox(
+              height: 20,
             ),
-            Container(
-              child: Padding(
-                padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
-                child: ClipRRect(
+            Padding(
+              padding: EdgeInsets.only(left: w / 15, right: w / 15),
+              child: Container(
+                height: h / 4.7,
+                width: double.infinity,
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.asset("images/IMG-20230406-WA0026.jpg"),
+                  image: const DecorationImage(
+                      image: AssetImage('images/IMG-20230406-WA0026.jpg'),
+                      fit: BoxFit.fill),
+                ),
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: EdgeInsets.only(top: h / 6.5),
+                  child: BlurryContainer(
+                    width: double.infinity,
+                    blur: 3,
+                    color: const Color.fromARGB(92, 17, 17, 18),
+                    borderRadius: BorderRadius.circular(20),
+                    child: const SizedBox(
+                      height: 40,
+                      //width: 120,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 10, top: 5),
+                        child: Text(
+                          'Beyond the Call of Duty',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w200,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 20, left: w / 12),
-              child: Container(
-                  child: Text(
-                "Emerging Tech:",
-                style: TextStyle(
-                    color: Colors.green[600], fontWeight: FontWeight.w500),
-              )),
+            const SizedBox(
+              height: 20,
             ),
-            Container(
-              child: Padding(
-                padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
-                child: ClipRRect(
+            Padding(
+              padding: EdgeInsets.only(left: w / 15, right: w / 15),
+              child: Container(
+                height: h / 4.7,
+                width: double.infinity,
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.asset("images/IMG-20230406-WA0024.jpg"),
+                  image: const DecorationImage(
+                      image: AssetImage('images/IMG-20230406-WA0024.jpg'),
+                      fit: BoxFit.fill),
+                ),
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: EdgeInsets.only(top: h / 6.5),
+                  child: BlurryContainer(
+                    width: double.infinity,
+                    blur: 3,
+                    color: const Color.fromARGB(92, 17, 17, 18),
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      height: 40,
+                      //width: 120,
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 10, top: 5),
+                        child: Text(
+                          'Emerging Tech',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w200,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 20, left: w / 12),
-              child: Container(
-                  child: Text(
-                "Coder Of The Year :",
-                style: TextStyle(
-                    color: Colors.green[600], fontWeight: FontWeight.w500),
-              )),
+            const SizedBox(
+              height: 20,
             ),
-            Container(
-              child: Padding(
-                padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
-                child: ClipRRect(
+            Padding(
+              padding: EdgeInsets.only(left: w / 15, right: w / 15),
+              child: Container(
+                height: h / 4.7,
+                width: double.infinity,
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.asset("images/IMG-20230406-WA0027.jpg"),
+                  image: const DecorationImage(
+                      image: AssetImage('images/IMG-20230406-WA0027.jpg'),
+                      fit: BoxFit.fill),
+                ),
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: EdgeInsets.only(top: h / 6.5),
+                  child: BlurryContainer(
+                    width: double.infinity,
+                    blur: 3,
+                    color: const Color.fromARGB(92, 17, 17, 18),
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      height: 40,
+                      //width: 120,
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 10, top: 5),
+                        child: Text(
+                          'Coder of the Year',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w200,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 20, left: w / 12),
-              child: Container(
-                  child: Text(
-                "Trainee Of The Year :",
-                style: TextStyle(
-                    color: Colors.green[600], fontWeight: FontWeight.w500),
-              )),
+            const SizedBox(
+              height: 20,
             ),
-            Container(
-              child: Padding(
-                padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
-                child: ClipRRect(
+            Padding(
+              padding: EdgeInsets.only(left: w / 15, right: w / 15),
+              child: Container(
+                height: h / 4.7,
+                width: double.infinity,
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.asset("images/tranieeoftheyear.JPG"),
+                  image: const DecorationImage(
+                      image: AssetImage('images/Best.png'), fit: BoxFit.fill),
+                ),
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: EdgeInsets.only(top: h / 6.5),
+                  child: BlurryContainer(
+                    width: double.infinity,
+                    blur: 3,
+                    color: const Color.fromARGB(92, 17, 17, 18),
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      height: 40,
+                      //width: 120,
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 10, top: 5),
+                        child: Text(
+                          'Trainee of the Year',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w200,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.only(top: 20, left: w / 12),
-              child: Container(
-                  child: Text(
-                "Topper Of The CodeMind :",
-                style: TextStyle(
-                    color: Colors.green[600], fontWeight: FontWeight.w500),
-              )),
+            const SizedBox(
+              height: 20,
             ),
-            Container(
-              child: Padding(
-                padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
-                child: ClipRRect(
+            Padding(
+              padding: EdgeInsets.only(left: w / 15, right: w / 15),
+              child: Container(
+                height: h / 4.7,
+                width: double.infinity,
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  child: Image.asset("images/IMG-20230406-WA0028.jpg"),
+                  image: const DecorationImage(
+                      image: AssetImage('images/IMG-20230406-WA0028.jpg'),
+                      fit: BoxFit.fill),
+                ),
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: EdgeInsets.only(top: h / 6.5),
+                  child: BlurryContainer(
+                    width: double.infinity,
+                    blur: 3,
+                    color: const Color.fromARGB(92, 17, 17, 18),
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      height: 40,
+                      //width: 120,
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 10, top: 5),
+                        child: Text(
+                          'Topper of Codemind',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.w200,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
@@ -281,7 +464,7 @@ class _AnvState extends State<Anv> {
                   width: w / 4,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 2,
                       ),
@@ -290,7 +473,7 @@ class _AnvState extends State<Anv> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset(
-                      "images/IMG-20230406-WA0032.jpg",
+                      "images/1stprize.png",
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -303,7 +486,7 @@ class _AnvState extends State<Anv> {
                   width: w / 4,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 2,
                       ),
@@ -325,7 +508,7 @@ class _AnvState extends State<Anv> {
                   width: w / 4,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 2,
                       ),
@@ -343,14 +526,12 @@ class _AnvState extends State<Anv> {
             ),
             Padding(
               padding: EdgeInsets.only(left: w / 15, top: 10),
-              child: Container(
-                child: Text(
-                  "Event Moments: ",
-                  style: TextStyle(
-                      color: Colors.green[900],
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600),
-                ),
+              child: Text(
+                "Event Moments: ",
+                style: TextStyle(
+                    color: Colors.green[900],
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600),
               ),
             ),
             Padding(
@@ -363,8 +544,9 @@ class _AnvState extends State<Anv> {
                     height: 200,
                     reverse: false,
                     autoPlay: true,
-                    autoPlayInterval: Duration(seconds: 3),
-                    autoPlayAnimationDuration: Duration(milliseconds: 800),
+                    autoPlayInterval: const Duration(seconds: 3),
+                    autoPlayAnimationDuration:
+                        const Duration(milliseconds: 800),
                     autoPlayCurve: Curves.fastOutSlowIn,
                     enlargeCenterPage: true,
                     aspectRatio: 16 / 9,

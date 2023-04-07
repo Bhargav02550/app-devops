@@ -1,19 +1,10 @@
-import 'package:dot_navigation_bar/dot_navigation_bar.dart';
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:thub/Coding1.dart';
 import 'package:thub/driveready.dart';
 import 'package:thub/T-Connect.dart';
-import 'package:thub/main.dart';
 import 'package:thub/open.dart';
-//import 'package:thub/.Codingdart';
-import 'package:thub/owlcoder.dart';
 import 'package:thub/project.dart';
 
 class Myslider extends StatefulWidget {
@@ -24,22 +15,11 @@ class Myslider extends StatefulWidget {
 }
 
 class _MysliderState extends State<Myslider> {
+
   @override
-  List<Widget> pageList = [
-    Drive(),
-  ];
-
-  var _currentIndex = 0;
-  var _selectedTab = _SelectedTab.home;
-
-  void _handleIndexChanged(int i) {
-    setState(() {
-      _selectedTab = _SelectedTab.values[i];
-    });
-  }
-
   Widget build(BuildContext context) {
     double wid = MediaQuery.of(context).size.width;
+    // ignore: unused_local_variable
     double hig = MediaQuery.of(context).size.height;
     Future<bool> showExitPopup() async {
       return await showDialog(
@@ -47,23 +27,55 @@ class _MysliderState extends State<Myslider> {
             //the return value will be from "Yes" or "No" options
             context: context,
             builder: (context) => AlertDialog(
-              title: Text('Exit App'),
-              content: Text('Do you want to exit an App?'),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              icon: const Icon(
+                Icons.warning_rounded,
+                color: Color.fromARGB(255, 226, 183, 53),
+                size: 55,
+              ),
+              backgroundColor: Colors.greenAccent[50],
+              content: const Text(
+                'Do you really want to exit from the app ?',
+                textAlign: TextAlign.center,
+              ),
+              title: Text("Are You Sure ?"),
               actions: [
-                ElevatedButton(
-                  onPressed: () => Navigator.of(context).pop(false),
-                  //return false when click on "NO"
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.redAccent,
-                  ),
-                  child: Text('No'),
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.green[400]),
-                  onPressed: () => Navigator.of(context).pop(true),
-                  //return true when click on "Yes"
-                  child: Text('Yes'),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      height: 30,
+                      width: 100,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
+                            backgroundColor: Colors.green[400]),
+                        onPressed: () => Navigator.of(context).pop(true),
+
+                        //return true when click on "Yes"
+                        child: const Text('Yes'),
+                      ),
+                    ),
+                    SizedBox(
+                      width: wid / 20,
+                    ),
+                    SizedBox(
+                      height: 30,
+                      width: 100,
+                      child: ElevatedButton(
+                        onPressed: () => Navigator.of(context).pop(false),
+                        //return false when click on "NO"
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20)),
+                          backgroundColor: Colors.green[400],
+                        ),
+                        child: const Text('Cancel'),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -75,13 +87,11 @@ class _MysliderState extends State<Myslider> {
       onWillPop: showExitPopup,
       child: Scaffold(
         appBar: AppBar(
+          elevation: 2,
           automaticallyImplyLeading: false,
-          backgroundColor: Colors.green,
-          title: const Text(
-            'TECHNICAL HUB',
-            style: TextStyle(fontFamily: 'Vonique'),
-            textAlign: TextAlign.center,
-          ),
+          backgroundColor: const Color.fromARGB(219, 153, 225, 144),
+          title: Image.asset('images/Techo.png',
+              fit: BoxFit.cover, height: 35.00, width: 200.00),
           centerTitle: true,
         ),
         body: Container(
@@ -111,7 +121,7 @@ class _MysliderState extends State<Myslider> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
-                        'images/Selfie.JPG',
+                        'images/IMG-20230406-WA0030(1).jpg',
                         fit: BoxFit.fill,
                       ),
                     ),
@@ -179,8 +189,8 @@ class _MysliderState extends State<Myslider> {
                   ),
                 ),
                 onTap: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Owl()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Owl()));
                 },
               ),
               InkWell(
@@ -288,8 +298,8 @@ class _MysliderState extends State<Myslider> {
                   ),
                 ),
                 onTap: () {
-                  Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => Know()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Know()));
                 },
               ),
               InkWell(
@@ -325,7 +335,7 @@ class _MysliderState extends State<Myslider> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Mpage()),
+                    MaterialPageRoute(builder: (context) => const Mpage()),
                   );
                 },
               ),
@@ -336,5 +346,3 @@ class _MysliderState extends State<Myslider> {
     );
   }
 }
-
-enum _SelectedTab { home, favorite, search, person }
