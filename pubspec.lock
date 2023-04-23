@@ -9,6 +9,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
+  animated_button:
+    dependency: "direct main"
+    description:
+      name: animated_button
+      sha256: "74c7a632e7e9befd1b56595a280bf66b4604d797c1c79c84ca38cf0607f638de"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.0"
   appbar_animated:
     dependency: "direct main"
     description:
@@ -57,6 +65,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  bubble_lens:
+    dependency: "direct main"
+    description:
+      name: bubble_lens
+      sha256: "6c066e00e830a3cdb1bdfd71d602c62c0f489beb90d83ff1fced2b831783cb9a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
   carousel_pro:
     dependency: "direct main"
     description:
@@ -256,6 +272,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.0.6"
+  hero_animation:
+    dependency: "direct main"
+    description:
+      name: hero_animation
+      sha256: "01892d2b0dffb382014d7dabb8bea09fc389beb02489179c6d1b500284d8d2ef"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0+3"
   html:
     dependency: transitive
     description:
@@ -400,6 +424,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.1"
+  responsive_framework:
+    dependency: "direct main"
+    description:
+      name: responsive_framework
+      sha256: e083346029b008335b008274c4d3fac5b9e0ca8796f201ed20884f579101d584
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.0"
   rxdart:
     dependency: transitive
     description:
@@ -501,6 +533,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  vertical_card_pager:
+    dependency: "direct main"
+    description:
+      name: vertical_card_pager
+      sha256: "204ee6ea1fda27a1e02fde920e4238779f0e39bb4ed6ccbb82c9e2781251670f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.5.0"
   video_player:
     dependency: "direct main"
     description:
@@ -581,6 +621,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.2.1"
+  widget_and_text_animator:
+    dependency: "direct main"
+    description:
+      name: widget_and_text_animator
+      sha256: "7d0b81569a8deacf55cb2a098ee4b4acfdf713baaa82ca8a31b7893b50bf7b89"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.9"
   win32:
     dependency: transitive
     description:

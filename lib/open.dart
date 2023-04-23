@@ -58,32 +58,56 @@ class _OwlState extends State<Owl> {
             ),
           ),
           const SizedBox(height: 10),
+          const Divider(height: 10, thickness: 3),
           Padding(
             padding: EdgeInsets.only(
                 left: pd, right: pd, top: pd - 10, bottom: pd - 10),
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: const Color.fromARGB(255, 198, 107, 214),
-              ),
-              child: const Padding(
-                // padding: EdgeInsets.only(
-                //     left: w / 12, right: w / 12, top: w / 20, bottom: w / 20),
-                padding: EdgeInsets.all(20),
-                child: Text(
-                  "Owl coder is an Innovative Training Program of 60 days which enhances trainees on Coding skills like Data Structures and Algorithms, Problem solving skills, Aptitude, Reasoning and Soft skills. ",
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
+                color: Colors.purple,
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.grey,
+                    blurRadius: 10.0,
+                    spreadRadius: 0.1,
                   ),
-                  textAlign: TextAlign.justify,
-                ),
+                ],
+                borderRadius: BorderRadius.circular(10),
+              ),
+              width: MediaQuery.of(context).size.width * 0.88,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10, right: 20),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.only(left: 5, top: 10),
+                        child: Text(
+                          'Owl Coder',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 5, top: 5, bottom: 10),
+                        child: Text(
+                          'Owl coder is an innovative training program of 60 days which enhances trainees on coding skills like Data structures and algorithms, Problem solving skills,Aptitude,Reasoning and Soft skills',
+                          style: TextStyle(
+                            fontStyle: FontStyle.italic,
+                            //fontFamily: 'IP',
+                            //fontWeight: FontWeight,
+                            fontSize: 15,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ]),
               ),
             ),
           ),
-          const Divider(height: 10, thickness: 3),
           const SizedBox(
             height: 20,
           ),
@@ -285,7 +309,7 @@ class _OwlState extends State<Owl> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: const Image(
-                              image: AssetImage('images/ashoksir.png')),
+                              image: AssetImage('images/Team/ASHOK-M.png')),
                         ),
                       ),
                       Column(
@@ -368,7 +392,7 @@ class _OwlState extends State<Owl> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: const Image(
-                              image: AssetImage('images/kiransir.png'),
+                              image: AssetImage('images/Team/KIRAN-KUMAR.png'),
                               alignment: Alignment(0, 1)),
                         ),
                       ),
@@ -409,7 +433,8 @@ class _OwlState extends State<Owl> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: const Image(
-                              image: AssetImage('images/rajachowsir.png')),
+                              image:
+                                  AssetImage('images/Team/RAJA-CHOWDARI.png')),
                         ),
                       ),
                       Column(
@@ -491,7 +516,7 @@ class _OwlState extends State<Owl> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: const Image(
-                            image: AssetImage('images/siddqsir.jpg'),
+                            image: AssetImage('images/Team/SIDIK.png'),
                             alignment: Alignment.topRight,
                           ),
                         ),
@@ -533,7 +558,7 @@ class _OwlState extends State<Owl> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: const Image(
-                              image: AssetImage('images/bharathsir.png')),
+                              image: AssetImage('images/Team/BHARATH.png')),
                         ),
                       ),
                       Column(

@@ -27,6 +27,8 @@ class _MpageState extends State<Mpage> {
 
   @override
   Widget build(BuildContext context) {
+    double wi = MediaQuery.of(context).size.width;
+    double pd = wi * 0.05;
     double wid = MediaQuery.of(context).size.width;
     double hig = MediaQuery.of(context).size.height / 3.4;
     double podugu =
@@ -57,18 +59,62 @@ class _MpageState extends State<Mpage> {
               ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(20),
-            margin: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-                color: Colors.pink[300],
-                borderRadius: BorderRadius.circular(20)),
-            child: const Text(
-                "Code Mind is a platform that focuses on crafting a skilled individual. Our unique and interactive secenario based learning modules are designed to help a student look at a problem in a life like perspective. We stongly believe that every mind isn't alike, and therefore we give the student a chace to express their opinion rather than trying to abide by a generalized one.",
-                style: TextStyle(
-                  color: Colors.white,
-                )),
-          ),
+        Column(
+          children: [
+            const Divider(
+              thickness: 0.5,
+              color: Colors.black,
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                  left: pd, right: pd, top: pd - 10, bottom: pd - 10),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.pink[200],
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 10.0,
+                      spreadRadius: 0.1,
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                width: MediaQuery.of(context).size.width * 0.88,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10, right: 20),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.only(left: 5, top: 10),
+                          child: Text(
+                            'Codemind',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding:
+                          EdgeInsets.only(left: 5, top: 5, bottom: 10),
+                          child: Text(
+                            "Code Mind is a platform that focuses on crafting a skilled individual. Our unique and interactive secenario based learning modules are designed to help a student look at a problem in a life like perspective. We stongly believe that every mind isn't alike, and therefore we give the student a chace to express their opinion rather than trying to abide by a generalized one.",
+                            style: TextStyle(
+                              fontStyle: FontStyle.italic,
+                              //fontFamily: 'IP',
+                              //fontWeight: FontWeight,
+                              fontSize: 15,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ]),
+                ),
+              ),
+            ),
           Column(children: [
             Padding(
               padding: const EdgeInsets.only(top: 10),
@@ -2708,77 +2754,77 @@ class _MpageState extends State<Mpage> {
                     aspectRatio: 16 / 9,
                     viewportFraction: 0.8,
                     onPageChanged: null,
-                    scrollDirection: Axis.horizontal,
+                    scrollDirection: Axis.vertical,
                   ),
                   items: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         'images/100.png',
-                        fit: BoxFit.fill,
+                        fit: BoxFit.fitHeight,
                       ),
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         'images/200.png',
-                        fit: BoxFit.fill,
+                        fit: BoxFit.fitHeight,
                       ),
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         'images/300.png',
-                        fit: BoxFit.fill,
+                        fit: BoxFit.fitHeight,
                       ),
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         'images/400.png',
-                        fit: BoxFit.fill,
+                        fit: BoxFit.fitHeight,
                       ),
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         'images/500.png',
-                        fit: BoxFit.fill,
+                        fit: BoxFit.fitHeight,
                       ),
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         'images/600.png',
-                        fit: BoxFit.fill,
+                        fit: BoxFit.fitHeight,
                       ),
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         'images/700.png',
-                        fit: BoxFit.fill,
+                        fit: BoxFit.fitHeight,
                       ),
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         'images/800.png',
-                        fit: BoxFit.fill,
+                        fit: BoxFit.fitHeight,
                       ),
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         'images/900.png',
-                        fit: BoxFit.fill,
+                        fit: BoxFit.fitHeight,
                       ),
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         'images/1000.png',
-                        fit: BoxFit.fill,
+                        fit: BoxFit.fitHeight,
                       ),
                     ),
                   ],
@@ -2787,7 +2833,8 @@ class _MpageState extends State<Mpage> {
             ),
           ]),
         ],
-      )),
+      )],),
+    ),
     );
   }
 }

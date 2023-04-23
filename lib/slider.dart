@@ -70,7 +70,7 @@ class _MysliderState extends State<Myslider> {
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20)),
-                          backgroundColor: Colors.green[400],
+                          backgroundColor: Colors.yellow[400],
                         ),
                         child: const Text('Cancel'),
                       ),

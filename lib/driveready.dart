@@ -1,9 +1,5 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:carousel_pro/carousel_pro.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flip_card/flip_card.dart';
 import 'package:flick_video_player/flick_video_player.dart';
 
 class Drive extends StatefulWidget {
@@ -29,6 +25,8 @@ class _DriveState extends State<Drive> {
 
   @override
   Widget build(BuildContext context) {
+    double wi = MediaQuery.of(context).size.width;
+    double pd = wi * 0.05;
     double wid = MediaQuery.of(context).size.width;
     double hig = MediaQuery.of(context).size.height / 3.4;
     double podugu =
@@ -57,16 +55,53 @@ class _DriveState extends State<Drive> {
               thickness: 1,
               color: Colors.grey,
             ),
-            Container(
-              padding: const EdgeInsets.all(20),
-              margin: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.blue,
-              ),
-              child: const Text(
-                "Drive Ready is a program designed to help attendees familiarize themselves with a technology and coding language of their choice. This hybrid mode of training ensures that every attendee is ready to ace every interview they attend. The trainings offered in this program are usually job specific and is designed to help the attendee acquire the adequate skills required to efficiently begin their career.",
-                style: TextStyle(color: Colors.white),
+            Padding(
+              padding: EdgeInsets.only(
+                  left: pd, right: pd, top: pd - 10, bottom: pd - 10),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 10.0,
+                      spreadRadius: 0.1,
+                    ),
+                  ],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                width: MediaQuery.of(context).size.width * 0.88,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10, right: 20),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Padding(
+                          padding: EdgeInsets.only(left: 5, top: 10),
+                          child: Text(
+                            'Drive Ready',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 5, top: 5, bottom: 10),
+                          child: Text(
+                            'Drive Ready is a program designed to help attendees familiarize themselves with a technology and coding language of their choice. This hybrid mode of training ensures that every attendee is ready to ace every interview they attend. The trainings offered in this program are usually job specific and is designed to help the attendee acquire the adequate skills required to efficiently begin their career.',
+                            style: TextStyle(
+                              fontStyle: FontStyle.italic,
+                              //fontFamily: 'IP',
+                              //fontWeight: FontWeight,
+                              fontSize: 15,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ]),
+                ),
               ),
             ),
             Column(
@@ -124,7 +159,7 @@ class _DriveState extends State<Drive> {
                                               BorderRadius.circular(20),
                                           child: Center(
                                             child: Image.asset(
-                                              'images/Shaifu Zama.png',
+                                              'images/Team/SHAIFU.png',
                                               fit: BoxFit.fitWidth,
                                             ),
                                           ),
@@ -210,7 +245,7 @@ class _DriveState extends State<Drive> {
                                                   BorderRadius.circular(20),
                                               child: Center(
                                                 child: Image.asset(
-                                                  'images/GNK.jpeg',
+                                                  'images/Team/KIJSHORE.webp',
                                                   fit: BoxFit.fill,
                                                 ),
                                               ),
@@ -307,9 +342,9 @@ class _DriveState extends State<Drive> {
                                             ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(20),
-                                              child: Container(
+                                              child: Center(
                                                 child: Image.asset(
-                                                  'images/Kiran Kumar G.png',
+                                                  'images/Team/KIRAN-KUMAR.png',
                                                   fit: BoxFit.fill,
                                                 ),
                                               ),
@@ -396,9 +431,9 @@ class _DriveState extends State<Drive> {
                                             ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(20),
-                                              child: Container(
+                                              child: Center(
                                                 child: Image.asset(
-                                                  'images/Krishna.jpeg',
+                                                  'images/Team/krishna.webp',
                                                   fit: BoxFit.fill,
                                                 ),
                                               ),
@@ -494,9 +529,9 @@ class _DriveState extends State<Drive> {
                                             ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(20),
-                                              child: Container(
+                                              child: Center(
                                                 child: Image.asset(
-                                                  'images/Rajesh.png',
+                                                  'images/Team/RAJESH-B.png',
                                                   fit: BoxFit.fill,
                                                 ),
                                               ),
@@ -581,9 +616,9 @@ class _DriveState extends State<Drive> {
                                             ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(20),
-                                              child: Container(
+                                              child: Center(
                                                 child: Image.asset(
-                                                  'images/Pavan Teja.png',
+                                                  'images/Team/PAVAN-TEJA.png',
                                                   fit: BoxFit.fill,
                                                 ),
                                               ),
@@ -676,12 +711,14 @@ class _DriveState extends State<Drive> {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: <Widget>[
-                                            ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(20),
-                                              child: Image.asset(
-                                                'images/Jhonathan Peter.png',
-                                                fit: BoxFit.fitHeight,
+                                            Center(
+                                              child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(20),
+                                                child: Image.asset(
+                                                  'images/Team/PETER.png',
+                                                  fit: BoxFit.fitHeight,
+                                                ),
                                               ),
                                             ),
                                             const Padding(
@@ -761,13 +798,15 @@ class _DriveState extends State<Drive> {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: <Widget>[
-                                            ClipRRect(
-                                              borderRadius:
-                                                  BorderRadius.circular(20),
-                                              child: Container(
-                                                child: Image.asset(
-                                                  'images/Jhonathan Peter.png',
-                                                  fit: BoxFit.fill,
+                                            Center(
+                                              child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(20),
+                                                child: Container(
+                                                  child: Image.asset(
+                                                    'images/Team/PETER.png',
+                                                    fit: BoxFit.fill,
+                                                  ),
                                                 ),
                                               ),
                                             ),
@@ -832,7 +871,7 @@ class _DriveState extends State<Drive> {
                               image: const DecorationImage(
                                   image: AssetImage('images/automation.png'),
                                   alignment: Alignment(0.3, 0),
-                                  fit: BoxFit.fitHeight),
+                                  fit: BoxFit.fill),
                               borderRadius: BorderRadius.circular(10),
                             ),
                           ),
@@ -862,9 +901,9 @@ class _DriveState extends State<Drive> {
                                             ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(20),
-                                              child: Container(
+                                              child: Center(
                                                 child: Image.asset(
-                                                  'images/Sai teja.png',
+                                                  'images/Team/SAI-TEJA.png',
                                                   fit: BoxFit.fill,
                                                 ),
                                               ),
@@ -951,7 +990,7 @@ class _DriveState extends State<Drive> {
                                                   BorderRadius.circular(20),
                                               child: Center(
                                                 child: Image.asset(
-                                                  'images/Boby Kiran .png',
+                                                  'images/Team/BOBBY-KIRAN.png',
                                                   fit: BoxFit.fitHeight,
                                                 ),
                                               ),
@@ -1045,9 +1084,9 @@ class _DriveState extends State<Drive> {
                                         ClipRRect(
                                           borderRadius:
                                               BorderRadius.circular(20),
-                                          child: Container(
+                                          child: Center(
                                             child: Image.asset(
-                                              'images/Prasanth.png',
+                                              'images/Team/PRASANTH.png',
                                               fit: BoxFit.fill,
                                             ),
                                           ),
@@ -1125,12 +1164,14 @@ class _DriveState extends State<Drive> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: <Widget>[
-                                        ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                          child: Image.asset(
-                                            'images/SDP.png',
-                                            fit: BoxFit.fitHeight,
+                                        Center(
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                            child: Image.asset(
+                                              'images/Team/SDP.png',
+                                              fit: BoxFit.fitHeight,
+                                            ),
                                           ),
                                         ),
                                         const Padding(
@@ -1222,9 +1263,9 @@ class _DriveState extends State<Drive> {
                                             ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(20),
-                                              child: Container(
+                                              child: Center(
                                                 child: Image.asset(
-                                                  'images/Mutyala Babu.png',
+                                                  'images/Team/MUTYALA-BABU.png',
                                                   fit: BoxFit.fill,
                                                 ),
                                               ),
@@ -1309,9 +1350,9 @@ class _DriveState extends State<Drive> {
                                             ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(20),
-                                              child: Container(
+                                              child: Center(
                                                 child: Image.asset(
-                                                  'images/Ganapathi.png',
+                                                  'images/Team/GANAPATHI.png',
                                                   fit: BoxFit.fill,
                                                 ),
                                               ),
@@ -1407,9 +1448,9 @@ class _DriveState extends State<Drive> {
                                             ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(20),
-                                              child: Container(
+                                              child: Center(
                                                 child: Image.asset(
-                                                  'images/NDP.png',
+                                                  'images/Team/NDP.png',
                                                   fit: BoxFit.fill,
                                                 ),
                                               ),
@@ -1494,9 +1535,9 @@ class _DriveState extends State<Drive> {
                                             ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(20),
-                                              child: Container(
+                                              child: Center(
                                                 child: Image.asset(
-                                                  'images/Kiran Immadi.png',
+                                                  'images/Team/KIRAN.png',
                                                   fit: BoxFit.fill,
                                                 ),
                                               ),
@@ -1593,9 +1634,9 @@ class _DriveState extends State<Drive> {
                                             ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(20),
-                                              child: Container(
+                                              child: Center(
                                                 child: Image.asset(
-                                                  'images/veera Babu.png',
+                                                  'images/Team/VEERABABU.png',
                                                   fit: BoxFit.fill,
                                                 ),
                                               ),
@@ -1681,9 +1722,9 @@ class _DriveState extends State<Drive> {
                                             ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(20),
-                                              child: Container(
+                                              child: Center(
                                                 child: Image.asset(
-                                                  'images/surya Ashok.png',
+                                                  'images/Team/ASHOK-SIRIKI.png',
                                                   fit: BoxFit.fill,
                                                 ),
                                               ),
@@ -1779,9 +1820,9 @@ class _DriveState extends State<Drive> {
                                             ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(20),
-                                              child: Container(
+                                              child: Center(
                                                 child: Image.asset(
-                                                  'images/Raja Choudary.png',
+                                                  'images/Team/RAJA-CHOWDARI.png',
                                                   fit: BoxFit.fill,
                                                 ),
                                               ),

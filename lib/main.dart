@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           builder: (BuildContext _, Widget? __) {
             return Container(
               width: double.infinity,
-              height: MediaQuery.of(context).size.height / 1.9,
+              height: MediaQuery.of(context).size.height / 1.8,
               decoration: BoxDecoration(
                   border: Border.all(
                     width: 5,
@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         ),
       ),
       floatingActionButton: SizedBox(
-        height: MediaQuery.of(context).size.height / 1.7,
+        height: MediaQuery.of(context).size.height / 1.74,
         width: MediaQuery.of(context).size.width / 1.1,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
-                    shape: const RoundedRectangleBorder( 
+                    shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(10),
                         bottomRight: Radius.circular(10),

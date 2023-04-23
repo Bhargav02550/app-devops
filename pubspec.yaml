@@ -29,8 +29,10 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   animated_background: ^2.0.0
+  animated_button: ^0.2.0
   appbar_animated: ^0.0.3
   blurrycontainer: ^1.0.2
+  bubble_lens: ^2.0.0
   carousel_pro: ^1.0.0
   carousel_slider: ^4.2.1
   dot_navigation_bar: ^1.0.1+4
@@ -44,13 +46,16 @@ dependencies:
   flutter_native_splash: ^2.2.19
   flutter_staggered_grid_view: ^0.6.2
   google_nav_bar: ^5.0.6
+  hero_animation: ^1.0.0+3
   js: ^0.6.2
   new_gradient_app_bar: ^0.2.0
   page_transition: ^2.0.9
   panara_dialogs: ^0.1.4
   quickalert: ^1.0.1
+  responsive_framework: ^0.2.0
   salomon_bottom_bar: ^3.3.2
   video_player: ^2.6.0
+  widget_and_text_animator: ^1.0.9
 
 flutter_native_splash:
   image: images/thublogo.png
@@ -80,6 +85,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - images/
+    - images/Team/
 
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

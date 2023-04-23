@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
-import 'package:thub/Events.dart';
+import 'package:thub/Certificates.dart';
+import 'package:thub/Events/Events.dart';
 import 'package:thub/Info.dart';
-import 'package:thub/owlcoder.dart';
 import 'package:thub/slider.dart';
+import 'package:thub/team.dart';
 
 class Gone extends StatefulWidget {
   const Gone({super.key});
@@ -17,6 +18,8 @@ class _GoneState extends State<Gone> {
   List pages = [
     const Myslider(),
     const Events(),
+    const Cert(),
+    const Team(),
     const Info(),
   ];
 
@@ -46,6 +49,20 @@ class _GoneState extends State<Gone> {
             icon: const Icon(Icons.event),
             title: const Text("Events"),
             selectedColor: Colors.pink,
+          ),
+
+          /// Certificates
+          SalomonBottomBarItem(
+            icon: const Icon(Icons.library_books),
+            title: const Text("Certifications"),
+            selectedColor: Colors.teal,
+          ),
+
+          /// Team Details
+          SalomonBottomBarItem(
+            icon: const Icon(Icons.group),
+            title: const Text("Team"),
+            selectedColor: Colors.teal,
           ),
 
           /// Profile
