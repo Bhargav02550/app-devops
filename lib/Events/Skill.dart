@@ -15,6 +15,7 @@ class _SkillState extends State<Skill> {
   void initState() {
     super.initState();
     flickManager = FlickManager(
+        autoPlay: false,
         videoPlayerController:
             VideoPlayerController.asset("images/VN20230405_204026.mp4"));
   }
@@ -43,9 +44,9 @@ class _SkillState extends State<Skill> {
       body: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(25.0),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(15),
+              borderRadius: BorderRadius.circular(10),
               child: FlickVideoPlayer(
                 flickManager: flickManager,
               ),

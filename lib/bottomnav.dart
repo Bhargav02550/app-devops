@@ -4,7 +4,7 @@ import 'package:thub/Certificates.dart';
 import 'package:thub/Events/Events.dart';
 import 'package:thub/Info.dart';
 import 'package:thub/slider.dart';
-import 'package:thub/team.dart';
+import 'package:thub/Team/team.dart';
 
 class Gone extends StatefulWidget {
   const Gone({super.key});

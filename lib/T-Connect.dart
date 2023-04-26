@@ -16,6 +16,7 @@ class _HomeState extends State<Home> {
   void initState() {
     super.initState();
     flickManager = FlickManager(
+      autoPlay: false,
       videoPlayerController: VideoPlayerController.asset("images/TCV.mp4"),
     );
   }
@@ -46,7 +47,7 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.only(
                 left: pd, right: pd, top: pd - 5, bottom: pd - 10),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(10),
               child: FlickVideoPlayer(flickManager: flickManager),
             ),
           ),

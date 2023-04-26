@@ -13,6 +13,7 @@ class _DriveState extends State<Drive> {
   void initState() {
     super.initState();
     flickManager = FlickManager(
+        autoPlay: false,
         videoPlayerController:
             VideoPlayerController.asset("images/Driveready.mp4"));
   }
@@ -28,7 +29,6 @@ class _DriveState extends State<Drive> {
     double wi = MediaQuery.of(context).size.width;
     double pd = wi * 0.05;
     double wid = MediaQuery.of(context).size.width;
-    double hig = MediaQuery.of(context).size.height / 3.4;
     double podugu =
         MediaQuery.of(context).size.height / 4 - (wid / 10.18518518518519);
     double baru =
@@ -45,7 +45,7 @@ class _DriveState extends State<Drive> {
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(10),
                 child: FlickVideoPlayer(
                   flickManager: flickManager,
                 ),

@@ -119,149 +119,260 @@ class _InfoState extends State<Info> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0),
-                        child: Container(
-                          height: 80,
-                          width: MediaQuery.of(context).size.width / 2.1,
-                          decoration: BoxDecoration(
+                        child: InkWell(
+                          child: Container(
+                            height: 80,
+                            width: MediaQuery.of(context).size.width / 2.1,
+                            decoration: BoxDecoration(
+                                color: const Color.fromARGB(97, 226, 226, 226),
+                                borderRadius: BorderRadius.circular(20)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Padding(
+                                  padding: EdgeInsets.only(left: 10.0),
+                                  child: Icon(
+                                    Icons.call,
+                                    size: 30,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 10.0),
+                                  child: Text(
+                                    'Phone:\n +91 8343818181',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          onTap: () {
+                            showDialog(
+                              context: (context),
+                              builder: (context) {
+                                return Padding(
+                                  padding: const EdgeInsets.all(10),
+                                  child: Center(
+                                    child: Material(
+                                      type: MaterialType.transparency,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(10.0),
+                                            child: Image.asset(
+                                              'images/Qr/qr-code.png',
+                                              fit: BoxFit.fill,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              },
+                            );
+                          },
+                        ),
+                      ),
+                      InkWell(
+                          child: Container(
+                            height: 80,
+                            width: MediaQuery.of(context).size.width / 2.1,
+                            decoration: BoxDecoration(
+                                color: const Color.fromARGB(97, 226, 226, 226),
+                                borderRadius: BorderRadius.circular(20)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Padding(
+                                  padding: EdgeInsets.only(left: 5.0),
+                                  child: Icon(
+                                    Icons.mail,
+                                    size: 30,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 10.0),
+                                  child: Text(
+                                    'Email:\n support@technicalhub.io',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          onTap: () {
+                            showDialog(
+                              context: (context),
+                              builder: (context) {
+                                return Padding(
+                                  padding: const EdgeInsets.all(10),
+                                  child: Center(
+                                    child: Material(
+                                      type: MaterialType.transparency,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(10),
+                                            child: Image.asset(
+                                              'images/Qr/qr.png',
+                                              fit: BoxFit.fill,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              },
+                            );
+                          })
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          showDialog(
+                            context: (context),
+                            builder: (context) {
+                              return Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Center(
+                                  child: Material(
+                                    type: MaterialType.transparency,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(20),
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(10),
+                                          child: Image.asset(
+                                            'images/Qr/webQR.png',
+                                            fit: BoxFit.fill,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            },
+                          );
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10, right: 10),
+                          child: Container(
+                            height: 80,
+                            width: MediaQuery.of(context).size.width / 1.06,
+                            decoration: BoxDecoration(
                               color: const Color.fromARGB(97, 226, 226, 226),
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Padding(
-                                padding: EdgeInsets.only(left: 10.0),
-                                child: Icon(
-                                  Icons.call,
-                                  size: 30,
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Row(
+                              children: const [
+                                Padding(
+                                  padding: EdgeInsets.only(left: 20.0),
+                                  child: Icon(
+                                    Icons.web,
+                                    size: 35,
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 10.0),
-                                child: Text(
-                                  'Phone:\n +91 8343818181',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              )
-                            ],
+                                Padding(
+                                  padding: EdgeInsets.only(left: 10.0),
+                                  child: Text(
+                                    'Website:\nhttps://technicalhub.io/index.php',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                      Container(
-                        height: 80,
-                        width: MediaQuery.of(context).size.width / 2.1,
-                        decoration: BoxDecoration(
-                            color: const Color.fromARGB(97, 226, 226, 226),
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Padding(
-                              padding: EdgeInsets.only(left: 5.0),
-                              child: Icon(
-                                Icons.mail,
-                                size: 30,
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      showDialog(
+                        context: (context),
+                        builder: (context) {
+                          return Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: Center(
+                              child: Material(
+                                type: MaterialType.transparency,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(10),
+                                      child: Image.asset(
+                                        'images/Qr/LinkedQR.jpg',
+                                        fit: BoxFit.fill,
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 10.0),
-                              child: Text(
-                                'Email:\n support@technicalhub.io',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontSize: 10, fontWeight: FontWeight.bold),
-                              ),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10, right: 10),
-                        child: Container(
-                          height: 80,
-                          width: MediaQuery.of(context).size.width / 1.06,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(97, 226, 226, 226),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Row(
-                            children: const [
-                              Padding(
-                                padding: EdgeInsets.only(left: 20.0),
-                                child: Icon(
-                                  Icons.web,
-                                  size: 35,
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 10.0),
-                                child: Text(
-                                  'Website:\nhttps://technicalhub.io/index.php',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              )
-                            ],
+                          );
+                        },
+                      );
+                    },
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, right: 2),
+                          child: Container(
+                            height: 80,
+                            width: MediaQuery.of(context).size.width / 2.5,
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(97, 226, 226, 226),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Image.asset('images/Linked.png'),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10, right: 2),
-                        child: Container(
-                          height: 80,
-                          width: MediaQuery.of(context).size.width / 2.5,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(97, 226, 226, 226),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Image.asset('images/Linked.png'),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(),
-                        child: Container(
-                          height: 80,
-                          width: MediaQuery.of(context).size.height / 4,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(97, 226, 226, 226),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: const Center(
-                              child: Text(
-                            '@technicalhub',
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
-                          )),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10, right: 2),
-                        child: Container(
+                        Padding(
+                          padding: const EdgeInsets.only(),
+                          child: Container(
                             height: 80,
                             width: MediaQuery.of(context).size.height / 4,
                             decoration: BoxDecoration(
@@ -269,60 +380,151 @@ class _InfoState extends State<Info> {
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: const Center(
-                              child: Text(
-                                '@technicalhubio',
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
+                                child: Text(
+                              '@technicalhub',
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
                             )),
-                      ),
-                      Container(
-                        height: 80,
-                        width: MediaQuery.of(context).size.width / 2.5,
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(97, 226, 226, 226),
-                          borderRadius: BorderRadius.circular(20),
+                          ),
                         ),
-                        child: Image.asset('images/Instag.png'),
-                      )
-                    ],
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 5,
                   ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10, right: 2),
-                        child: Container(
-                          height: 80,
-                          width: MediaQuery.of(context).size.width / 2.5,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(97, 226, 226, 226),
-                            borderRadius: BorderRadius.circular(20),
+                  InkWell(
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10, right: 2),
+                            child: Container(
+                                height: 80,
+                                width: MediaQuery.of(context).size.height / 4,
+                                decoration: BoxDecoration(
+                                  color:
+                                      const Color.fromARGB(97, 226, 226, 226),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: const Center(
+                                  child: Text(
+                                    '@technicalhubio',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                )),
                           ),
-                          child: Image.asset('images/Youtube (1).png'),
-                        ),
+                          Container(
+                            height: 80,
+                            width: MediaQuery.of(context).size.width / 2.5,
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(97, 226, 226, 226),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Image.asset('images/Instag.png'),
+                          )
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(),
-                        child: Container(
-                          height: 80,
-                          width: MediaQuery.of(context).size.height / 4,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(97, 226, 226, 226),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: const Center(
-                              child: Text(
-                            '@technicalhub8786',
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
-                          )),
-                        ),
-                      ),
-                    ],
+                      onTap: () {
+                        showDialog(
+                          context: (context),
+                          builder: (context) {
+                            return Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Center(
+                                child: Material(
+                                  type: MaterialType.transparency,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(10),
+                                        child: Image.asset(
+                                          'images/Qr/inst.png',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      }),
+                  const SizedBox(
+                    height: 5,
                   ),
+                  InkWell(
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10, right: 2),
+                            child: Container(
+                              height: 80,
+                              width: MediaQuery.of(context).size.width / 2.5,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(97, 226, 226, 226),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Image.asset('images/Youtube (1).png'),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(),
+                            child: Container(
+                              height: 80,
+                              width: MediaQuery.of(context).size.height / 4,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(97, 226, 226, 226),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: const Center(
+                                  child: Text(
+                                '@technicalhub8786',
+                                style: TextStyle(
+                                    fontSize: 20, fontWeight: FontWeight.bold),
+                              )),
+                            ),
+                          ),
+                        ],
+                      ),
+                      onTap: () {
+                        showDialog(
+                          context: (context),
+                          builder: (context) {
+                            return Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Center(
+                                child: Material(
+                                  type: MaterialType.transparency,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(10),
+                                        child: Image.asset(
+                                          'images/Qr/you.png',
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      }),
                   const SizedBox(
                     height: 5,
                   ),

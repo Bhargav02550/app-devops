@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/material.dart';
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:video_player/video_player.dart';
 
 class Know extends StatefulWidget {
@@ -18,8 +17,10 @@ class _KnowState extends State<Know> {
   void initState() {
     super.initState();
     flickManager = FlickManager(
-        videoPlayerController:
-            VideoPlayerController.asset('images/project.mp4'));
+        autoPlay: false,
+        videoPlayerController: VideoPlayerController.asset('images/project.mp4',
+            videoPlayerOptions:
+                VideoPlayerOptions(allowBackgroundPlayback: false)));
   }
 
   @override
@@ -55,7 +56,7 @@ class _KnowState extends State<Know> {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(10),
               child: FlickVideoPlayer(
                 flickManager: flickManager,
               ),

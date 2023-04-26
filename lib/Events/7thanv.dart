@@ -18,6 +18,7 @@ class _AnvState extends State<Anv> {
   void initState() {
     super.initState();
     flickManager = FlickManager(
+        autoPlay: false,
         videoPlayerController:
             VideoPlayerController.asset("images/7thanvid.mp4"));
   }
@@ -48,7 +49,7 @@ class _AnvState extends State<Anv> {
             Padding(
               padding: EdgeInsets.all(w / 15),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(15),
+                borderRadius: BorderRadius.circular(10),
                 child: FlickVideoPlayer(flickManager: flickManager),
               ),
             ),

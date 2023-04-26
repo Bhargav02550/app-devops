@@ -1,3 +1,4 @@
+import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/material.dart';
@@ -16,8 +17,10 @@ class _OwlState extends State<Owl> {
   void initState() {
     super.initState();
     flickManager = FlickManager(
-        videoPlayerController:
-            VideoPlayerController.asset("images/Owlcoder2.0vid.mp4"));
+        autoPlay: false,
+        videoPlayerController: VideoPlayerController.asset(
+          "images/Owlcoder2.0vid.mp4",
+        ));
   }
 
   @override
@@ -51,7 +54,7 @@ class _OwlState extends State<Owl> {
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(10),
               child: FlickVideoPlayer(
                 flickManager: flickManager,
               ),
@@ -127,137 +130,405 @@ class _OwlState extends State<Owl> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Container(
-              height: 100,
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                    colors: [Colors.black, Colors.pink], stops: [0.1, 0.5]),
-                borderRadius: BorderRadius.circular(70),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.purpleAccent,
-                  ),
-                ],
-              ),
-              child: Row(
-                children: [
-                  Container(
-                      height: 200,
-                      width: 100,
-                      child: Image.asset("images/BO.png")),
-                  SizedBox(width: MediaQuery.of(context).size.width / 8),
-                  const Text(
-                    "   Owl Coder Badge1 \n Completed By 270 Owls",
-                    style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500,
-                        color: Color.fromARGB(255, 255, 255, 255)),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Container(
-              height: 100,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(70),
-                gradient: const LinearGradient(
-                    colors: [Colors.black, Color.fromARGB(255, 203, 13, 220)],
-                    stops: [0.1, 0.5]),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.purple,
-                  ),
-                ],
-              ),
-              child: Row(
-                children: [
-                  Container(
-                      height: 200,
-                      width: 100,
-                      child: Image.asset("images/HO.png")),
-                  SizedBox(width: MediaQuery.of(context).size.width / 8),
-                  Container(
-                    child: const Text(
-                      "   Owl Coder Badge2 \n Completed By 170 Owls",
+          InkWell(
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Container(
+                height: 100,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                      colors: [Colors.black, Colors.pink], stops: [0.1, 0.5]),
+                  borderRadius: BorderRadius.circular(70),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.purpleAccent,
+                    ),
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                        height: 200,
+                        width: 100,
+                        child: Image.asset("images/BO.png")),
+                    SizedBox(width: MediaQuery.of(context).size.width / 8),
+                    const Text(
+                      "   Owl Coder Badge1 \n Completed By 270 Owls",
                       style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w500,
                           color: Color.fromARGB(255, 255, 255, 255)),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
+            onTap: () {
+              showDialog(
+                context: (context),
+                builder: (context) {
+                  return Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Center(
+                      child: Material(
+                        type: MaterialType.transparency,
+                        child: BlurryContainer(
+                          blur: 100,
+                          height: h / 4,
+                          width: w / 1,
+                          child: Padding(
+                            padding: const EdgeInsets.all(15),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Center(
+                                  child: Text(
+                                    'LEVEL - 1 (Barn Owl)',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'LeetCode - 100 Problems',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Geeks For Geeks - 100 Problems',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Codechef - 100 Problems',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Hacker Rank - Problem solving 2 Star',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Codemind - Owl Sheet 1 - 10 Levels',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
           ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Container(
-              height: 100,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(70),
-                gradient: const LinearGradient(
-                    colors: [Colors.black, Colors.teal], stops: [0.1, 0.5]),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.grey,
-                  ),
-                ],
-              ),
-              child: Row(
-                children: [
-                  SizedBox(
-                      height: 200,
-                      width: 100,
-                      child: Image.asset("images/GH.png")),
-                  SizedBox(width: MediaQuery.of(context).size.width / 8),
-                  const Text(
-                    "   Owl Coder Badge4 \n Completed By 80 Owls",
-                    style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white),
-                  ),
-                ],
+          InkWell(
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Container(
+                height: 100,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(70),
+                  gradient: const LinearGradient(
+                      colors: [Colors.black, Color.fromARGB(255, 203, 13, 220)],
+                      stops: [0.1, 0.5]),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.purple,
+                    ),
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                        height: 200,
+                        width: 100,
+                        child: Image.asset("images/HO.png")),
+                    SizedBox(width: MediaQuery.of(context).size.width / 8),
+                    Container(
+                      child: const Text(
+                        "   Owl Coder Badge2 \n Completed By 170 Owls",
+                        style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
+                            color: Color.fromARGB(255, 255, 255, 255)),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
+            onTap: () {
+              showDialog(
+                context: (context),
+                builder: (context) {
+                  return Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Center(
+                      child: Material(
+                        type: MaterialType.transparency,
+                        child: BlurryContainer(
+                          blur: 100,
+                          height: h / 4,
+                          width: w / 1,
+                          child: Padding(
+                            padding: const EdgeInsets.all(15),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Center(
+                                  child: Text(
+                                    'LEVEL - 2 (Hoot Owl)',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'LeetCode - 200 Problems',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Geeks For Geeks - 200 Problems',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Codechef - 200 Problems',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Hacker Rank - Problem solving 4 Star',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Codemind - Owl Sheet 1 - 20 Levels',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
           ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Container(
-              height: 100,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(70),
-                gradient: const LinearGradient(
-                    colors: [Colors.black, Color.fromARGB(255, 79, 84, 153)],
-                    stops: [0.1, 0.5]),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.teal,
-                  ),
-                ],
-              ),
-              child: Row(
-                children: [
-                  SizedBox(
-                      height: 200,
-                      width: 100,
-                      child: Image.asset("images/GO.png")),
-                  SizedBox(width: MediaQuery.of(context).size.width / 8),
-                  const Text(
-                    "   Owl Coder Badge3 \n Completed By 36 Owls",
-                    style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white),
-                  ),
-                ],
+          InkWell(
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Container(
+                height: 100,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(70),
+                  gradient: const LinearGradient(
+                      colors: [Colors.black, Colors.teal], stops: [0.1, 0.5]),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    SizedBox(
+                        height: 200,
+                        width: 100,
+                        child: Image.asset("images/GH.png")),
+                    SizedBox(width: MediaQuery.of(context).size.width / 8),
+                    const Text(
+                      "   Owl Coder Badge4 \n Completed By 80 Owls",
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white),
+                    ),
+                  ],
+                ),
               ),
             ),
+            onTap: () {
+              showDialog(
+                context: (context),
+                builder: (context) {
+                  return Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Center(
+                      child: Material(
+                        type: MaterialType.transparency,
+                        child: BlurryContainer(
+                          blur: 100,
+                          height: h / 4,
+                          width: w / 1,
+                          child: Padding(
+                            padding: const EdgeInsets.all(15),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Center(
+                                  child: Text(
+                                    'LEVEL - 3 (Great Horned Owl)',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'LeetCode - 350 Problems',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Geeks For Geeks - 350 Problems',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Codechef - 350 Problems',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Hacker Rank - Problem solving 4 Star',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Codemind - Owl Sheet 1 - 35 Levels',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
+          ),
+          InkWell(
+            child: Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Container(
+                height: 100,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(70),
+                  gradient: const LinearGradient(
+                      colors: [Colors.black, Color.fromARGB(255, 79, 84, 153)],
+                      stops: [0.1, 0.5]),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.teal,
+                    ),
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    SizedBox(
+                        height: 200,
+                        width: 100,
+                        child: Image.asset("images/GO.png")),
+                    SizedBox(width: MediaQuery.of(context).size.width / 8),
+                    const Text(
+                      "   Owl Coder Badge3 \n Completed By 36 Owls",
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            onTap: () {
+              showDialog(
+                context: (context),
+                builder: (context) {
+                  return Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Center(
+                      child: Material(
+                        type: MaterialType.transparency,
+                        child: BlurryContainer(
+                          blur: 100,
+                          height: h / 4,
+                          width: w / 1,
+                          child: Padding(
+                            padding: const EdgeInsets.all(15),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Center(
+                                  child: Text(
+                                    'LEVEL - 4 (Great Grey Owl)',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'LeetCode - 500 Problems',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Geeks For Geeks - 500 Problems',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Codechef - 500 Problems',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Hacker Rank - Problem solving 6 Star',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                                Text(
+                                  'Codemind - Owl Sheet 2 - 20 Levels',
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
           ),
           const SizedBox(
             height: 20,

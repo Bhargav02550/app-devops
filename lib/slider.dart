@@ -15,7 +15,6 @@ class Myslider extends StatefulWidget {
 }
 
 class _MysliderState extends State<Myslider> {
-
   @override
   Widget build(BuildContext context) {
     double wid = MediaQuery.of(context).size.width;
@@ -39,7 +38,7 @@ class _MysliderState extends State<Myslider> {
                 'Do you really want to exit from the app ?',
                 textAlign: TextAlign.center,
               ),
-              title: Text("Are You Sure ?"),
+              title: const Text("Are You Sure ?"),
               actions: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -94,254 +93,289 @@ class _MysliderState extends State<Myslider> {
               fit: BoxFit.cover, height: 35.00, width: 200.00),
           centerTitle: true,
         ),
-        body: Container(
-          child: Center(
-              child: ListView(
-            children: [
-              Container(
-                color: Colors.grey[200],
-                height: 300,
-                width: double.infinity,
-                child: CarouselSlider(
-                  options: CarouselOptions(
-                    height: 200,
-                    reverse: false,
-                    autoPlay: true,
-                    autoPlayInterval: const Duration(seconds: 3),
-                    autoPlayAnimationDuration:
-                        const Duration(milliseconds: 800),
-                    autoPlayCurve: Curves.fastOutSlowIn,
-                    enlargeCenterPage: true,
-                    aspectRatio: 16 / 9,
-                    viewportFraction: 0.8,
-                    onPageChanged: null,
-                    scrollDirection: Axis.horizontal,
-                  ),
-                  items: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        'images/IMG-20230406-WA0030(1).jpg',
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        'images/owlcd.png',
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        'images/pega1.png',
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: Image.asset('images/mind.png'),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: Image.asset('images/codemindsub.png'),
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: Image.asset('images/train.png'),
-                    ),
-                  ],
+        body: Center(
+            child: ListView(
+          children: [
+            Container(
+              color: Colors.grey[200],
+              height: 300,
+              width: double.infinity,
+              child: CarouselSlider(
+                options: CarouselOptions(
+                  height: 200,
+                  pauseAutoPlayOnTouch: true,
+                  reverse: false,
+                  autoPlay: true,
+                  autoPlayInterval: const Duration(seconds: 3),
+                  autoPlayAnimationDuration: const Duration(milliseconds: 800),
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  enlargeCenterPage: true,
+                  aspectRatio: 16 / 9,
+                  viewportFraction: 0.8,
+                  onPageChanged: null,
+                  scrollDirection: Axis.horizontal,
                 ),
-              ),
-              const Divider(
-                thickness: 0.5,
-                color: Colors.black,
-              ),
-              InkWell(
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 10, left: 20, right: 20, bottom: 5),
-                  child: Container(
-                    height: 150,
-                    width: wid * (0.06),
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 255, 255, 255),
-                      borderRadius: BorderRadius.circular(10),
-                      // ignore: prefer_const_literals_to_create_immutables
-                      boxShadow: [
-                        const BoxShadow(
-                          color: Color.fromARGB(255, 0, 0, 0),
-                          blurRadius: 5.0,
-                          blurStyle: BlurStyle.outer,
-                        ),
-                      ],
-                      //image: DecorationImage(image: AssetImage('images/owl.png')),
+                items: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'images/IMG-20230406-WA0030(1).jpg',
+                      fit: BoxFit.fill,
                     ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        'images/main.png',
-                        fit: BoxFit.cover,
-                        //alignment: Alignment(0.0, 1.0),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'images/owlcd.png',
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'images/pega1.png',
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset('images/mind.png'),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset('images/codemindsub.png'),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset('images/train.png'),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(
+              thickness: 0.5,
+              color: Colors.black,
+            ),
+            InkWell(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 10, left: 20, right: 20, bottom: 5),
+                child: Container(
+                  height: 150,
+                  width: wid * (0.06),
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(10),
+                    // ignore: prefer_const_literals_to_create_immutables
+                    boxShadow: [
+                      const BoxShadow(
+                        color: Color.fromARGB(255, 0, 0, 0),
+                        blurRadius: 5.0,
+                        blurStyle: BlurStyle.outer,
                       ),
+                    ],
+                    //image: DecorationImage(image: AssetImage('images/owl.png')),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'images/main.png',
+                      fit: BoxFit.cover,
+                      //alignment: Alignment(0.0, 1.0),
                     ),
                   ),
                 ),
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Owl()));
-                },
               ),
-              InkWell(
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 10, left: 20, right: 20, bottom: 5),
-                  child: Container(
-                    height: 150,
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 255, 255, 255),
-                      borderRadius: BorderRadius.circular(10),
-                      // ignore: prefer_const_literals_to_create_immutables
-                      boxShadow: [
-                        const BoxShadow(
-                          color: Colors.black38,
-                          blurRadius: 5.0,
-                          blurStyle: BlurStyle.outer,
-                        ),
-                      ],
-                      //image: DecorationImage(image: AssetImage('images/owl.png')),
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        'images/TCON.png',
-                        fit: BoxFit.cover,
-                        //alignment: Alignment(0.0, 1.0),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Owl()));
+              },
+            ),
+            InkWell(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 10, left: 20, right: 20, bottom: 5),
+                child: Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(10),
+                    // ignore: prefer_const_literals_to_create_immutables
+                    boxShadow: [
+                      const BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 5.0,
+                        blurStyle: BlurStyle.outer,
                       ),
+                    ],
+                    //image: DecorationImage(image: AssetImage('images/owl.png')),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'images/TCON.png',
+                      fit: BoxFit.cover,
+                      //alignment: Alignment(0.0, 1.0),
                     ),
                   ),
                 ),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    PageTransition(
-                      child: const Home(),
-                      type: PageTransitionType.fade,
-                    ),
-                  );
-                },
               ),
-              InkWell(
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 10, left: 20, right: 20, bottom: 5),
-                  child: Container(
-                    height: 150,
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 255, 255, 255),
-                      borderRadius: BorderRadius.circular(10),
-                      // ignore: prefer_const_literals_to_create_immutables
-                      boxShadow: [
-                        const BoxShadow(
-                          color: Colors.black38,
-                          blurRadius: 5.0,
-                          blurStyle: BlurStyle.outer,
-                        ),
-                      ],
-                      //image: DecorationImage(image: AssetImage('images/owl.png')),
-                    ),
-                    child: ClipRRect(
-                      // ignore: sort_child_properties_last
-                      child: Image.asset(
-                        'images/DR.png',
-                        fit: BoxFit.cover,
-                        //alignment: Alignment(0.0, 1.0),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    child: const Home(),
+                    type: PageTransitionType.fade,
+                  ),
+                );
+              },
+            ),
+            InkWell(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 10, left: 20, right: 20, bottom: 5),
+                child: Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(10),
+                    // ignore: prefer_const_literals_to_create_immutables
+                    boxShadow: [
+                      const BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 5.0,
+                        blurStyle: BlurStyle.outer,
                       ),
-                      borderRadius: BorderRadius.circular(10),
+                    ],
+                    //image: DecorationImage(image: AssetImage('images/owl.png')),
+                  ),
+                  child: ClipRRect(
+                    // ignore: sort_child_properties_last
+                    child: Image.asset(
+                      'images/DR.png',
+                      fit: BoxFit.cover,
+                      //alignment: Alignment(0.0, 1.0),
                     ),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Drive()));
-                },
               ),
-              InkWell(
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 10, left: 20, right: 20, bottom: 5),
-                  child: Container(
-                    height: 150,
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 255, 255, 255),
-                      borderRadius: BorderRadius.circular(10),
-                      // ignore: prefer_const_literals_to_create_immutables
-                      boxShadow: [
-                        const BoxShadow(
-                          color: Colors.black38,
-                          blurRadius: 5.0,
-                          blurStyle: BlurStyle.outer,
-                        ),
-                      ],
-                      //image: DecorationImage(image: AssetImage('images/owl.png')),
-                    ),
-                    child: ClipRRect(
-                      // ignore: sort_child_properties_last
-                      child: Image.asset(
-                        'images/PSD.png',
-                        fit: BoxFit.cover,
-                        //alignment: Alignment(0.0, 1.0),
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Drive()));
+              },
+            ),
+            InkWell(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 10, left: 20, right: 20, bottom: 5),
+                child: Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(10),
+                    // ignore: prefer_const_literals_to_create_immutables
+                    boxShadow: [
+                      const BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 5.0,
+                        blurStyle: BlurStyle.outer,
                       ),
-                      borderRadius: BorderRadius.circular(10),
+                    ],
+                    //image: DecorationImage(image: AssetImage('images/owl.png')),
+                  ),
+                  child: ClipRRect(
+                    // ignore: sort_child_properties_last
+                    child: Image.asset(
+                      'images/PSD.png',
+                      fit: BoxFit.cover,
+                      //alignment: Alignment(0.0, 1.0),
                     ),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Know()));
-                },
               ),
-              InkWell(
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 10, left: 20, right: 20, bottom: 5),
-                  child: Container(
-                    height: 150,
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 255, 255, 255),
-                      borderRadius: BorderRadius.circular(10),
-                      // ignore: prefer_const_literals_to_create_immutables
-                      boxShadow: [
-                        const BoxShadow(
-                          color: Colors.black38,
-                          blurRadius: 5.0,
-                          blurStyle: BlurStyle.outer,
-                        ),
-                      ],
-                      //image: DecorationImage(image: AssetImage('images/owl.png')),
-                    ),
-                    child: ClipRRect(
-                      // ignore: sort_child_properties_last
-                      child: Image.asset(
-                        'images/CO.png',
-                        fit: BoxFit.cover,
-                        //alignment: Alignment(0.0, 1.0),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Know()));
+              },
+            ),
+            InkWell(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 10, left: 20, right: 20, bottom: 5),
+                child: Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(10),
+                    // ignore: prefer_const_literals_to_create_immutables
+                    boxShadow: [
+                      const BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 5.0,
+                        blurStyle: BlurStyle.outer,
                       ),
-                      borderRadius: BorderRadius.circular(10),
+                    ],
+                    //image: DecorationImage(image: AssetImage('images/owl.png')),
+                  ),
+                  child: ClipRRect(
+                    // ignore: sort_child_properties_last
+                    child: Image.asset(
+                      'images/CO.png',
+                      fit: BoxFit.cover,
+                      //alignment: Alignment(0.0, 1.0),
                     ),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Mpage()),
-                  );
-                },
               ),
-            ],
-          )),
-        ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Mpage()),
+                );
+              },
+            ),
+            InkWell(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 10, left: 20, right: 20, bottom: 5),
+                child: Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(10),
+                    // ignore: prefer_const_literals_to_create_immutables
+                    boxShadow: [
+                      const BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 5.0,
+                        blurStyle: BlurStyle.outer,
+                      ),
+                    ],
+                    //image: DecorationImage(image: AssetImage('images/owl.png')),
+                  ),
+                  child: ClipRRect(
+                    // ignore: sort_child_properties_last
+                    child: Image.asset(
+                      'images/CO.png',
+                      fit: BoxFit.cover,
+                      //alignment: Alignment(0.0, 1.0),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Mpage()),
+                );
+              },
+            ),
+          ],
+        )),
       ),
     );
   }

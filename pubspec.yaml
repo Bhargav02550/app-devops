@@ -32,6 +32,7 @@ dependencies:
   animated_button: ^0.2.0
   appbar_animated: ^0.0.3
   blurrycontainer: ^1.0.2
+  bouncing_widget: ^2.0.0
   bubble_lens: ^2.0.0
   carousel_pro: ^1.0.0
   carousel_slider: ^4.2.1
@@ -51,11 +52,15 @@ dependencies:
   new_gradient_app_bar: ^0.2.0
   page_transition: ^2.0.9
   panara_dialogs: ^0.1.4
+  persistent_bottom_nav_bar: ^5.0.2
   quickalert: ^1.0.1
   responsive_framework: ^0.2.0
   salomon_bottom_bar: ^3.3.2
+  searchfield: ^0.7.6
+  vertical_card_pager: ^1.5.0
   video_player: ^2.6.0
   widget_and_text_animator: ^1.0.9
+  motion: ^1.4.0
 
 flutter_native_splash:
   image: images/thublogo.png
@@ -86,6 +91,7 @@ flutter:
   assets:
     - images/
     - images/Team/
+    - images/Qr/
 
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -65,6 +65,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  bouncing_widget:
+    dependency: "direct main"
+    description:
+      name: bouncing_widget
+      sha256: "94d30908780fa0e82ada38ef90963d0760419a42c5d05289f85fae745981da99"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.0"
   bubble_lens:
     dependency: "direct main"
     description:
@@ -344,6 +352,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.0"
+  motion:
+    dependency: "direct main"
+    description:
+      name: motion
+      sha256: "1764b7a4c0d5509dba58dc6cfca80c03e3f049e0175c26d0a096f76451a5f23e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.0"
+  motion_platform_interface:
+    dependency: transitive
+    description:
+      name: motion_platform_interface
+      sha256: "0b29234fef24d18cd7c3d3f1a2a2f67998aed1c2fb8f5d484900cc9b012328de"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.0"
+  motion_web:
+    dependency: transitive
+    description:
+      name: motion_web
+      sha256: "223699d57c7f3dff7d0ffbfb9b3c8b083b9ef3dc0d260040c367c899fd38a4a2"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.0"
   nested:
     dependency: transitive
     description:
@@ -384,6 +416,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.2"
+  persistent_bottom_nav_bar:
+    dependency: "direct main"
+    description:
+      name: persistent_bottom_nav_bar
+      sha256: e2e031e3366fde01511e372a9a19d720a9b252bb456e5c8d77a30d7a4a2ddfb0
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.2"
   petitparser:
     dependency: transitive
     description:
@@ -448,6 +488,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.3.2"
+  searchfield:
+    dependency: "direct main"
+    description:
+      name: searchfield
+      sha256: c532a5696776919381cfea2ee6de483c4796276eae8aea2430f26a57f505dbba
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.6"
   sky_engine:
     dependency: transitive
     description: flutter

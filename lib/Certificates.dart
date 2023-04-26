@@ -10,7 +10,7 @@ class Cert extends StatefulWidget {
 class _CertState extends State<Cert> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.green,
     );
   }
