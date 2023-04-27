@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:thub/Coding1.dart';
+import 'package:thub/Tinfo.dart';
 import 'package:thub/driveready.dart';
 import 'package:thub/T-Connect.dart';
 import 'package:thub/open.dart';
+import 'package:thub/placement.dart';
 import 'package:thub/project.dart';
 
 class Myslider extends StatefulWidget {
@@ -298,43 +300,6 @@ class _MysliderState extends State<Myslider> {
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const Know()));
-              },
-            ),
-            InkWell(
-              child: Padding(
-                padding: const EdgeInsets.only(
-                    top: 10, left: 20, right: 20, bottom: 5),
-                child: Container(
-                  height: 150,
-                  decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 255, 255, 255),
-                    borderRadius: BorderRadius.circular(10),
-                    // ignore: prefer_const_literals_to_create_immutables
-                    boxShadow: [
-                      const BoxShadow(
-                        color: Colors.black38,
-                        blurRadius: 5.0,
-                        blurStyle: BlurStyle.outer,
-                      ),
-                    ],
-                    //image: DecorationImage(image: AssetImage('images/owl.png')),
-                  ),
-                  child: ClipRRect(
-                    // ignore: sort_child_properties_last
-                    child: Image.asset(
-                      'images/CO.png',
-                      fit: BoxFit.cover,
-                      //alignment: Alignment(0.0, 1.0),
-                    ),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
-              ),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Mpage()),
-                );
               },
             ),
             InkWell(

@@ -175,7 +175,6 @@ class _OwlState extends State<Owl> {
                         child: BlurryContainer(
                           blur: 100,
                           height: h / 4,
-                          width: w / 1,
                           child: Padding(
                             padding: const EdgeInsets.all(15),
                             child: Column(
@@ -186,7 +185,7 @@ class _OwlState extends State<Owl> {
                                     'LEVEL - 1 (Barn Owl)',
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: 30,
+                                        fontSize: 25,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
@@ -196,27 +195,27 @@ class _OwlState extends State<Owl> {
                                 Text(
                                   'LeetCode - 100 Problems',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Geeks For Geeks - 100 Problems',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Codechef - 100 Problems',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Hacker Rank - Problem solving 2 Star',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Codemind - Owl Sheet 1 - 10 Levels',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                               ],
                             ),
@@ -288,7 +287,7 @@ class _OwlState extends State<Owl> {
                                     'LEVEL - 2 (Hoot Owl)',
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: 30,
+                                        fontSize: 25,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
@@ -298,27 +297,27 @@ class _OwlState extends State<Owl> {
                                 Text(
                                   'LeetCode - 200 Problems',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Geeks For Geeks - 200 Problems',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Codechef - 200 Problems',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Hacker Rank - Problem solving 4 Star',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Codemind - Owl Sheet 1 - 20 Levels',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                               ],
                             ),
@@ -397,27 +396,27 @@ class _OwlState extends State<Owl> {
                                 Text(
                                   'LeetCode - 350 Problems',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Geeks For Geeks - 350 Problems',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Codechef - 350 Problems',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Hacker Rank - Problem solving 4 Star',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Codemind - Owl Sheet 1 - 35 Levels',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                               ],
                             ),
@@ -497,27 +496,27 @@ class _OwlState extends State<Owl> {
                                 Text(
                                   'LeetCode - 500 Problems',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Geeks For Geeks - 500 Problems',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Codechef - 500 Problems',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Hacker Rank - Problem solving 6 Star',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                                 Text(
                                   'Codemind - Owl Sheet 2 - 20 Levels',
                                   style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                                      fontSize: 15, color: Colors.white),
                                 ),
                               ],
                             ),

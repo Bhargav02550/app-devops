@@ -61,6 +61,10 @@ dependencies:
   video_player: ^2.6.0
   widget_and_text_animator: ^1.0.9
   motion: ^1.4.0
+  flutter_svg: ^2.0.5
+  url_launcher: ^6.1.10
+  getwidget: ^3.1.1
+  animated_image_list: ^1.0.0
 
 flutter_native_splash:
   image: images/thublogo.png
@@ -92,6 +96,7 @@ flutter:
     - images/
     - images/Team/
     - images/Qr/
+    - images/Certify/
 
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

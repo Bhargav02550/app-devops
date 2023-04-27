@@ -18,7 +18,7 @@ class _GoneState extends State<Gone> {
   List pages = [
     const Myslider(),
     const Events(),
-    const Cert(),
+    const Home(),
     const Team(),
     const Info(),
   ];

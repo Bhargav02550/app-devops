@@ -1,9 +1,7 @@
-import 'package:bouncing_widget/bouncing_widget.dart';
+import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:bubble_lens/bubble_lens.dart';
 import 'package:flutter/material.dart';
-import 'package:thub/Team/Profile.dart';
 import 'package:thub/Team/details.dart';
-import 'Profile.dart';
 
 List<ImageDetails> _images = [
   ImageDetails(
@@ -415,7 +413,7 @@ class _TeamState extends State<Team> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-          child: Container(
+          child: BlurryContainer(
         color: Colors.white,
         child: BubbleLens(
             width: MediaQuery.of(context).size.width,
@@ -429,15 +427,17 @@ class _TeamState extends State<Team> {
                     child: Image.asset(_images[i].imagePath),
                     onTap: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => DetailsPage(
-                                    imagePath: _images[i].imagePath,
-                                    title: _images[i].title,
-                                    team: _images[i].team,
-                                    designation: _images[i].designation,
-                                    details: _images[i].details,
-                                  )));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DetailsPage(
+                            imagePath: _images[i].imagePath,
+                            title: _images[i].title,
+                            team: _images[i].team,
+                            designation: _images[i].designation,
+                            details: _images[i].details,
+                          ),
+                        ),
+                      );
                     },
                   ),
                   //color: [Colors.red, Colors.green, Colors.blue][i % 3],

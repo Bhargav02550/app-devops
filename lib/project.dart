@@ -31,6 +31,14 @@ class _KnowState extends State<Know> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> paths = [
+      "images/TCV.mp4",
+      "images/TCV.mp4",
+      "images/TCV.mp4",
+      "images/TCV.mp4",
+      "images/TCV.mp4",
+    ];
+    
     double wi = MediaQuery.of(context).size.width;
     double pd = wi * 0.05;
     double wid = MediaQuery.of(context).size.width;
