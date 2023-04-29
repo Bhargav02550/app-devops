@@ -410,40 +410,106 @@ class Team extends StatefulWidget {
 class _TeamState extends State<Team> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-          child: BlurryContainer(
-        color: Colors.white,
-        child: BubbleLens(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            widgets: [
-              for (var i = 0; i < _images.length; i++)
-                SizedBox(
-                  width: 100,
-                  height: 100,
-                  child: InkWell(
-                    child: Image.asset(_images[i].imagePath),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => DetailsPage(
-                            imagePath: _images[i].imagePath,
-                            title: _images[i].title,
-                            team: _images[i].team,
-                            designation: _images[i].designation,
-                            details: _images[i].details,
-                          ),
+    double wid = MediaQuery.of(context).size.width;
+    Future<bool> showExitPopup() async {
+      return await showDialog(
+            //show confirm dialogue
+            //the return value will be from "Yes" or "No" options
+            context: context,
+            builder: (context) => AlertDialog(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              icon: const Icon(
+                Icons.warning_rounded,
+                color: Color.fromARGB(255, 226, 183, 53),
+                size: 55,
+              ),
+              backgroundColor: Colors.greenAccent[50],
+              content: const Text(
+                'Do you want to exit the app ?',
+                textAlign: TextAlign.center,
+              ),
+              title: const Text("Are You Sure ?"),
+              actions: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      height: 30,
+                      width: 100,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
+                            backgroundColor: Colors.green[400]),
+                        onPressed: () => Navigator.of(context).pop(true),
+
+                        //return true when click on "Yes"
+                        child: const Text('Yes'),
+                      ),
+                    ),
+                    SizedBox(
+                      width: wid / 20,
+                    ),
+                    SizedBox(
+                      height: 30,
+                      width: 100,
+                      child: ElevatedButton(
+                        onPressed: () => Navigator.of(context).pop(false),
+                        //return false when click on "NO"
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20)),
+                          backgroundColor: Colors.green,
                         ),
-                      );
-                    },
-                  ),
-                  //color: [Colors.red, Colors.green, Colors.blue][i % 3],
-                )
-            ]),
-      )),
+                        child: const Text('Cancel'),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ) ??
+          false; //if showDialouge had returned null, then return false
+    }
+
+    return WillPopScope(
+      onWillPop: showExitPopup,
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: Center(
+            child: BlurryContainer(
+          color: Colors.white,
+          child: BubbleLens(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              widgets: [
+                for (var i = 0; i < _images.length; i++)
+                  SizedBox(
+                    width: 100,
+                    height: 100,
+                    child: InkWell(
+                      child: Image.asset(_images[i].imagePath),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailsPage(
+                              imagePath: _images[i].imagePath,
+                              title: _images[i].title,
+                              team: _images[i].team,
+                              designation: _images[i].designation,
+                              details: _images[i].details,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                    //color: [Colors.red, Colors.green, Colors.blue][i % 3],
+                  )
+              ]),
+        )),
+      ),
     );
   }
 }

@@ -1,7 +1,8 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:thub/Events/7thanv.dart';
-import 'package:thub/Prog.dart';
+import 'package:thub/Events/Prog.dart';
 import 'package:thub/Events/Skill.dart';
 
 class Events extends StatefulWidget {
@@ -35,7 +36,7 @@ class _EventsState extends State<Events> {
                 'Do you really want to exit from the app ?',
                 textAlign: TextAlign.center,
               ),
-              title: Text("Are You Sure ?"),
+              title: const Text("Are You Sure ?"),
               actions: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -86,7 +87,7 @@ class _EventsState extends State<Events> {
           elevation: 2,
           automaticallyImplyLeading: false,
           backgroundColor: Colors.lightBlue[100],
-          title: Image.asset('images/Techo.png',
+          title: Image.asset('images/Events/Techo.png',
               fit: BoxFit.cover, height: 35.00, width: 200.00),
           centerTitle: true,
         ),
@@ -122,20 +123,20 @@ class _EventsState extends State<Events> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
-                        'images/skday1.png',
+                        'images/Events/skday1.png',
                         fit: BoxFit.fill,
                       ),
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
-                        'images/progday1.png',
+                        'images/Events/progday1.png',
                         fit: BoxFit.fill,
                       ),
                     ),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(20),
-                      child: Image.asset('images/botchal.png'),
+                      child: Image.asset('images/Events/botchal.png'),
                     ),
                   ],
                 ),
@@ -160,7 +161,7 @@ class _EventsState extends State<Events> {
                         ),
                       ],
                       image: const DecorationImage(
-                          image: AssetImage('images/7thanv.png'),
+                          image: AssetImage('images/Events/7thanv.png'),
                           fit: BoxFit.fill),
                     ),
                     // child: ClipRRect(
@@ -196,8 +197,8 @@ class _EventsState extends State<Events> {
                         ),
                       ],
                       image: const DecorationImage(
-                          image:
-                              AssetImage('images/Skillers Day Campus TV.png'),
+                          image: AssetImage(
+                              'images/Events/Skillers Day Campus TV.png'),
                           fit: BoxFit.fill),
                     ),
                     // child: ClipRRect(
@@ -233,7 +234,7 @@ class _EventsState extends State<Events> {
                         ),
                       ],
                       image: const DecorationImage(
-                          image: AssetImage('images/Pday.png'),
+                          image: AssetImage('images/Events/Pday.png'),
                           fit: BoxFit.fill),
                     ),
                     // child: ClipRRect(

@@ -27,6 +27,24 @@ class _HomeState extends State<Home> {
             children: [
               Card(
                 child: Image.asset(
+                  "images/Certify/REDHAT.jpg",
+                  fit: BoxFit.fill,
+                ),
+              ),
+              Card(
+                child: Image.asset(
+                  "images/Certify/SECURITY.jpg",
+                  fit: BoxFit.fitHeight,
+                ),
+              ),
+              Card(
+                child: Image.asset(
+                  "images/Certify/UNITY PROG.jpg",
+                  fit: BoxFit.fitHeight,
+                ),
+              ),
+              Card(
+                child: Image.asset(
                   "images/Certify/AWS.jpg",
                   fit: BoxFit.contain,
                 ),
@@ -63,37 +81,19 @@ class _HomeState extends State<Home> {
               ),
               Card(
                 child: Image.asset(
-                  "images/Certify/PS.jpg",
-                  fit: BoxFit.fitHeight,
-                ),
-              ),
-              Card(
-                child: Image.asset(
                   "images/Certify/PYTHON.jpg",
                   fit: BoxFit.contain,
                 ),
               ),
               Card(
                 child: Image.asset(
-                  "images/Certify/REDHAT.jpg",
-                  fit: BoxFit.fill,
+                  "images/Certify/PS.jpg",
+                  fit: BoxFit.fitHeight,
                 ),
               ),
               Card(
                 child: Image.asset(
                   "images/Certify/SALES.jpg",
-                  fit: BoxFit.fitHeight,
-                ),
-              ),
-              Card(
-                child: Image.asset(
-                  "images/Certify/SECURITY.jpg",
-                  fit: BoxFit.fitHeight,
-                ),
-              ),
-              Card(
-                child: Image.asset(
-                  "images/Certify/UNITY PROG.jpg",
                   fit: BoxFit.fitHeight,
                 ),
               ),

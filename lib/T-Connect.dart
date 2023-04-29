@@ -17,7 +17,9 @@ class _HomeState extends State<Home> {
     super.initState();
     flickManager = FlickManager(
       autoPlay: false,
-      videoPlayerController: VideoPlayerController.asset("images/TCV.mp4"),
+      videoPlayerController: VideoPlayerController.asset(
+        "images/TCV.mp4",
+      ),
     );
   }
 
@@ -1661,7 +1663,7 @@ class _HomeState extends State<Home> {
                                         padding: EdgeInsets.only(
                                             left: 10, right: 10),
                                         child: Text(
-                                          'The Internet of Things (IoT) describes the network of physical objects—“things”—that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the internet.',
+                                          'An unmanned aerial vehicle (UAV), commonly known as a drone, is an aircraft without any human pilot, crew, or passengers on board. UAVs were originally developed through the twentieth century for military missions too "dull, dirty or dangerous"[1] for humans, and by the twenty-first, they had become essential assets to most militaries. ',
                                           style: TextStyle(
                                             fontSize: 15,
                                             fontWeight: FontWeight.w500,

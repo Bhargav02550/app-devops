@@ -115,7 +115,7 @@ class _SkillState extends State<Skill> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image.asset(
-                "images/C_1.png",
+                "images/Events/C_1.png",
               ),
             ),
           ),
@@ -123,28 +123,28 @@ class _SkillState extends State<Skill> {
             padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image.asset("images/C_2.jpeg"),
+              child: Image.asset("images/Events/C_2.jpeg"),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image.asset("images/C_3.jpeg"),
+              child: Image.asset("images/Events/C_3.jpeg"),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image.asset("images/C_4.jpeg"),
+              child: Image.asset("images/Events/C_4.jpeg"),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image.asset("images/C_6.jpeg"),
+              child: Image.asset("images/Events/C_6.jpeg"),
             ),
           ),
           const SizedBox(
@@ -164,28 +164,28 @@ class _SkillState extends State<Skill> {
             padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image.asset("images/R-1.jpeg"),
+              child: Image.asset("images/Events/R-1.jpeg"),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image.asset("images/R-2.jpeg"),
+              child: Image.asset("images/Events/R-2.jpeg"),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image.asset("images/Rpa_arun.jpeg"),
+              child: Image.asset("images/Events/Rpa_arun.jpeg"),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(left: w / 12, top: 10, right: w / 12),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image.asset("images/Rpa_divya - Copy.jpeg"),
+              child: Image.asset("images/Events/Rpa_divya - Copy.jpeg"),
             ),
           ),
           Padding(
@@ -193,7 +193,7 @@ class _SkillState extends State<Skill> {
                 left: w / 12, top: 10, right: w / 12, bottom: w / 12),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image.asset("images/R-5.jpeg"),
+              child: Image.asset("images/Events/R-5.jpeg"),
             ),
           ),
         ],

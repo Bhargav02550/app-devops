@@ -20,7 +20,7 @@ class _AnvState extends State<Anv> {
     flickManager = FlickManager(
         autoPlay: false,
         videoPlayerController:
-            VideoPlayerController.asset("images/7thanvid.mp4"));
+            VideoPlayerController.asset("images/Videos/7thanvid.mp4"));
   }
 
   @override
@@ -37,7 +37,7 @@ class _AnvState extends State<Anv> {
       appBar: AppBar(
         backgroundColor: Colors.teal,
         actions: [
-          Image.asset("images/Techo.png"),
+          Image.asset("images/Events/Techo.png"),
           const SizedBox(
             width: 100,
           )
@@ -122,7 +122,8 @@ class _AnvState extends State<Anv> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   image: const DecorationImage(
-                      image: AssetImage('images/IMG-20230406-WA0022.jpg'),
+                      image:
+                          AssetImage('images/Events/IMG-20230406-WA0022.jpg'),
                       fit: BoxFit.fill),
                 ),
                 alignment: Alignment.center,
@@ -163,7 +164,7 @@ class _AnvState extends State<Anv> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   image: const DecorationImage(
-                      image: AssetImage('images/bestdeveloper.png'),
+                      image: AssetImage('images/Events/bestdeveloper.png'),
                       fit: BoxFit.fill),
                 ),
                 alignment: Alignment.center,
@@ -204,7 +205,8 @@ class _AnvState extends State<Anv> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   image: const DecorationImage(
-                      image: AssetImage('images/IMG-20230406-WA0034.jpg'),
+                      image:
+                          AssetImage('images/Events/IMG-20230406-WA0034.jpg'),
                       fit: BoxFit.fill),
                 ),
                 alignment: Alignment.center,
@@ -245,7 +247,8 @@ class _AnvState extends State<Anv> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   image: const DecorationImage(
-                      image: AssetImage('images/IMG-20230406-WA0026.jpg'),
+                      image:
+                          AssetImage('images/Events/IMG-20230406-WA0026.jpg'),
                       fit: BoxFit.fill),
                 ),
                 alignment: Alignment.center,
@@ -286,7 +289,8 @@ class _AnvState extends State<Anv> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   image: const DecorationImage(
-                      image: AssetImage('images/IMG-20230406-WA0024.jpg'),
+                      image:
+                          AssetImage('images/Events/IMG-20230406-WA0024.jpg'),
                       fit: BoxFit.fill),
                 ),
                 alignment: Alignment.center,
@@ -327,7 +331,8 @@ class _AnvState extends State<Anv> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   image: const DecorationImage(
-                      image: AssetImage('images/IMG-20230406-WA0027.jpg'),
+                      image:
+                          AssetImage('images/Events/IMG-20230406-WA0027.jpg'),
                       fit: BoxFit.fill),
                 ),
                 alignment: Alignment.center,
@@ -368,7 +373,8 @@ class _AnvState extends State<Anv> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   image: const DecorationImage(
-                      image: AssetImage('images/Best.png'), fit: BoxFit.fill),
+                      image: AssetImage('images/Events/Best.png'),
+                      fit: BoxFit.fill),
                 ),
                 alignment: Alignment.center,
                 child: Padding(
@@ -408,7 +414,8 @@ class _AnvState extends State<Anv> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   image: const DecorationImage(
-                      image: AssetImage('images/IMG-20230406-WA0028.jpg'),
+                      image:
+                          AssetImage('images/Events/IMG-20230406-WA0028.jpg'),
                       fit: BoxFit.fill),
                 ),
                 alignment: Alignment.center,
@@ -471,7 +478,7 @@ class _AnvState extends State<Anv> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset(
-                      "images/1stprize.png",
+                      "images/Events/1stprize.png",
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -493,7 +500,7 @@ class _AnvState extends State<Anv> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset(
-                      "images/IMG-20230406-WA0033.jpg",
+                      "images/Events/IMG-20230406-WA0033.jpg",
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -515,7 +522,7 @@ class _AnvState extends State<Anv> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.asset(
-                      "images/IMG-20230406-WA0025.jpg",
+                      "images/Events/IMG-20230406-WA0025.jpg",
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -553,13 +560,13 @@ class _AnvState extends State<Anv> {
                     scrollDirection: Axis.horizontal,
                   ),
                   items: [
-                    Image.asset('images/IMG-20230406-WA0030(1).jpg',
+                    Image.asset('images/Events/IMG-20230406-WA0030(1).jpg',
                         fit: BoxFit.fill),
-                    Image.asset('images/IMG-20230406-WA0023.jpg',
+                    Image.asset('images/Events/IMG-20230406-WA0023.jpg',
                         fit: BoxFit.fill),
-                    Image.asset('images/IMG-20230406-WA0021.jpg',
+                    Image.asset('images/Events/IMG-20230406-WA0021.jpg',
                         fit: BoxFit.fill),
-                    Image.asset('images/interns.png', fit: BoxFit.fill),
+                    Image.asset('images/Events/interns.png', fit: BoxFit.fill),
                   ],
                 ),
               ),

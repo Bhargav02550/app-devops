@@ -31,14 +31,6 @@ class _KnowState extends State<Know> {
 
   @override
   Widget build(BuildContext context) {
-    List<String> paths = [
-      "images/TCV.mp4",
-      "images/TCV.mp4",
-      "images/TCV.mp4",
-      "images/TCV.mp4",
-      "images/TCV.mp4",
-    ];
-    
     double wi = MediaQuery.of(context).size.width;
     double pd = wi * 0.05;
     double wid = MediaQuery.of(context).size.width;
@@ -75,14 +67,19 @@ class _KnowState extends State<Know> {
             color: Colors.black,
           ),
           Container(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(20),
             child: Container(
               decoration: BoxDecoration(
                   color: Colors.yellowAccent.shade700,
                   boxShadow: const [
-                    BoxShadow(color: Colors.grey, blurRadius: 15)
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 20,
+                      spreadRadius: 0.5,
+                      blurStyle: BlurStyle.normal,
+                    )
                   ],
-                  borderRadius: BorderRadius.circular(30)),
+                  borderRadius: BorderRadius.circular(10)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

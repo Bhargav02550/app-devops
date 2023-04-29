@@ -859,6 +859,8 @@ class _OwlState extends State<Owl> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: Container(
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(10)),
               height: 250.0,
               width: double.infinity,
               child: CarouselSlider(
@@ -870,19 +872,61 @@ class _OwlState extends State<Owl> {
                   autoPlayAnimationDuration: const Duration(milliseconds: 800),
                   autoPlayCurve: Curves.fastOutSlowIn,
                   enlargeCenterPage: true,
+                  enlargeFactor: 0.5,
                   aspectRatio: 16 / 9,
                   viewportFraction: 0.8,
                   onPageChanged: null,
-                  scrollDirection: Axis.horizontal,
+                  scrollDirection: Axis.vertical,
                 ),
                 items: [
-                  Image.asset('images/owlcoder3.1.png', fit: BoxFit.fill),
-                  Image.asset('images/owlcoder34.png', fit: BoxFit.fill),
-                  Image.asset('images/owlcoder32.png', fit: BoxFit.fill),
-                  Image.asset('images/Owlcoder.33.png', fit: BoxFit.fill),
-                  Image.asset('images/owlcoder32.png', fit: BoxFit.fill),
-                  Image.asset('images/owlcoder12.png', fit: BoxFit.fill),
-                  Image.asset('images/owlcoder31.png', fit: BoxFit.fill),
+                  ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        'images/owlcoder3.1.png',
+                        fit: BoxFit.cover,
+                      )),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'images/owlcoder34.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'images/owlcoder32.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'images/Owlcoder.33.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'images/owlcoder32.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'images/owlcoder12.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'images/owlcoder31.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -1015,6 +1059,7 @@ class _OwlState extends State<Owl> {
                 ),
               ),
               Container(
+                color: Colors.transparent,
                 alignment: Alignment.center,
                 child: Text(
                   "   CodeChef",

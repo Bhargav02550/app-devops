@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:thub/Coding1.dart';
-import 'package:thub/Tinfo.dart';
 import 'package:thub/driveready.dart';
 import 'package:thub/T-Connect.dart';
 import 'package:thub/open.dart';
@@ -71,7 +70,7 @@ class _MysliderState extends State<Myslider> {
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(20)),
-                          backgroundColor: Colors.yellow[400],
+                          backgroundColor: Colors.green,
                         ),
                         child: const Text('Cancel'),
                       ),
@@ -121,7 +120,7 @@ class _MysliderState extends State<Myslider> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(10),
                     child: Image.asset(
-                      'images/IMG-20230406-WA0030(1).jpg',
+                      'images/Events/IMG-20230406-WA0030(1).jpg',
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -140,15 +139,15 @@ class _MysliderState extends State<Myslider> {
                     ),
                   ),
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(10),
                     child: Image.asset('images/mind.png'),
                   ),
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(10),
                     child: Image.asset('images/codemindsub.png'),
                   ),
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(10),
                     child: Image.asset('images/train.png'),
                   ),
                 ],
