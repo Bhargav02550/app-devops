@@ -338,6 +338,43 @@ class _MysliderState extends State<Myslider> {
                 );
               },
             ),
+            InkWell(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    top: 10, left: 20, right: 20, bottom: 5),
+                child: Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 255, 255, 255),
+                    borderRadius: BorderRadius.circular(10),
+                    // ignore: prefer_const_literals_to_create_immutables
+                    boxShadow: [
+                      const BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 5.0,
+                        blurStyle: BlurStyle.outer,
+                      ),
+                    ],
+                  ),
+                  child: Center(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        'images/place.jpg',
+                        fit: BoxFit.fill,
+                        //alignment: Alignment(0.0, 1.0),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Place()),
+                );
+              },
+            ),
           ],
         )),
       ),

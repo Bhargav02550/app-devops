@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Info extends StatefulWidget {
   const Info({super.key});
@@ -9,6 +10,16 @@ class Info extends StatefulWidget {
 
 class _InfoState extends State<Info> {
   Widget build(BuildContext context) {
+    launchURL() async {
+      const url = 'https://flutter.io';
+      final uri = Uri.parse(url);
+      if (await canLaunchUrl(uri)) {
+        await launchUrl(uri);
+      } else {
+        throw 'Could not launch $url';
+      }
+    }
+
     double wid = MediaQuery.of(context).size.width;
     // ignore: unused_local_variable
     double hig = MediaQuery.of(context).size.height;
@@ -460,10 +471,10 @@ class _InfoState extends State<Info> {
                   const SizedBox(
                     height: 5,
                   ),
-                  InkWell(
-                      child: Row(
-                        children: [
-                          Padding(
+                  Row(
+                    children: [
+                      InkWell(
+                          child: Padding(
                             padding: const EdgeInsets.only(left: 10, right: 2),
                             child: Container(
                               height: 80,
@@ -475,56 +486,61 @@ class _InfoState extends State<Info> {
                               child: Image.asset('images/Youtube (1).png'),
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(),
-                            child: Container(
-                              height: 80,
-                              width: MediaQuery.of(context).size.height / 4,
-                              decoration: BoxDecoration(
-                                color: const Color.fromARGB(97, 226, 226, 226),
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: const Center(
-                                  child: Text(
-                                '@technicalhub8786',
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              )),
-                            ),
-                          ),
-                        ],
-                      ),
-                      onTap: () {
-                        showDialog(
-                          context: (context),
-                          builder: (context) {
-                            return Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: Center(
-                                child: Material(
-                                  type: MaterialType.transparency,
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(20),
-                                    ),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(10),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(10),
-                                        child: Image.asset(
-                                          'images/Qr/you.png',
-                                          fit: BoxFit.fill,
+                          onTap: () {
+                            showDialog(
+                              context: (context),
+                              builder: (context) {
+                                return Padding(
+                                  padding: const EdgeInsets.all(10),
+                                  child: Center(
+                                    child: Material(
+                                      type: MaterialType.transparency,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                        ),
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(10),
+                                            child: Image.asset(
+                                              'images/Qr/you.png',
+                                              fit: BoxFit.fill,
+                                            ),
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
-                                ),
-                              ),
+                                );
+                              },
                             );
-                          },
-                        );
-                      }),
+                          }),
+                      InkWell(
+                        onTap: launchURL,
+                        child: Padding(
+                          padding: const EdgeInsets.only(),
+                          child: Container(
+                            height: 80,
+                            width: MediaQuery.of(context).size.height / 4,
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(97, 226, 226, 226),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: const Center(
+                                child: Text(
+                              '@technicalhub8786',
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            )),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                   const SizedBox(
                     height: 5,
                   ),

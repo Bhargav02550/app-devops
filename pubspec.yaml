@@ -62,9 +62,12 @@ dependencies:
   widget_and_text_animator: ^1.0.9
   motion: ^1.4.0
   flutter_svg: ^2.0.5
-  url_launcher: ^6.1.10
   getwidget: ^3.1.1
   animated_image_list: ^1.0.0
+  url_launcher: ^6.1.10
+  appcenter: ^0.2.1
+  appcenter_analytics: ^0.2.1
+  appcenter_crashes: ^0.2.1
 
 flutter_native_splash:
   image: images/thublogo.png

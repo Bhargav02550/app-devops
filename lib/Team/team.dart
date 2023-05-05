@@ -265,13 +265,6 @@ List<ImageDetails> _images = [
     details: '',
   ),
   ImageDetails(
-    imagePath: 'images/Team/RAMESH.png',
-    designation: 'Prasanth',
-    team: 'AR?VR Developer',
-    title: 'Sudhir',
-    details: '',
-  ),
-  ImageDetails(
     imagePath: 'images/Team/RENUKA.png',
     designation: 'Renuka',
     team: 'Softskills Trainer',

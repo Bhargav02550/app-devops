@@ -876,7 +876,7 @@ class _OwlState extends State<Owl> {
                   aspectRatio: 16 / 9,
                   viewportFraction: 0.8,
                   onPageChanged: null,
-                  scrollDirection: Axis.vertical,
+                  scrollDirection: Axis.horizontal,
                 ),
                 items: [
                   ClipRRect(

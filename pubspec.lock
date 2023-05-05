@@ -33,6 +33,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.0.3"
+  appcenter:
+    dependency: "direct main"
+    description:
+      name: appcenter
+      sha256: ca4808d1f04f93da49d5035623dca07d6798e1303e159f16f87a2fab4320222f
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.1"
+  appcenter_analytics:
+    dependency: "direct main"
+    description:
+      name: appcenter_analytics
+      sha256: "8973f3455bacdca4cc934898f136c463a9fb672427f0cfce5e43592f082f769f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.1"
+  appcenter_crashes:
+    dependency: "direct main"
+    description:
+      name: appcenter_crashes
+      sha256: df5a1f7e8c5942f65ca17523e3ac4a8e71042e77b043b457b058419c08f10b23
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.2.1"
   archive:
     dependency: transitive
     description:
@@ -625,10 +649,10 @@ packages:
     dependency: transitive
     description:
       name: url_launcher_android
-      sha256: a52628068d282d01a07cd86e6ba99e497aa45ce8c91159015b2416907d78e411
+      sha256: "22f8db4a72be26e9e3a4aa3f194b1f7afbc76d20ec141f84be1d787db2155cbd"
       url: "https://pub.dev"
     source: hosted
-    version: "6.0.27"
+    version: "6.0.31"
   url_launcher_ios:
     dependency: transitive
     description:

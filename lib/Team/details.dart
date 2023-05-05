@@ -6,7 +6,8 @@ class DetailsPage extends StatelessWidget {
   final String team;
   final String designation;
   final String details;
-  const DetailsPage({super.key, 
+  const DetailsPage({
+    super.key,
     required this.imagePath,
     required this.title,
     required this.team,
@@ -34,29 +35,31 @@ class DetailsPage extends StatelessWidget {
                 fit: BoxFit.cover,
               )),
           bottom: PreferredSize(
-              preferredSize: const Size.fromHeight(30),
-              child: Transform.translate(
-                offset: const Offset(0, 1),
-                child: Container(
-                  height: 30,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30),
-                      topRight: Radius.circular(30),
-                    ),
+            preferredSize: const Size.fromHeight(30),
+            child: Transform.translate(
+              offset: const Offset(0, 1),
+              child: Container(
+                height: 30,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
                   ),
-                  child: Center(
-                      child: Container(
+                ),
+                child: Center(
+                  child: Container(
                     width: 50,
                     height: 8,
                     decoration: BoxDecoration(
                       color: Colors.grey.shade300,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                  )),
+                  ),
                 ),
-              )),
+              ),
+            ),
+          ),
         ),
         SliverList(
             delegate: SliverChildListDelegate([
