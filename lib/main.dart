@@ -1,22 +1,8 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:thub/bottomnav.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:appcenter/appcenter.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:appcenter_analytics/appcenter_analytics.dart';
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:appcenter_crashes/appcenter_crashes.dart';
 
-final ios = defaultTargetPlatform == TargetPlatform.iOS;
-
-void initAppCenter() async{
-  final ios = defaultTargetPlatform == TargetPlatform.iOS;
-  var appSecret = ios ? "123cfac9-123b-123a-123f-123273416a48" : "96781fae-f8e4-4114-98c3-51e7c52c8d53";
-  await AppCenter.start(appSecret, [AppCenterAnalytics.id, AppCenterCrashes.id]);
-}
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
@@ -26,7 +12,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  
   const MyApp({Key? key}) : super(key: key);
 
   @override
@@ -79,7 +64,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    double w = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
         child: AnimatedBuilder(

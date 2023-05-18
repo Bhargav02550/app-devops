@@ -2,7 +2,7 @@ name: thub
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.4 <3.0.0'
+  sdk: ">=2.19.4 <3.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -30,11 +30,11 @@ environment:
 dependencies:
   animated_background: ^2.0.0
   animated_button: ^0.2.0
+  animated_image_list: ^1.0.0
   appbar_animated: ^0.0.3
   blurrycontainer: ^1.0.2
   bouncing_widget: ^2.0.0
   bubble_lens: ^2.0.0
-  carousel_pro: ^1.0.0
   carousel_slider: ^4.2.1
   dot_navigation_bar: ^1.0.1+4
   draggable_home: ^1.0.4
@@ -43,31 +43,28 @@ dependencies:
   floating_bottom_navigation_bar: ^1.5.2
   flutter:
     sdk: flutter
-  flutter_launcher_icons: ^0.12.0
+  flutter_launcher_icons: ^0.13.1
   flutter_native_splash: ^2.2.19
   flutter_staggered_grid_view: ^0.6.2
+  flutter_svg: ^2.0.5
+  getwidget: ^3.1.1
+  glass: ^1.0.1+1
   google_nav_bar: ^5.0.6
   hero_animation: ^1.0.0+3
   js: ^0.6.2
+  motion: ^1.4.0
   new_gradient_app_bar: ^0.2.0
   page_transition: ^2.0.9
   panara_dialogs: ^0.1.4
   persistent_bottom_nav_bar: ^5.0.2
   quickalert: ^1.0.1
-  responsive_framework: ^0.2.0
+  responsive_framework: ^1.0.0
   salomon_bottom_bar: ^3.3.2
-  searchfield: ^0.7.6
+  searchfield: ^0.8.1
+  url_launcher: ^6.1.10
   vertical_card_pager: ^1.5.0
   video_player: ^2.6.0
   widget_and_text_animator: ^1.0.9
-  motion: ^1.4.0
-  flutter_svg: ^2.0.5
-  getwidget: ^3.1.1
-  animated_image_list: ^1.0.0
-  url_launcher: ^6.1.10
-  appcenter: ^0.2.1
-  appcenter_analytics: ^0.2.1
-  appcenter_crashes: ^0.2.1
 
 flutter_native_splash:
   image: images/thublogo.png
@@ -88,7 +85,6 @@ flutter_icons:
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

@@ -31,7 +31,6 @@ class _MpageState extends State<Mpage> {
     double wi = MediaQuery.of(context).size.width;
     double pd = wi * 0.05;
     double wid = MediaQuery.of(context).size.width;
-    double hig = MediaQuery.of(context).size.height / 3.4;
     double podugu =
         MediaQuery.of(context).size.height / 4 - (wid / 10.18518518518519);
     double baru =
@@ -82,11 +81,11 @@ class _MpageState extends State<Mpage> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     width: MediaQuery.of(context).size.width * 0.88,
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 20),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 10, right: 20),
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Padding(
                               padding: EdgeInsets.only(left: 5, top: 10),
                               child: Text(

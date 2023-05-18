@@ -55,7 +55,6 @@ class _PlaceState extends State<Place> {
 
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -71,10 +70,10 @@ class _PlaceState extends State<Place> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
+                const Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Padding(
                       padding: EdgeInsets.only(left: 20.0, top: 10),
                       child: Text(
@@ -138,10 +137,10 @@ class _PlaceState extends State<Place> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
+                const Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Padding(
                       padding: EdgeInsets.only(left: 20.0, top: 10),
                       child: Text(
@@ -205,10 +204,10 @@ class _PlaceState extends State<Place> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
+                const Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Padding(
                       padding: EdgeInsets.only(left: 20.0, top: 10),
                       child: Text(

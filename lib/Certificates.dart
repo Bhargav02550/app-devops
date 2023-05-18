@@ -1,4 +1,6 @@
+import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
+import 'package:glass/glass.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -84,28 +86,63 @@ class _HomeState extends State<Home> {
             scrollDirection: Axis.vertical,
             crossAxisCount: 2,
             children: [
-              Card(
-                child: Image.asset(
+              FlipCard(
+                fill: Fill
+                    .fillBack, // Fill the back side of the card to make in the same size as the front.
+                direction: FlipDirection.HORIZONTAL, // default
+                side: CardSide.FRONT, // The side to initially display.
+                front: Image.asset(
                   "images/Certify/REDHAT.jpg",
                   fit: BoxFit.fill,
                 ),
+                back: Container(
+                  color: Colors.amber,
+                ).asGlass(
+                  tintColor: Colors.transparent,
+                  blurX: 10,
+                  blurY: 10,
+                ),
               ),
-              Card(
-                child: Image.asset(
+              FlipCard(
+                fill: Fill
+                    .fillBack, // Fill the back side of the card to make in the same size as the front.
+                direction: FlipDirection.HORIZONTAL, // default
+                side: CardSide.FRONT, // The side to initially display.
+                front: Image.asset(
                   "images/Certify/SECURITY.jpg",
                   fit: BoxFit.fitHeight,
                 ),
+                back: Container(
+                  color: Colors.transparent,
+                  child: const Text('Back'),
+                ),
               ),
-              Card(
-                child: Image.asset(
+              FlipCard(
+                fill: Fill
+                    .fillBack, // Fill the back side of the card to make in the same size as the front.
+                direction: FlipDirection.HORIZONTAL, // default
+                side: CardSide.FRONT, // The side to initially display.
+                front: Image.asset(
                   "images/Certify/UNITY PROG.jpg",
                   fit: BoxFit.fitHeight,
                 ),
+                back: Container(
+                  color: Colors.transparent,
+                  child: const Text('Back'),
+                ),
               ),
-              Card(
-                child: Image.asset(
+              FlipCard(
+                fill: Fill
+                    .fillBack, // Fill the back side of the card to make in the same size as the front.
+                direction: FlipDirection.HORIZONTAL, // default
+                side: CardSide.FRONT, // The side to initially display.
+                front: Image.asset(
                   "images/Certify/AWS.jpg",
                   fit: BoxFit.contain,
+                ),
+                back: Container(
+                  color: Colors.transparent,
+                  child: const Text('Back'),
                 ),
               ),
               Card(

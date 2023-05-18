@@ -1,4 +1,3 @@
-import 'package:thub/owlcoder.dart';
 import 'package:flutter/material.dart';
 
 class ProductViewPage extends StatefulWidget {
@@ -105,7 +104,6 @@ class _ProductViewPageState extends State<ProductViewPage> {
                       fontSize: 15,
                     ),
                   ),
-                  
                 ],
               ))
         ])),

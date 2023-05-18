@@ -31,10 +31,7 @@ class _KnowState extends State<Know> {
 
   @override
   Widget build(BuildContext context) {
-    double wi = MediaQuery.of(context).size.width;
-    double pd = wi * 0.05;
     double wid = MediaQuery.of(context).size.width;
-    double hig = MediaQuery.of(context).size.height / 3.4;
     double hi = MediaQuery.of(context).size.height;
     double podugu =
         MediaQuery.of(context).size.height / 4 - (wid / 10.18518518518519);

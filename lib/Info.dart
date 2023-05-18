@@ -10,15 +10,15 @@ class Info extends StatefulWidget {
 
 class _InfoState extends State<Info> {
   Widget build(BuildContext context) {
-    launchURL() async {
-      const url = 'https://flutter.io';
-      final uri = Uri.parse(url);
-      if (await canLaunchUrl(uri)) {
-        await launchUrl(uri);
-      } else {
-        throw 'Could not launch $url';
-      }
-    }
+    // launchURL() async {
+    //   const url = 'https://flutter.io';
+    //   final uri = Uri.parse(url);
+    //   if (await canLaunchUrl(uri)) {
+    //     await launchUrl(uri);
+    //   } else {
+    //     throw 'Could not launch $url';
+    //   }
+    // }
 
     double wid = MediaQuery.of(context).size.width;
     // ignore: unused_local_variable
@@ -41,7 +41,7 @@ class _InfoState extends State<Info> {
                 'Do you really want to exit from the app ?',
                 textAlign: TextAlign.center,
               ),
-              title: Text("Are You Sure ?"),
+              title: const Text("Are You Sure ?"),
               actions: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -107,8 +107,8 @@ class _InfoState extends State<Info> {
                       borderRadius: BorderRadius.circular(20),
                       color: const Color.fromARGB(255, 255, 255, 255),
                     ),
-                    child: Column(
-                      children: const [
+                    child: const Column(
+                      children: [
                         Padding(
                           padding: EdgeInsets.only(top: 8.0),
                           child: Text(
@@ -137,9 +137,9 @@ class _InfoState extends State<Info> {
                             decoration: BoxDecoration(
                                 color: const Color.fromARGB(97, 226, 226, 226),
                                 borderRadius: BorderRadius.circular(20)),
-                            child: Row(
+                            child: const Row(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
+                              children: [
                                 Padding(
                                   padding: EdgeInsets.only(left: 10.0),
                                   child: Icon(
@@ -202,9 +202,9 @@ class _InfoState extends State<Info> {
                             decoration: BoxDecoration(
                                 color: const Color.fromARGB(97, 226, 226, 226),
                                 borderRadius: BorderRadius.circular(20)),
-                            child: Row(
+                            child: const Row(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
+                              children: [
                                 Padding(
                                   padding: EdgeInsets.only(left: 5.0),
                                   child: Icon(
@@ -306,8 +306,8 @@ class _InfoState extends State<Info> {
                               color: const Color.fromARGB(97, 226, 226, 226),
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Row(
-                              children: const [
+                            child: const Row(
+                              children: [
                                 Padding(
                                   padding: EdgeInsets.only(left: 20.0),
                                   child: Icon(
@@ -520,7 +520,17 @@ class _InfoState extends State<Info> {
                             );
                           }),
                       InkWell(
-                        onTap: launchURL,
+                        onTap: () async {
+                          String url = "https://www.fluttercampus.com";
+                          var urllaunchable = await canLaunch(
+                              url); //canLaunch is from url_launcher package
+                          if (urllaunchable) {
+                            await launch(
+                                url); //launch is from url_launcher package to launch URL
+                          } else {
+                            print("URL can't be launched.");
+                          }
+                        },
                         child: Padding(
                           padding: const EdgeInsets.only(),
                           child: Container(
